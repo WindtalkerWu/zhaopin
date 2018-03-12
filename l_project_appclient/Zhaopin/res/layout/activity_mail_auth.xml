@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <RelativeLayout
+        android:id="@+id/mail_auth_title_bg"
+        style="@style/common_top_layout_style" >
+
+        <ImageButton
+            android:id="@+id/mail_auth_goback"
+            style="@style/common_top_left_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/mobile_mail_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/mail_auth_title_txt" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mail_auth_content_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mail_auth_title_bg"
+        android:orientation="vertical" >
+		<TextView android:id="@+id/mobile_auth_old_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/list_subTitle"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:visibility="gone"/>
+        <LinearLayout
+            style="@style/common_form_vertical_style"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="20.0dip" >
+		<RelativeLayout
+                style="@style/common_form_item_style"
+                android:padding="0dp" >
+
+                <LinearLayout
+                    android:id="@+id/mobile_mail_mail_txt"
+                    style="@style/common_form_item_imagelayout_style"
+                    android:padding="0dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="0dp"
+                        android:src="@drawable/common_icon_email" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    style="@style/common_form_item_editlayout_style"
+                    android:layout_toRightOf="@id/mobile_mail_mail_txt" >
+
+                    <EditText
+                        android:id="@+id/mobile_mail_txt"
+                        style="@style/common_form_item_edittext_style"
+                        android:hint="@string/mail_auth_mail_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <Button android:id="@+id/mobile_mail_domail"
+            style="@style/common_button_green_match"
+            android:text="@string/mail_auth_mail_do_auth"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+</RelativeLayout>

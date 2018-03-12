@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <RelativeLayout
+        android:id="@+id/publish_reward_title_bg"
+        style="@style/common_top_layout_style" >
+
+        <ImageView
+            android:id="@+id/publish_reward_goback"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/publish_reward_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/publish_reward_title_txt" />
+
+        <ImageView
+            android:id="@+id/publish_reward_title_submit"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_save" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/publish_reward_content_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/publish_reward_title_bg"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/publish_reward_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp" >
+
+            <LinearLayout style="@style/common_form_vertical_style" >
+
+                <RelativeLayout style="@style/common_form_item_style" >
+
+                    <LinearLayout
+                        android:id="@+id/publish_reward_method_txt"
+                        style="@style/common_form_item_textviewlayout_style"
+                        android:orientation="horizontal" >
+						<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/publish_reward_must"
+                            android:textColor="@color/red" />
+                        <TextView
+                            style="@style/common_form_item_textview_style"
+                            android:text="@string/publish_reward_method_txt" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/publish_reward_method"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/publish_reward_method_txt"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/publish_reward_radiobutton_audition"
+                            style="@style/CustomRadioButtonTheme"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@string/publish_reward_method_audition"
+                            android:textColor="@color/list_subTitle"
+                            android:textSize="14sp"
+                            android:checked="true" />
+
+                        <RadioButton
+                            android:id="@+id/publish_reward_radiobutton_entry"
+                            style="@style/CustomRadioButtonTheme"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="35dp"
+                            android:text="@string/publish_reward_method_entry"
+                            android:textColor="@color/list_subTitle"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <include layout="@layout/common_form_line" />
+
+                <RelativeLayout style="@style/common_form_item_style" >
+
+                    <LinearLayout android:id="@+id/publish_reward_money_txt"
+                        style="@style/common_form_item_textviewlayout_style"
+                        android:orientation="horizontal" >
+						<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/publish_reward_must"
+                            android:textColor="@color/red" />
+                        <TextView android:id="@+id/publish_reward_money_txtview"
+                            style="@style/common_form_item_textview_style"
+                            android:text="@string/publish_reward_money" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        style="@style/common_form_item_editlayout_style"
+                        android:layout_toRightOf="@id/publish_reward_money_txt" >
+
+                        <EditText
+                            android:id="@+id/publish_reward_money"
+                            style="@style/common_form_item_edittext_style"
+                            android:hint="@string/publish_reward_money_audition_hint"
+                            android:imeOptions="actionNext"
+                            android:inputType="number" 
+                            android:maxLength="5"
+                            />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <include layout="@layout/common_form_line" />
+
+                <RelativeLayout style="@style/common_form_item_style" >
+
+                    <LinearLayout
+                        android:id="@+id/publish_reward_times_txt"
+                        style="@style/common_form_item_textviewlayout_style"
+                        android:orientation="horizontal" >
+						<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/publish_reward_must"
+                            android:textColor="@color/red" />
+                        <TextView
+                            style="@style/common_form_item_textview_style"
+                            android:text="@string/publish_reward_times" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/publish_reward_times_bg"
+                        style="@style/common_form_item_editlayout_style"
+                        android:layout_toRightOf="@id/publish_reward_times_txt" >
+
+                        <ImageView
+                            android:id="@+id/publish_reward_times_text_icon"
+                            style="@style/common_form_item_edit_next_style" />
+
+                        <TextView
+                            android:id="@+id/publish_reward_times"
+                            style="@style/common_form_item_edit_textview_style"
+                            android:layout_toLeftOf="@id/publish_reward_times_text_icon"
+                            android:hint="@string/publish_reward_times_hint" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/common_form_vertical_style"
+                android:layout_marginTop="6dp" >
+
+                <RelativeLayout style="@style/common_form_item_style" >
+
+                    <LinearLayout
+                        android:id="@+id/publish_reward_salary_txt"
+                        style="@style/common_form_item_textviewlayout_style"
+                        android:orientation="horizontal" >
+						<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/publish_reward_must"
+                            android:textColor="@color/red" />
+                        <TextView
+                            style="@style/common_form_item_textview_style"
+                            android:text="@string/publish_reward_salary" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/publish_reward_salary_bg"
+                        style="@style/common_form_item_editlayout_style"
+                        android:layout_toRightOf="@id/publish_reward_salary_txt" >
+
+                        <ImageView
+                            android:id="@+id/publish_reward_salary_next_icon"
+                            style="@style/common_form_item_edit_next_style" />
+
+                        <TextView
+                            android:id="@+id/publish_reward_salary"
+                            style="@style/common_form_item_edit_textview_style"
+                            android:layout_toLeftOf="@id/publish_reward_salary_next_icon"
+                            android:hint="@string/publish_reward_salary_hint" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <include layout="@layout/common_form_line" />
+
+                <RelativeLayout style="@style/common_form_item_style" >
+
+                    <LinearLayout
+                        android:id="@+id/publish_reward_industry_txt"
+                        style="@style/common_form_item_textviewlayout_style"
+                        android:orientation="horizontal" >
+						<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/publish_reward_must"
+                            android:textColor="@color/red" />
+                        <TextView
+                            style="@style/common_form_item_textview_style"
+                            android:text="@string/publish_reward_industry" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/publish_reward_industry_bg"
+                        style="@style/common_form_item_editlayout_style"
+                        android:layout_toRightOf="@id/publish_reward_industry_txt" >
+
+                        <ImageView
+                            android:id="@+id/publish_reward_industry_next_icon"
+                            style="@style/common_form_item_edit_next_style" />
+
+                        <TextView
+                            android:id="@+id/publish_reward_industry"
+                            style="@style/common_form_item_edit_textview_style"
+                            android:layout_toLeftOf="@id/publish_reward_industry_next_icon"
+                            android:hint="@string/publish_reward_industry_hint" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <include layout="@layout/common_form_line" />
+
+                <RelativeLayout style="@style/common_form_item_style" >
+
+                    <LinearLayout
+                        android:id="@+id/publish_reward_post_txt"
+                        style="@style/common_form_item_textviewlayout_style"
+                        android:orientation="horizontal" >
+						<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/publish_reward_must"
+                            android:textColor="@color/red" />
+                        <TextView
+                            style="@style/common_form_item_textview_style"
+                            android:text="@string/publish_reward_post" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/publish_reward_post_bg"
+                        style="@style/common_form_item_editlayout_style"
+                        android:layout_toRightOf="@id/publish_reward_post_txt" >
+
+                        <ImageView
+                            android:id="@+id/publish_reward_post_next_icon"
+                            style="@style/common_form_item_edit_next_style" />
+
+                        <TextView
+                            android:id="@+id/publish_reward_post"
+                            style="@style/common_form_item_edit_textview_style"
+                            android:layout_toLeftOf="@id/publish_reward_post_next_icon"
+                            android:hint="@string/publish_reward_post_hint" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <include layout="@layout/common_form_line" />
+
+                <RelativeLayout style="@style/common_form_item_style" >
+
+                    <LinearLayout
+                        android:id="@+id/publish_reward_location_txt"
+                        style="@style/common_form_item_textviewlayout_style"
+                        android:orientation="horizontal" >
+						<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/publish_reward_must"
+                            android:textColor="@color/red" />
+                        <TextView
+                            style="@style/common_form_item_textview_style"
+                            android:text="@string/publish_reward_location" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/publish_reward_location_bg"
+                        style="@style/common_form_item_editlayout_style"
+                        android:layout_toRightOf="@id/publish_reward_location_txt" >
+
+                        <ImageView
+                            android:id="@+id/publish_reward_location_next_icon"
+                            style="@style/common_form_item_edit_next_style" />
+
+                        <TextView
+                            android:id="@+id/publish_reward_location"
+                            style="@style/common_form_item_edit_textview_style"
+                            android:layout_toLeftOf="@id/publish_reward_location_next_icon"
+                            android:hint="@string/publish_reward_location_hint" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <include layout="@layout/common_form_line" />
+
+                <RelativeLayout style="@style/common_form_item_style" >
+
+                    <LinearLayout
+                        android:id="@+id/publish_reward_select_resume_txt"
+                        style="@style/common_form_item_textviewlayout_style"
+                        android:orientation="horizontal" >
+						<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/publish_reward_must"
+                            android:textColor="@color/red" />
+                        <TextView
+                            style="@style/common_form_item_textview_style"
+                            android:text="@string/publish_reward_select_resume" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/publish_reward_select_resume_bg"
+                        style="@style/common_form_item_editlayout_style"
+                        android:layout_toRightOf="@id/publish_reward_select_resume_txt" >
+
+                        <ImageView
+                            android:id="@+id/publish_reward_select_resume_next_icon"
+                            style="@style/common_form_item_edit_next_style" />
+
+                        <TextView
+                            android:id="@+id/publish_reward_resume"
+                            style="@style/common_form_item_edit_textview_style"
+                            android:layout_toLeftOf="@id/publish_reward_select_resume_next_icon"
+                            android:hint="@string/publish_reward_select_resume_hint" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <include layout="@layout/common_form_line" />
+
+                <RelativeLayout style="@style/common_form_big_item_style" >
+
+                    <LinearLayout
+                        android:id="@+id/publish_reward_introduce_txt"
+                        style="@style/common_form_big_item_textviewlayout_style" >
+
+                        <TextView
+                            style="@style/common_form_item_textview_style"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/publish_reward_introduce" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/publish_reward_introduce_bg"
+                        style="@style/common_form_item_editlayout_style"
+                        android:layout_toRightOf="@id/publish_reward_introduce_txt" >
+					 <com.qianniu.zhaopin.app.widget.VerticalScrollInterceptLineralayout
+                        	android:layout_width="match_parent"
+                       	 	android:layout_height="wrap_content"
+                        	android:orientation="vertical" >
+                        <EditText
+                            android:id="@+id/publish_reward_introduce"
+                            style="@style/common_form_item_big_edittext_style"
+                            android:gravity="top"
+                            android:hint="@string/publish_reward_introduce_hint"
+                            android:imeOptions="actionDone"
+                            android:maxLength="500"
+                            android:paddingBottom="15dp"
+                            android:paddingTop="15dp" />
+                      </com.qianniu.zhaopin.app.widget.VerticalScrollInterceptLineralayout>
+                        
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+            	<CheckBox
+                    android:id="@+id/publish_reward_agreement_checkbox"
+                    style="@style/checkbox_common_default_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/resume_button_color"
+                    android:text=""
+                    android:gravity="left"
+                    android:textSize="12sp"
+                    android:checked="true" />
+            	<TextView android:id="@+id/publish_reward_agreement_text"
+            	    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/publish_reward_agreement"
+                    android:textColor="@color/resume_button_color"
+                    android:textSize="12sp"/>
+			</LinearLayout>
+
+            <Button
+                android:id="@+id/publish_reward_publish"
+                style="@style/common_button_green_big"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="@string/publish_reward_publish" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

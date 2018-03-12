@@ -1,0 +1,70 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="half_alpha_black">#7f000000</color>
+    <color name="dark_alpha_black">#cc000000</color>
+    <color name="gray">#808080</color>
+    <color name="lightgrey">#ff888888</color>
+    <color name="red">#FF0000</color>
+    <color name="gold">#FFD700</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#008000</color>
+    <color name="blue">#0000FF</color>
+    <color name="purple">#800080</color>
+    <color name="pink">#FFC0CB</color>
+    <color name="orange">#FFA500</color>
+    <color name="lemonyellow">#FFFACD</color>
+    <color name="graywhite">#F5F5F5</color>
+    <color name="grayslate">#708090</color>
+    <color name="lightblue">#0083FF</color>
+    <!-- 字体，线用颜色 -->
+    <color name="deepthingrey">#ff777777</color>
+    <color name="deepblue">#ff234a72</color>
+    <color name="thingrey">#ffa6a6a6</color>
+    <color name="common_input_edittext_bg">#ffeeeeee</color>
+    <color name="common_input_clean_focus_bg">#d6d6d6</color><!-- #ff99e5ff -->
+    <!-- 简历背景色 -->
+    <color name="resume_home_bg">#EEEBE5</color>
+    <color name="resume_button_color">#00AAA1</color>
+    <color name="resume_text_color">#3A4147</color>
+    <!-- 透明色 -->
+    <color name="full_transparent">#00000000</color>
+    <color name="half_transparent">#aa000000</color>
+    <color name="bright_foreground_light">#ff000000</color>
+    <color name="bright_foreground_light_inverse">#ffffffff</color>
+    <color name="bright_foreground_light_disabled">#80000000</color>
+    <color name="dim_foreground_light">#808080</color>
+    <color name="dim_foreground_light_disabled">#80323232</color>
+    <color name="dim_foreground_light_inverse">#ff006eaa</color>
+    <color name="dim_foreground_light_inverse_disabled">#80bebebe</color>
+    <color name="head_text">#0e5986</color>
+    <color name="author_text">#0e5986</color>
+    <color name="face_bg">#eef1f4</color>
+    <color name="frame_button_text_nor">#033a5c</color>
+    <color name="frame_button_text_select">#FFFFFF</color>
+    <color name="listitem_transparent">#00000000</color>
+    <color name="listitem_black">#ff000000</color>
+    <color name="listitem_white">#ffffffff</color>
+    <color name="listitem_blue">#0e5986</color>
+    <color name="listitem_gray">#ff9da19e</color>
+    <color name="listitem_green">#ffe3ffc6</color>
+    <color name="listitem_greenyellow">#ff87b869</color>
+    <color name="listitem_yellow">#fffaffbf</color>
+
+    <!-- 背景色 -->
+    <color name="bg_color">#eeebe5</color>
+    <color name="popupwindow_bg_color">#b0000000</color>
+    <color name="bar_bg">#00aaa1</color>
+    
+    <color name="dialog_content_color">#FCFCFC</color>
+    <color name="list_title">#333333</color>
+    <color name="list_subTitle">#747474</color>
+    <color name="tips_gray">#b0afaf</color>
+    <color name="label_gray">#828282</color>
+    <color name="alert_red">#dc5b58</color>
+    <color name="resume_bar_gray">#e5e5e5</color>
+    <color name="dividing_line_color">#DCD9D4</color>
+    <color name="style_text_deepgreen">#00A39A</color>
+</resources>

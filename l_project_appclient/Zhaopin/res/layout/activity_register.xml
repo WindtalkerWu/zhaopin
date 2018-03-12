@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/register_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+			<RelativeLayout style="@style/common_top_layout_style" >
+		
+				<ImageButton
+                    android:id="@+id/register_btn_goback"
+                    style="@style/common_top_left_title_style"
+                    android:src="@drawable/common_button_back" />
+		
+				<TextView
+                    android:id="@+id/register_title"
+                    style="@style/common_top_center_bigtitle_style"
+                    android:text="@string/register_title" />
+		                
+				<ImageButton
+		            android:id="@+id/register_btn_submit"
+		            style="@style/common_top_right_title_style"
+		            android:src="@drawable/common_button_save" />
+			</RelativeLayout>
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        style="@style/common_form_vertical_style"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_marginTop="10.0dip" >
+
+                        <!-- 用户名 -->
+
+                        <RelativeLayout style="@style/common_form_item_style" >
+
+                            <RelativeLayout
+                                android:id="@+id/login_username"
+                                style="@style/common_form_item_imagelayout_style" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/common_button_userid" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                style="@style/common_form_item_editlayout_style"
+                                android:layout_toRightOf="@id/login_username" >
+
+                                <EditText
+                                    android:id="@+id/register_et_username"
+                                    style="@style/common_form_item_edittext_style"
+                                    android:hint="@string/register_hint_username"
+                                    android:imeOptions="actionNext" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <include layout="@layout/common_form_line" />
+
+                        <!-- 密码 -->
+
+                        <RelativeLayout style="@style/common_form_item_style" >
+
+                            <RelativeLayout
+                                android:id="@+id/login_userpass"
+                                style="@style/common_form_item_imagelayout_style" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/common_button_userkey_one" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                style="@style/common_form_item_editlayout_style"
+                                android:layout_toRightOf="@id/login_userpass" >
+
+                                <EditText
+                                    android:id="@+id/register_et_userpwd"
+                                    style="@style/common_form_item_edittext_style"
+                                    android:hint="@string/register_hint_userpwd"
+                                    android:imeOptions="actionNext"
+                                    android:password="true" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <include layout="@layout/common_form_line" />
+
+                        <!-- 密码确认 -->
+
+                        <RelativeLayout style="@style/common_form_item_style" >
+
+                            <RelativeLayout
+                                android:id="@+id/login_userpass"
+                                style="@style/common_form_item_imagelayout_style" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/common_button_userkey_two" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                style="@style/common_form_item_editlayout_style"
+                                android:layout_toRightOf="@id/login_userpass" >
+
+                                <EditText
+                                    android:id="@+id/register_et_userpwd_confirm"
+                                    style="@style/common_form_item_edittext_style"
+                                    android:hint="@string/register_hint_userpwd_confirm"
+                                    android:imeOptions="actionNext"
+                                    android:password="true" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/register_prompt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:paddingLeft="12.0dip"
+                        android:paddingRight="12.0dip"
+                        android:paddingTop="12.0dip"
+                        android:text="@string/register_tv_prompt"
+                        android:textColor="@color/list_subTitle" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.0dip" >
+
+                        <CheckBox
+                            android:id="@+id/register_cb_read"
+                            style="@style/checkbox_common_default_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="14.0dip"
+                            android:checked="true"
+                            android:gravity="left"
+                            android:text="@string/register_cb_read"
+                            android:textColor="@color/resume_button_color"
+                            android:textSize="14.0sp" />
+
+                        <TextView
+                            android:id="@+id/register_tv_read"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/register_cb_read"
+                            android:text="@string/register_tv_read"
+                            android:textColor="@color/resume_button_color"
+                            android:textSize="14.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="60.0dip"
+                        android:layout_marginTop="30.0dip" >
+
+                        <!-- 提交 -->
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="60.0dip"
+                            android:layout_alignParentBottom="true" >
+
+                            <RelativeLayout
+                                android:id="@+id/register_lp_submit"
+                                style="@style/common_button_green_big"
+                                android:layout_centerInParent="true" >
+
+                                <TextView
+                                    style="@style/common_button_text"
+                                    android:text="@string/register_btn_submit" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

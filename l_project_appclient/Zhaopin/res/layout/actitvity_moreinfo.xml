@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/common_top_layout_style" >
+
+        <ImageButton
+            android:id="@+id/goback_ibtn"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="更多" />
+
+        <ImageView
+            android:id="@+id/rightbt"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_subscription"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+</LinearLayout>

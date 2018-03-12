@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/common_top_layout_style" >
+
+        <ImageView
+            android:id="@+id/fragment_extra_back"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back"
+            android:visibility="visible" />
+
+        <!--
+             <ImageView
+            android:id="@+id/fragment_extra_more"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_more" />
+        -->
+
+        <ImageButton
+            android:id="@+id/fragment_extra_more"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_more" />
+
+        <ImageButton
+            android:id="@+id/fragment_extra_rightbt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/fragment_extra_more"
+            android:background="@color/full_transparent"
+            android:src="@drawable/common_button_subscription" />
+
+        <TextView
+            android:id="@+id/fragment_extra_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/disk_item_professional_info" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/listview_item_selector_bg"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/fragment_extra_time_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="星期五"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/fragment_extra_time_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="2013年9月9日"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_12" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fragment_extra_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:text="更多"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_12" />
+    </LinearLayout>
+
+    <com.qianniu.zhaopin.app.widget.PullToRefreshListView
+        android:id="@+id/fragment_extra_listview"
+        style="@style/widget_listview"
+        android:divider="@null"
+        android:listSelector="@drawable/listview_item_empty_selector" />
+
+</LinearLayout>

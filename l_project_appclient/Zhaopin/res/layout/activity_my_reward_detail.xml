@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/my_reward_title_bg"
+        style="@style/common_top_layout_style"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@+id/my_reward_detail_goback"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/my_reward_detail_tv_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/my_reward_detail_title_txt" />
+
+        <!--
+             <ProgressBar
+                android:id="@+id/my_reward_detail_head_progress"
+                style="@style/loading_small"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:layout_alignParentRight="true"
+                android:visibility="gone" />
+        -->
+
+        <ViewStub
+            android:id="@+id/my_reward_detail_head_progress"
+            style="@style/viewstub_progress_small_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:layout="@layout/progressbar_small" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/my_reward_detail_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/my_reward_detail_operate"
+        android:layout_below="@id/my_reward_title_bg"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:id="@id/my_reward_detail_operate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+
+        <include
+            android:layout_alignParentTop="true"
+            layout="@layout/common_form_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp" 
+            >
+			<Button
+                android:id="@+id/my_reward_detail_pay"
+                style="@style/common_button_red_match"
+                android:text="@string/my_reward_detail_pay" />
+			
+			<Button
+                android:id="@+id/my_reward_detail_applyrefund"
+                style="@style/common_button_green_match"
+                android:layout_marginTop="10.0dip"
+                android:text="@string/my_reward_detail_applyrefund"
+                android:visibility="gone"
+                 />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/my_reward_detail_loading"
+        style="@style/common_big_loading_style" />
+
+</RelativeLayout>

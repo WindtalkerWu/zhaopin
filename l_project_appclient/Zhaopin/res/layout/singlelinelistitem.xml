@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/common_singleline_listitem_style" >
+
+    <TextView
+        android:id="@+id/singlelinelistitem_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:textColor="@color/list_title"
+        android:textSize="@dimen/text_size_15" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp" >
+
+        <ImageView
+            android:id="@+id/singlelinelistitem_rightbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_item_arrow_bg"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/singlelinelistitem_rightcheckedbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:src="@drawable/common_img_check_green"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</RelativeLayout>

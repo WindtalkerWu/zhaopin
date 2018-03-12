@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_color" >
+    <RelativeLayout
+        android:id="@+id/comment_list_top"
+        style="@style/common_top_layout_style" >
+
+        <ImageButton
+            android:id="@+id/comment_list_goback"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/comment_list_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/comment_list_title" />
+
+        <ImageView
+            android:id="@+id/comment_list_comment"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_edit" />
+    </RelativeLayout>
+    <!-- <TextView android:id="@+id/comment_list_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/comment_list_tips"
+        android:textSize="14sp"
+        android:textColor="@color/list_subTitle"
+        android:layout_margin="8dp"/> -->
+        
+    <com.qianniu.zhaopin.app.widget.PullToRefreshListView
+        android:id="@+id/comment_list_content"
+        style="@style/common_listview"
+        android:listSelector="@drawable/listview_item_empty_selector"
+        android:scrollbars="none"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" />
+
+</LinearLayout>

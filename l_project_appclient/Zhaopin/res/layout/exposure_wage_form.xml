@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <RelativeLayout
+        android:id="@+id/exposure_wage_city_item"
+        style="@style/common_form_item_bg_nomargine_style"
+        android:padding="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="12dp" >
+
+        <TextView
+            android:id="@+id/exposure_wage_city_text"
+            style="@style/common_form_item_textviewlayout_style1"
+            android:text="@string/exposure_wage_city_text" />
+        <TextView
+            android:id="@+id/exposure_wage_city"
+            android:layout_toRightOf="@id/exposure_wage_city_text"
+            style="@style/common_form_item_left_tv_nowidth_style"
+            android:layout_width="match_parent"
+            android:drawableRight="@drawable/common_img_next_big"
+            android:drawablePadding="6dp"
+            android:paddingRight="10dp" />
+        
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/exposure_wage_company_item"
+        style="@style/common_form_item_bg_nomargine_style"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="0.5dp"
+        android:layout_marginTop="-1dp" >
+
+        <TextView
+            android:id="@+id/exposure_wage_company_text"
+            style="@style/common_form_item_textviewlayout_style1"
+            android:text="@string/exposure_wage_company_text" />
+
+        <EditText
+            android:id="@+id/exposure_wage_company"
+            style="@style/common_form_item_edittext_style"
+            android:layout_toRightOf="@id/exposure_wage_company_text" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/exposure_wage_post_item"
+        style="@style/common_form_item_bg_nomargine_style"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="0.5dp"
+        android:layout_marginTop="-1dp" >
+
+        <TextView
+            android:id="@+id/exposure_wage_post_text"
+            style="@style/common_form_item_textviewlayout_style1"
+            android:text="@string/exposure_wage_post_text" />
+
+        <EditText
+            android:id="@+id/exposure_wage_post"
+            style="@style/common_form_item_edittext_style"
+            android:layout_toRightOf="@id/exposure_wage_post_text" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/exposure_wage_salary_item"
+        style="@style/common_form_item_bg_nomargine_style"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="0.5dp"
+        android:layout_marginTop="-1dp" >
+
+        <TextView
+            android:id="@+id/exposure_wage_salary_text"
+            style="@style/common_form_item_textviewlayout_style1"
+            android:text="@string/exposure_wage_salary_text" />
+
+        <EditText
+            android:id="@+id/exposure_wage_salary"
+            style="@style/common_form_item_edittext_style"
+            android:layout_toRightOf="@id/exposure_wage_salary_text" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/exposure_wage_doSubmit"
+        style="@style/common_button_green_big"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:text="@string/exposure_wage_submit" />
+
+</merge>

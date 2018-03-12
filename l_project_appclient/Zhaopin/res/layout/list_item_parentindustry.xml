@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+ 	android:descendantFocusability="blocksDescendants">
+ 	<LinearLayout
+ 	    android:id="@+id/list_item_industrychoose_ll_parent"
+ 	    android:layout_width="fill_parent"
+    	android:layout_height="50dp"
+    	android:background="@color/white"
+ 	    >
+ 	    <RelativeLayout 
+ 	        android:id="@+id/list_item_industrychoose_lp_parent"
+			android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:paddingRight="4.0dip"
+ 	        >
+			<!-- 行业类型图片  -->
+		    <ImageView
+		        android:id="@+id/list_item_industrychoose_img_industry"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerVertical="true"
+		        android:layout_alignParentLeft="true"
+		        />
+            <TextView 
+                android:id="@+id/list_item_industrychoose_tv_parentname"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+        		android:paddingLeft="10.0dip"
+                android:textColor="@color/list_title"
+                android:textSize="15sp" />
+            <!-- 是否展开图片  -->
+		    <ImageView
+		        android:id="@+id/list_item_industrychoose_img_open"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerVertical="true"
+		        android:layout_alignParentRight="true"
+                android:layout_marginRight="23.0dip"
+		        android:src="@drawable/common_img_up"
+		        />
+ 	    </RelativeLayout>
+ 	</LinearLayout>    
+</LinearLayout>

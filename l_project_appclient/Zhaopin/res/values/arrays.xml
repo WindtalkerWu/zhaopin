@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <!-- 社保城市 -->
+    <string-array name="tax_city">
+　　                <item>北京</item>
+　　                <item>上海</item>
+        <item>广州</item>
+　　                <item>深圳</item>
+　　                <item>杭州</item>
+        <item>苏州</item>
+        <item>宁波</item>
+        <item>南京</item>
+        <item>厦门</item>
+        <item>珠海</item>
+        <item>武汉</item>
+        <item>成都</item>
+        <item>重庆</item>
+        <item>西安</item>
+        <item>昆明</item>
+        <item>青岛</item>
+        <item>沈阳</item>
+        <item>天津</item>
+　　    </string-array>
+ <!-- 社保上限 -->
+    <integer-array name="tax_city_social_security_upper_limit">
+　　                <item>15669</item>
+　　                <item>14076</item>
+　　                <item>12303</item>
+　　                <item>12615</item>
+        <item>6870</item>
+        <item>12915</item>
+        <item>8423</item>
+        <item>10905</item>
+        <item>9114</item>
+        <item>8043</item>
+        <item>8106</item>
+        <item>7629</item>
+        <item>11349</item>
+        <item>7572</item>
+        <item>7248</item>
+        <item>8190</item>
+        <item>9645</item>
+        <item>14508</item>
+　　    </integer-array>
+    <!-- share items -->
+    <string-array name="app_share_items">
+        <item>新浪微博</item>
+        <item>腾讯微博</item>
+        <item>微信好友</item>
+        <item>微信朋友圈</item>
+        <item>更多...</item>
+    </string-array>
+	<string-array name="app_share_items_two">
+        <item>新浪微博</item>
+        <item>微信好友</item>
+        <item>微信朋友圈</item>
+        <item>更多...</item>
+    </string-array>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/map_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+    <RelativeLayout 
+        android:id="@+id/map_rl_title"
+        style="@style/common_top_layout_style" >
+
+        <ImageButton
+            android:id="@+id/map_btn_goback"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/map_tv_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/str_map_title" />
+        
+        <!-- <ProgressBar
+            android:id="@+id/map_tv_head_progress"
+            style="@style/loading_small"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:layout_alignParentRight="true"
+            android:visibility="gone" /> -->
+        <ViewStub
+            android:id="@+id/map_tv_head_progress"
+            style="@style/viewstub_progress_small_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:layout="@layout/progressbar_small" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/map_webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/map_rl_title"/>
+
+</RelativeLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/bg_color">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+			<RelativeLayout style="@style/common_top_layout_style" >
+				<ImageButton
+					android:id="@+id/login_goback"
+					style="@style/common_top_left_title_style" 
+					android:src="@drawable/common_button_back"/>
+
+	             <TextView
+	                  android:id="@+id/login_title"
+	                  style="@style/common_top_center_bigtitle_style"
+	                  android:text="@string/usermanager_login_button_login" />
+              
+				<!--  
+				<ImageButton
+		            android:id="@+id/login_btn_login"
+		            style="@style/common_top_right_title_style"
+		            android:src="@drawable/common_button_save" />
+		        -->
+				<Button
+		            android:id="@+id/login_btn_register"
+		            style="@style/fillheight_top_right_title_style"
+		            android:text="@string/usermanager_login_button_register"
+		            android:visibility="visible" />
+            </RelativeLayout>
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+					<LinearLayout
+					    android:id="@+id/login_rl_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+                        
+					<!-- 第三方登录 -->
+					<LinearLayout
+		                android:layout_width="fill_parent"
+		                android:layout_height="fill_parent"
+		                android:orientation="vertical"
+		                android:paddingLeft="10.0dip"
+		                android:paddingRight="10.0dip"
+		                android:paddingTop="15.0dip"
+		                 >
+
+		                <RelativeLayout
+		                    android:id="@+id/login_rl_sina"
+		                    style="@style/common_form_item_first_style1"
+		                    android:background="@drawable/common_list_item_selector" 
+		                    android:visibility="visible"
+		                    >
+		
+		                    <ImageView
+		                        android:id="@+id/common_item_sina"
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:layout_alignParentLeft="true"
+		                        android:layout_centerVertical="true"
+		                        android:layout_marginLeft="10.0dip"
+		                        android:src="@drawable/common_button_sina" />
+		                    
+		                    <TextView
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:layout_centerVertical="true"
+		                        android:layout_marginLeft="50.0dip"
+				              	android:text="@string/usermanager_login_button_sinalogin"
+            					android:textColor="@color/list_subTitle"
+		                        android:textSize="16.0sp" />
+		                    
+		                    <ImageView
+		                        android:id="@+id/common_item_arrow1"
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:layout_alignParentRight="true"
+		                        android:layout_centerVertical="true"
+		                        android:layout_marginRight="10.0dip"
+		                        android:src="@drawable/common_img_next_big" />
+
+		                </RelativeLayout>
+
+		                <RelativeLayout
+		                    android:id="@+id/login_rl_qq"
+		                    style="@style/common_form_item_first_style1"
+		                    android:background="@drawable/common_list_item_selector" 
+		                    android:layout_marginTop="-1dp"
+		                    android:visibility="visible" >
+		
+		                    <ImageView
+		                        android:id="@+id/common_item_qq"
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:layout_alignParentLeft="true"
+		                        android:layout_centerVertical="true"
+		                        android:layout_marginLeft="10.0dip"
+		                        android:src="@drawable/common_button_qq" />
+		                    
+		                    <TextView
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:layout_centerVertical="true"
+		                        android:layout_marginLeft="50.0dip"
+				              	android:text="@string/usermanager_login_button_qqlogin"
+            					android:textColor="@color/list_subTitle"
+		                        android:textSize="16.0sp" />
+		                    
+		                    <ImageView
+		                        android:id="@+id/common_item_arrow1"
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:layout_alignParentRight="true"
+		                        android:layout_centerVertical="true"
+		                        android:layout_marginRight="10.0dip"
+		                        android:src="@drawable/common_img_next_big" />
+
+		                </RelativeLayout>
+               		</LinearLayout>
+
+					 
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10.0dip"
+                        android:layout_marginTop="20.0dip"
+                        >
+                         <!-- 注册 -->
+                    	<!-- 
+                        <TextView
+                            android:id="@+id/login_tv_register"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10.0dip"
+                            android:layout_marginTop="10.0dip"
+                            android:gravity="right"
+                            android:text="@string/usermanager_login_button_register"
+                            android:textColor="@color/blue"
+                            android:textSize="13.0sp" />
+                            -->
+                    </RelativeLayout>
+                    
+
+                    <RelativeLayout
+				    	android:layout_width="fill_parent"
+				    	android:layout_height="wrap_content"
+				   		 >
+                        <!-- 登录 -->
+						<RelativeLayout
+			               android:id="@+id/login_rl_login"
+			               android:layout_centerInParent="true"
+			               style="@style/common_button_green_big"
+			              		>
+						   <TextView
+						   	   style="@style/common_button_text"
+			              	   android:text="@string/usermanager_login_button_login"
+						       />
+			           	</RelativeLayout>
+                    </RelativeLayout>
+                    
+					<TextView
+						android:id="@+id/login_contact"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:layout_alignParentBottom="true"
+						android:gravity="center_horizontal"
+						android:layout_marginTop="20.0dip"
+						android:layout_marginBottom="20.0dip"
+						android:text="@string/customer_service_hotline_telephone"
+						android:textColor="@color/list_subTitle"
+						android:textSize="16.0sp"
+						/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

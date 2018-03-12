@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical" >
+    <TextView android:id="@+id/publish_prompt_content"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:text="@string/publish_dialog_publish_prompt"
+    	android:textSize="18sp"/>
+    <CheckBox android:id="@+id/publish_prompt_checkbox"
+        style="@style/checkbox_common_default_style"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:text="@string/publish_dialog_publish_tips"
+    	android:paddingLeft="22dp"/>
+</LinearLayout>

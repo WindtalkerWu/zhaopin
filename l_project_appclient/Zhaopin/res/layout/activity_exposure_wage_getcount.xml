@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+    <RelativeLayout
+        android:id="@+id/exposure_wage_getcount_top"
+        style="@style/common_top_layout_style" >
+
+        <ImageButton
+            android:id="@+id/exposure_wage_getcount_goback"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/exposure_wage_getcount_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/exposure_wage_getcount_title2" />
+        <ImageView
+                android:id="@+id/exposure_wage_getcount_dosubmit"
+                style="@style/common_top_right_title_style"
+                android:src="@drawable/common_button_save" />
+    </RelativeLayout>
+    <TextView android:id="@+id/exposure_wage_getcount_searchresult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="@color/red"
+        android:text="@string/exposure_wage_getcount_null"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/exposure_wage_getcount_top"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="8dp"/>
+    <com.qianniu.zhaopin.app.widget.ScrollableTabView
+        android:id="@+id/exposure_wage_getcount_scrollingTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/exposure_wage_getcount_searchresult"
+        android:background="@drawable/tab_line_bg" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/exposure_wage_getcount_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/exposure_wage_getcount_scrollingTabs" />
+</RelativeLayout>

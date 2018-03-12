@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/resume_home_bg"
+    android:orientation="vertical" >
+
+   	<RelativeLayout style="@style/common_top_layout_style" >
+
+        <ImageView
+            android:id="@+id/deliveryaddress_btn_back"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/deliveryaddress_tv_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/str_deliveryaddress_title" 
+            />
+
+		<ImageView
+			android:id="@+id/deliveryaddress_btn_submit"
+			style="@style/common_top_right_title_style"
+			android:visibility="gone"
+			android:src="@drawable/common_button_save" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layerType="software" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical" >
+           	<LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp" >
+                
+                <LinearLayout style="@style/common_form_vertical_style" >
+	                <!-- 收货人  -->
+	                <RelativeLayout style="@style/common_form_item_style" >
+	
+	                    <LinearLayout
+	                        android:id="@+id/deliveryaddress_ll_nametitle"
+	                        style="@style/common_form_item_textviewlayout_style"
+	                        android:orientation="horizontal" >
+	                        <TextView
+	                            style="@style/common_form_item_textview_style"
+	                            android:text="@string/str_deliveryaddress_nametitle" />
+	                    </LinearLayout>
+	
+	                    <RelativeLayout
+	                        style="@style/common_form_item_editlayout_style"
+	                        android:layout_toRightOf="@id/deliveryaddress_ll_nametitle" >
+	
+	                        <EditText
+	                            android:id="@+id/deliveryaddress_et_name"
+								style="@style/common_form_item_edittext_style"
+	                            android:hint="@string/str_deliveryaddress_namehint"
+	                            android:imeOptions="actionNext"
+	                            />
+	                    </RelativeLayout>
+	                </RelativeLayout>
+	                
+	                <include layout="@layout/common_form_line" />
+
+	                <!-- 联系方式 -->
+	                <RelativeLayout style="@style/common_form_item_style" 
+	                    >
+	                    <LinearLayout
+	                        android:id="@+id/deliveryaddress_ll_teltitle"
+	                        style="@style/common_form_item_textviewlayout_style"
+	                        android:orientation="horizontal" >
+	                        <TextView
+	                            style="@style/common_form_item_textview_style"
+	                            android:text="@string/str_deliveryaddress_teltitle" />
+	                    </LinearLayout>
+	
+	                    <RelativeLayout
+	                        android:id="@+id/deliveryaddress_rl_tel"
+	                        style="@style/common_form_item_editlayout_style"
+	                        android:layout_toRightOf="@id/deliveryaddress_ll_teltitle" >
+	
+	                        <EditText
+	                            android:id="@+id/deliveryaddress_et_tel"
+	                            style="@style/common_form_item_edit_textview_style"
+	                            android:hint="@string/str_deliveryaddress_telhint"
+	                            android:imeOptions="actionNext"
+	                             />
+	                    </RelativeLayout>
+	                </RelativeLayout>
+	                
+	                <include layout="@layout/common_form_line" />
+	                
+	                <!-- 邮政编码 -->
+	                <RelativeLayout style="@style/common_form_item_style" 
+	                    >
+	                    <LinearLayout
+	                        android:id="@+id/deliveryaddress_ll_postcodetitle"
+	                        style="@style/common_form_item_textviewlayout_style"
+	                        android:orientation="horizontal" >
+	                        <TextView
+	                            style="@style/common_form_item_textview_style"
+	                            android:text="@string/str_deliveryaddress_postcodetitle" />
+	                    </LinearLayout>
+	
+	                    <RelativeLayout
+	                        android:id="@+id/deliveryaddress_rl_postcode"
+	                        style="@style/common_form_item_editlayout_style"
+	                        android:layout_toRightOf="@id/deliveryaddress_ll_postcodetitle" >
+	
+	                        <EditText
+	                            android:id="@+id/adddeliveryaddress_et_postcode"
+	                            style="@style/common_form_item_edittext_style"
+	                            android:hint="@string/str_deliveryaddress_postcodehint"
+	                            android:imeOptions="actionNext"
+	                             />
+	                    </RelativeLayout>
+	                </RelativeLayout>
+	                
+	                <include layout="@layout/common_form_line" />
+	                	                
+	                <!-- 详细地址 -->
+	                <RelativeLayout style="@style/common_form_item_style" >
+	
+	                    <LinearLayout
+	                        android:id="@+id/deliveryaddress_ll_addresstitle"
+	                        style="@style/common_form_item_textviewlayout_style"
+	                        android:orientation="horizontal" >
+	                        <TextView
+	                            style="@style/common_form_item_textview_style"
+	                            android:text="@string/str_deliveryaddress_addresstitle" />
+	                    </LinearLayout>
+	
+	                   <RelativeLayout
+	                        android:id="@+id/adddeliveryaddress_rl_address"
+	                        style="@style/common_form_item_editlayout_style"
+	                        android:layout_toRightOf="@id/deliveryaddress_ll_addresstitle" >
+
+	                        <EditText
+	                            android:id="@+id/deliveryaddress_et_address"
+	                            style="@style/common_form_item_edittext_style"
+	                            android:hint="@string/str_deliveryaddress_addresshint"
+	                            android:imeOptions="actionNext"
+	                             />
+	                    </RelativeLayout>
+	                </RelativeLayout>
+	             </LinearLayout>
+
+                <!-- 保存 -->
+				<Button 
+	               android:id="@+id/deliveryaddress_btn_save"
+	               style="@style/common_button_green_match"
+	               android:text="@string/str_deliveryaddress_save"
+	               android:layout_marginTop="15.0dip"
+	               android:layout_marginLeft="15.0dip"
+	               android:layout_marginRight="15.0dip"
+	               android:visibility="gone"
+	               />
+                
+				<!-- 删除收货地址 -->
+				<Button 
+	               android:id="@+id/deliveryaddress_btn_del"
+	               style="@style/common_button_red_match"
+	               android:text="@string/str_deliveryaddress_del"
+	               android:layout_marginTop="15.0dip"
+	               android:layout_marginLeft="15.0dip"
+	               android:layout_marginRight="15.0dip"
+	               android:visibility="gone"
+	                />
+                
+				<!-- 设为默认收货地址 -->
+				<Button 
+	               android:id="@+id/deliveryaddress_btn_setdefault"
+	               style="@style/common_button_green_match"
+	               android:text="@string/str_deliveryaddress_setdefault"
+	               android:layout_marginTop="15.0dip"
+	               android:layout_marginLeft="15.0dip"
+	               android:layout_marginRight="15.0dip"
+	               android:visibility="gone"
+	               />
+            
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

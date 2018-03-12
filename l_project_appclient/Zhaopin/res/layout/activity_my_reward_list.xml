@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout android:id="@+id/my_reward_list_title_bg"
+        style="@style/common_top_layout_style" >
+
+        <ImageView
+            android:id="@+id/my_reward_list_goback"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <ImageView
+            android:id="@+id/my_reward_list_add"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_add" />
+
+        <TextView
+            android:id="@+id/my_reward_list_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/my_reward_list_title_txt" />
+    </RelativeLayout>
+    <com.qianniu.zhaopin.app.widget.PullToRefreshListView android:id="@+id/my_reward_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:cacheColorHint="#00000000"
+        android:layout_below="@id/my_reward_list_title_bg">
+        
+    </com.qianniu.zhaopin.app.widget.PullToRefreshListView>
+
+</RelativeLayout>

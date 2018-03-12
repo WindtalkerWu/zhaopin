@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/resume_home_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/common_top_layout_style" >
+
+        <ImageView
+            android:id="@+id/my_btn_add"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_add"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/my_tv_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/str_my_title" />
+
+        <Button
+            android:id="@+id/my_btn_topright"
+            style="@style/fillheight_top_right_title_style"
+            android:text="登录"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layerType="software" >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical" >
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp" >
+                
+				<RelativeLayout
+				    android:id="@+id/my_rl_myaccount"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="6.0dip"
+                    android:paddingBottom="10.0dip"
+                    android:paddingTop="10.0dip"
+                    android:background="@drawable/common_list_item_selector" >
+                    
+	                <RelativeLayout
+	                    android:id="@+id/account_photo_item"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentLeft="true"
+	                    android:layout_marginLeft="10.0dip"
+	                    >
+	                    <ImageView
+	                        android:id="@+id/my_img_head"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_centerInParent="true"
+	                         />
+	                </RelativeLayout>
+	                
+	                <RelativeLayout
+	                    android:id="@+id/account_info_item"
+                   	 	android:layout_width="fill_parent"
+                    	android:layout_height="fill_parent"
+                    	android:layout_toRightOf="@id/account_photo_item"
+                    	android:layout_marginLeft="10.0dip"
+                    	android:layout_centerVertical="true"
+                    	>
+	                    <!-- 姓名/昵称 -->
+	                    <TextView
+	                        android:id="@+id/my_tv_accountname"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_alignParentTop="true"
+	                        android:hint="@string/str_my_accountnamehint"
+	                        android:textColor="@color/list_title"
+	                        android:textSize="18.0sp" />
+	                    <!-- 用户名 -->
+	                    <TextView
+	                        android:id="@+id/my_tv_username"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_below="@id/my_tv_accountname"
+	                        android:layout_marginTop="4.0dip"
+	                        android:hint="@string/str_my_usernamehint"
+	                        android:textColor="@color/list_title"
+	                        />
+	                    <!-- 余额 -->
+						<RelativeLayout
+	                   	 	android:layout_width="fill_parent"
+	                    	android:layout_height="fill_parent"
+		                    android:layout_below="@id/my_tv_username"
+		                    android:layout_marginTop="4.0dip"
+	                    	>
+	                    	<!-- 余额标题 -->
+							<TextView
+		                        android:id="@+id/my_tv_balancetitle"
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:layout_alignParentLeft="true"
+		                        android:text="@string/str_my_balancetitle"
+		                        android:textColor="@color/list_title"
+	                        	/>
+	                    	<!-- 余额 -->
+							<TextView
+		                        android:id="@+id/my_tv_balance"
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:layout_toRightOf="@id/my_tv_balancetitle"
+		                        android:layout_marginLeft="2.0dip"
+		                        android:text="0"
+		                        android:textColor="@color/red"
+	                        	/>
+	                    	<!-- 余额单位(元) -->
+							<TextView
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:layout_toRightOf="@id/my_tv_balance"
+		                        android:layout_marginLeft="2.0dip"
+		                        android:text="@string/str_my_balanceyuan"
+		                        android:textColor="@color/list_title"
+	                        	/>
+	                    </RelativeLayout>
+	                </RelativeLayout>
+	                 
+                    <ImageView
+                        android:id="@+id/common_item_arrow4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10.0dip"
+                        android:src="@drawable/common_img_next_big" />
+                </RelativeLayout>
+                
+                <!-- 积分管理 -->
+				<RelativeLayout
+                    android:id="@+id/my_rl_integral"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_marginTop="-1dp"
+                    android:background="@drawable/common_list_item_selector"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/my_tv_myintegraltitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="@string/str_myintegral_title"
+                        android:textColor="@color/list_title"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:id="@+id/common_item_arrow4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10.0dip"
+                        android:src="@drawable/common_img_next_big" />
+
+                    <TextView
+                        android:id="@+id/my_tv_myintegralcount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/common_item_arrow4"
+                        android:paddingRight="10.0dip"
+                        android:text="4"
+                        android:textColor="@color/red"
+                        android:textSize="14.0sp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+                
+				<!-- 我的简历库 -->
+                <RelativeLayout
+                    android:id="@+id/my_rl_myresume"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_marginTop="-1dp"
+                    android:background="@drawable/common_list_item_selector" >
+
+                    <TextView
+                        android:id="@+id/my_tv_myresumetitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="我的简历库"
+                        android:textColor="@color/list_title"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:id="@+id/common_item_arrow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10.0dip"
+                        android:src="@drawable/common_img_next_big" />
+
+                    <TextView
+                        android:id="@+id/my_tv_myresumecount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/common_item_arrow1"
+                        android:paddingRight="10.0dip"
+                        android:text="2"
+                        android:textColor="@color/resume_button_color"
+                        android:textSize="14.0sp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <!-- 我的悬赏 -->
+                <RelativeLayout
+                    android:id="@+id/my_rl_myreward"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_marginTop="6.0dip"
+                    android:background="@drawable/common_list_item_selector" >
+
+                    <TextView
+                        android:id="@+id/my_tv_myrewardtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="我的悬赏"
+                        android:textColor="@color/list_title"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:id="@+id/common_item_arrow3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10.0dip"
+                        android:src="@drawable/common_img_next_big" />
+
+                    <TextView
+                        android:id="@+id/my_tv_myrewardcount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/common_item_arrow3"
+                        android:paddingRight="10.0dip"
+                        android:text="4"
+                        android:textColor="@color/resume_button_color"
+                        android:textSize="14.0sp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <!-- 我的记录 -->
+                <RelativeLayout
+                    android:id="@+id/my_rl_myrecord"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_marginTop="-1.0dip"
+                    android:background="@drawable/common_list_item_selector" >
+
+                    <TextView
+                        android:id="@+id/my_tv_myrecordtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="任务记录"
+                        android:textColor="@color/list_title"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:id="@+id/common_item_arrow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10.0dip"
+                        android:src="@drawable/common_img_next_big" />
+
+                    <TextView
+                        android:id="@+id/my_tv_myrecordcount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/common_item_arrow1"
+                        android:paddingRight="10.0dip"
+                        android:text="2"
+                        android:textColor="@color/resume_button_color"
+                        android:textSize="14.0sp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <!-- 我的收藏 -->
+                <RelativeLayout
+                    android:id="@+id/my_rl_mycollection"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_marginTop="-1dp"
+                    android:background="@drawable/common_list_item_selector" >
+
+                    <TextView
+                        android:id="@+id/my_tv_mycollectiontitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="我的收藏"
+                        android:textColor="@color/list_title"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:id="@+id/common_item_arrow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10.0dip"
+                        android:src="@drawable/common_img_next_big" />
+
+                    <TextView
+                        android:id="@+id/my_tv_mycollectioncount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/common_item_arrow2"
+                        android:paddingRight="10.0dip"
+                        android:text="4"
+                        android:textColor="@color/resume_button_color"
+                        android:textSize="14.0sp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <!-- 手机绑定 -->
+                <RelativeLayout
+                    android:id="@+id/my_rl_phoneaccount"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/common_list_item_selector" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="15.0dip"
+                        android:text="手机绑定"
+                        android:textColor="@color/list_title"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:id="@+id/common_item_arrow4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10.0dip"
+                        android:src="@drawable/common_img_next_big" />
+
+                    <TextView
+                        android:id="@+id/my_tv_phoneaccountstatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/common_item_arrow4"
+                        android:paddingRight="10.0dip"
+                        android:text="4"
+                        android:textColor="@color/resume_button_color"
+                        android:textSize="14.0sp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <!-- 邮箱绑定 -->
+                <RelativeLayout
+                    android:id="@+id/my_rl_mailaccount"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_marginTop="-1dp"
+                    android:background="@drawable/common_list_item_selector" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="15.0dip"
+                        android:text="邮箱绑定"
+                        android:textColor="@color/list_title"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:id="@+id/common_item_arrow3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10.0dip"
+                        android:src="@drawable/common_img_next_big" />
+
+                    <TextView
+                        android:id="@+id/my_tv_mailaccountstatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/common_item_arrow3"
+                        android:paddingRight="10.0dip"
+                        android:text="4"
+                        android:textColor="@color/resume_button_color"
+                        android:textSize="14.0sp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <!-- 设置 -->
+                <RelativeLayout
+                    android:id="@+id/my_rl_setting"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/common_list_item_selector" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="15.0dip"
+                        android:text="设置"
+                        android:textColor="@color/list_title"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:id="@+id/common_item_arrow3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10.0dip"
+                        android:src="@drawable/common_img_next_big" />
+
+                    <TextView
+                        android:id="@+id/myreward_item_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/common_item_arrow3"
+                        android:paddingRight="10.0dip"
+                        android:text="4"
+                        android:textColor="@color/resume_button_color"
+                        android:textSize="14.0sp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,263 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".TaxActivity" >
+
+    <RelativeLayout
+        android:id="@+id/tax_title_bg"
+        style="@style/common_top_layout_style" >
+
+        <ImageView
+            android:id="@+id/tax_goback"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/tax_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/tax_title_txt" />
+
+        <Button
+            android:id="@+id/tax_rate_setting"
+            style="@style/common_top_right_title_style"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/tax_title_right_txt" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tax_title_bg"
+        android:scrollbars="none"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/tax_select_city_item"
+                style="@style/common_form_item_bg_style"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tax_city_tv"
+                    style="@style/common_form_item_left_tv_style"
+                    android:text="@string/tax_item_select_city" />
+
+                <ImageView
+                    android:id="@+id/tax_city_image"
+                    style="@style/common_form_item_right_image_style" />
+
+                <EditText
+                    android:id="@+id/tax_city"
+                    style="@style/common_form_item_edit_style"
+                    android:layout_toLeftOf="@id/tax_city_image"
+                    android:layout_toRightOf="@id/tax_city_tv"
+                    android:focusable="false"
+                    android:hint="@string/tax_item_select_city" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tax_threshold_item"
+                style="@style/common_form_item_bg_style"
+                android:layout_marginTop="-2dp" >
+
+                <TextView
+                    android:id="@+id/tax_threshold_tv"
+                    style="@style/common_form_item_left_tv_style"
+                    android:text="@string/tax_item_threshold" />
+
+                <TextView
+                    android:id="@+id/tax_threshold_unit"
+                    style="@style/common_form_item_right_tv_style"
+                    android:text="@string/tax_item_unit" />
+
+                <EditText
+                    android:id="@+id/tax_threshold"
+                    style="@style/common_form_item_edit_style"
+                    android:layout_toLeftOf="@id/tax_threshold_unit"
+                    android:layout_toRightOf="@id/tax_threshold_tv"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
+                    android:imeOptions="actionNext"  />
+            </RelativeLayout>
+			<RelativeLayout
+                android:id="@+id/tax_upper_limit_item"
+                style="@style/common_form_item_bg_style"
+                android:layout_marginTop="-2dp" >
+
+                <TextView
+                    android:id="@+id/tax_upper_limit_tv"
+                    style="@style/common_form_item_left_tv_style"
+                    android:text="@string/tax_upper_limit_txt" />
+
+                <TextView
+                    android:id="@+id/tax_upper_limit_unit"
+                    style="@style/common_form_item_right_tv_style"
+                    android:text="@string/tax_item_unit" />
+
+                <EditText
+                    android:id="@+id/tax_upper_limit"
+                    style="@style/common_form_item_edit_style"
+                    android:layout_toLeftOf="@id/tax_upper_limit_unit"
+                    android:layout_toRightOf="@id/tax_upper_limit_tv"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
+                    android:imeOptions="actionNext"  />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/tax_before_tax_item"
+                style="@style/common_form_item_bg_style"
+                android:layout_marginTop="-2dp" >
+
+                <TextView
+                    android:id="@+id/tax_before_tax_tv"
+                    style="@style/common_form_item_left_tv_style"
+                    android:text="@string/tax_item_before_tax" />
+
+                <TextView
+                    android:id="@+id/tax_before_tax_unit"
+                    style="@style/common_form_item_right_tv_style"
+                    android:text="@string/tax_item_unit" />
+
+                <EditText
+                    android:id="@+id/tax_before_tax"
+                    style="@style/common_form_item_edit_style"
+                    android:layout_toLeftOf="@id/tax_before_tax_unit"
+                    android:layout_toRightOf="@id/tax_before_tax_tv"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
+                    android:imeOptions="actionDone"  />
+                <requestFocus />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tax_free_statement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/tax_free_statement"
+                android:textColor="@color/list_subTitle"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:id="@+id/tax_button_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/tax_calculate"
+                    style="@style/common_button_green_weight_small"
+                    android:text="@string/tax_calculate" />
+
+                <Button
+                    android:id="@+id/tax_reset"
+                    style="@style/common_button_green_weight_small"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/tax_reset" />
+            </LinearLayout>
+
+            <!-- <RelativeLayout
+                android:id="@+id/tax_detail_bg"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/common_list_item_selector" >
+
+                <TextView
+                    android:id="@+id/tax_detail_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/tax_detail"
+                    android:textColor="@color/list_title"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/tax_detail_image"
+                    style="@style/common_form_item_right_image_style" />
+            </RelativeLayout> -->
+
+            <RelativeLayout
+                android:id="@+id/tax_after_tax_item"
+                style="@style/common_form_item_bg_style"
+                android:layout_marginTop="12dp" >
+
+                <TextView
+                    android:id="@+id/tax_after_tax_tv"
+                    style="@style/common_form_item_left_tv_style"
+                    android:text="@string/tax_item_after_tax" />
+
+                <TextView
+                    android:id="@+id/tax_after_tax_unit"
+                    style="@style/common_form_item_right_tv_style"
+                    android:text="@string/tax_item_unit" />
+
+                <TextView
+                    android:id="@+id/tax_after_tax"
+                    style="@style/common_form_item_edit_style"
+                    android:layout_toLeftOf="@id/tax_after_tax_unit"
+                    android:layout_toRightOf="@id/tax_after_tax_tv" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tax_my_tax_item"
+                style="@style/common_form_item_bg_style"
+                android:layout_marginTop="-2dp" >
+
+                <TextView
+                    android:id="@+id/tax_my_tax_tv"
+                    style="@style/common_form_item_left_tv_style"
+                    android:text="@string/tax_item_my_tax" />
+
+                <TextView
+                    android:id="@+id/tax_my_tax_unit"
+                    style="@style/common_form_item_right_tv_style"
+                    android:text="@string/tax_item_unit" />
+
+                <TextView
+                    android:id="@+id/tax_my_tax"
+                    style="@style/common_form_item_edit_style"
+                    android:layout_toLeftOf="@id/tax_my_tax_unit"
+                    android:layout_toRightOf="@id/tax_my_tax_tv" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/tax_social_security_item"
+                style="@style/common_form_item_bg_style"
+                android:layout_marginTop="-2dp" 
+        		android:layout_marginBottom="12dp">
+                
+
+                <TextView
+                    android:id="@+id/tax_social_security_tv"
+                    style="@style/common_form_item_left_wrap_tv_style"
+                    android:text="@string/tax_item_social_security" />
+
+                <TextView
+                    android:id="@+id/tax_social_security_unit"
+                    style="@style/common_form_item_right_tv_style"
+                    android:text="@string/tax_item_unit" />
+
+                <TextView
+                    android:id="@+id/tax_social_security"
+                    style="@style/common_form_item_edit_style"
+                    android:layout_toLeftOf="@id/tax_social_security_unit"
+                    android:layout_toRightOf="@id/tax_social_security_tv" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

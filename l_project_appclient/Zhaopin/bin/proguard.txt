@@ -1,0 +1,485 @@
+# view res/layout/main_fragment_tabs.xml #generated:15
+-keep class android.support.v4.app.FragmentTabHost { <init>(...); }
+
+# view res/layout/activity_exposure_search_result.xml #generated:53
+# view res/layout/activity_exposure_wage.xml #generated:47
+# view res/layout/activity_exposure_wage_getcount.xml #generated:40
+# view res/layout/activity_gossipmain.xml #generated:57
+# view res/layout/activity_integration_mall.xml #generated:64
+# view res/layout/activity_splash.xml #generated:6
+# view res/layout/adzoneview_layout.xml #generated:7
+# view res/layout/fragment_rewardviewpager.xml #generated:77
+# view res/layout/fragment_search_result_company_detail.xml #generated:26
+# view res/layout/subsfragment_layout.xml #generated:54
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# view AndroidManifest.xml #generated:647
+-keep class com.alipay.android.app.sdk.WapPayActivity { <init>(...); }
+
+# view res/layout/umeng_socialize_comment_detail.xml #generated:23
+-keep class com.google.android.maps.MapView { <init>(...); }
+
+# view res/layout/activity_industry_company.xml #generated:39
+# view res/layout/fragment_gossip_list.xml #generated:6
+# view res/layout/fragment_reward_waterfall.xml #generated:48
+# view res/layout/fragment_rewardlist.xml #generated:6
+-keep class com.huewu.pla.lib.MultiColumnPullToRefreshListView { <init>(...); }
+
+# view AndroidManifest.xml #generated:39
+-keep class com.qianniu.zhaopin.app.AppContext { <init>(...); }
+
+# view AndroidManifest.xml #generated:51
+-keep class com.qianniu.zhaopin.app.AppStart { <init>(...); }
+
+# view res/layout/activity_citychoose.xml #generated:105
+-keep class com.qianniu.zhaopin.app.adapter.SideBar { <init>(...); }
+
+# view AndroidManifest.xml #generated:750
+-keep class com.qianniu.zhaopin.app.gossip.GossipMainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:552
+-keep class com.qianniu.zhaopin.app.service.ConnectionService { <init>(...); }
+
+# view AndroidManifest.xml #generated:497
+-keep class com.qianniu.zhaopin.app.ui.AppRecommentActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:287
+-keep class com.qianniu.zhaopin.app.ui.ApplyRefundActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:587
+-keep class com.qianniu.zhaopin.app.ui.CampaignDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:583
+-keep class com.qianniu.zhaopin.app.ui.CampaignListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:139
+-keep class com.qianniu.zhaopin.app.ui.CityChooseActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:674
+-keep class com.qianniu.zhaopin.app.ui.CommentActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:678
+-keep class com.qianniu.zhaopin.app.ui.CommentListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:395
+-keep class com.qianniu.zhaopin.app.ui.CommonStaticItemListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:175
+-keep class com.qianniu.zhaopin.app.ui.CompanyInfoAcitivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:662
+-keep class com.qianniu.zhaopin.app.ui.CompanyListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:245
+-keep class com.qianniu.zhaopin.app.ui.ConversionRecordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:330
+-keep class com.qianniu.zhaopin.app.ui.CustomManagerActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:259
+-keep class com.qianniu.zhaopin.app.ui.DeliveryAddressActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:252
+-keep class com.qianniu.zhaopin.app.ui.DeliveryAddressListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:325
+-keep class com.qianniu.zhaopin.app.ui.ExtrasCatalogListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:492
+-keep class com.qianniu.zhaopin.app.ui.FeaturesIntroductionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:486
+-keep class com.qianniu.zhaopin.app.ui.FeedbackActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:320
+-keep class com.qianniu.zhaopin.app.ui.ForumInfoDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:301
+-keep class com.qianniu.zhaopin.app.ui.GuideActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:449
+-keep class com.qianniu.zhaopin.app.ui.HotLabelActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:146
+-keep class com.qianniu.zhaopin.app.ui.IndustryChooseActivity { <init>(...); }
+
+# view res/layout/info_item_multi_bottomslot.xml #generated:2
+# view res/layout/info_item_multi_middleslot.xml #generated:2
+-keep class com.qianniu.zhaopin.app.ui.InfoItemSlot { <init>(...); }
+
+# view AndroidManifest.xml #generated:293
+-keep class com.qianniu.zhaopin.app.ui.InfoListActivity { <init>(...); }
+
+# view res/layout/list_item_common.xml #generated:2
+-keep class com.qianniu.zhaopin.app.ui.InfoListCommonItem { <init>(...); }
+
+# view res/layout/infolist_multiimgtext_item.xml #generated:2
+-keep class com.qianniu.zhaopin.app.ui.InfoListMultiImgTxtItem { <init>(...); }
+
+# view res/layout/infolist_simpleimgtext_item.xml #generated:2
+-keep class com.qianniu.zhaopin.app.ui.InfoListSimpleImgTxtItem { <init>(...); }
+
+# view res/layout/list_item_simpletxt.xml #generated:2
+-keep class com.qianniu.zhaopin.app.ui.InfoListTxtItem { <init>(...); }
+
+# view AndroidManifest.xml #generated:658
+-keep class com.qianniu.zhaopin.app.ui.InsidersListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:266
+-keep class com.qianniu.zhaopin.app.ui.IntegralRechargeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:154
+-keep class com.qianniu.zhaopin.app.ui.JobFunctionsChooseActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:160
+-keep class com.qianniu.zhaopin.app.ui.JobFunctionsChooseForBottomActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:203
+-keep class com.qianniu.zhaopin.app.ui.JobRecommendActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:471
+-keep class com.qianniu.zhaopin.app.ui.MailAuthActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:62
+-keep class com.qianniu.zhaopin.app.ui.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:182
+-keep class com.qianniu.zhaopin.app.ui.MapActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:476
+-keep class com.qianniu.zhaopin.app.ui.MobileAuthActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:481
+-keep class com.qianniu.zhaopin.app.ui.ModifyPwdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:699
+-keep class com.qianniu.zhaopin.app.ui.MoreModuleActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:686
+-keep class com.qianniu.zhaopin.app.ui.MoreProfessionalInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:231
+-keep class com.qianniu.zhaopin.app.ui.MyAccountActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:238
+-keep class com.qianniu.zhaopin.app.ui.MyBalanceActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:217
+-keep class com.qianniu.zhaopin.app.ui.MyCollectionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:273
+-keep class com.qianniu.zhaopin.app.ui.MyIntegralActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:224
+-keep class com.qianniu.zhaopin.app.ui.MyRecordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:460
+-keep class com.qianniu.zhaopin.app.ui.MyRewardDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:454
+-keep class com.qianniu.zhaopin.app.ui.MyRewardListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:196
+-keep class com.qianniu.zhaopin.app.ui.OneLevelChooseActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:719
+-keep class com.qianniu.zhaopin.app.ui.PerfectInformationActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:670
+-keep class com.qianniu.zhaopin.app.ui.PostListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:591
+-keep class com.qianniu.zhaopin.app.ui.ProfessionalInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:465
+-keep class com.qianniu.zhaopin.app.ui.PublishRewardActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:100
+-keep class com.qianniu.zhaopin.app.ui.QianniuLoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:210
+-keep class com.qianniu.zhaopin.app.ui.QuickRecommendActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:407
+-keep class com.qianniu.zhaopin.app.ui.ResumeEditDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:375
+-keep class com.qianniu.zhaopin.app.ui.ResumeEditEducationItemActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:345
+-keep class com.qianniu.zhaopin.app.ui.ResumeEditHomeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:360
+-keep class com.qianniu.zhaopin.app.ui.ResumeEditJobTargetActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:385
+-keep class com.qianniu.zhaopin.app.ui.ResumeEditLanguageItemActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:380
+-keep class com.qianniu.zhaopin.app.ui.ResumeEditListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:350
+-keep class com.qianniu.zhaopin.app.ui.ResumeEditMainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:355
+-keep class com.qianniu.zhaopin.app.ui.ResumeEditPersonalInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:370
+-keep class com.qianniu.zhaopin.app.ui.ResumeEditProjectItemActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:390
+-keep class com.qianniu.zhaopin.app.ui.ResumeEditQuickActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:365
+-keep class com.qianniu.zhaopin.app.ui.ResumeEditWorkExpItemActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:335
+-keep class com.qianniu.zhaopin.app.ui.ResumeListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:400
+-keep class com.qianniu.zhaopin.app.ui.ResumeNewGuideActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:340
+-keep class com.qianniu.zhaopin.app.ui.ResumePreviewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:168
+-keep class com.qianniu.zhaopin.app.ui.RewardInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:189
+-keep class com.qianniu.zhaopin.app.ui.RewardRecommendActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:132
+-keep class com.qianniu.zhaopin.app.ui.RewardSearchActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:444
+-keep class com.qianniu.zhaopin.app.ui.RewardSearchLabelActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:666
+-keep class com.qianniu.zhaopin.app.ui.SeekWorthyActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:439
+-keep class com.qianniu.zhaopin.app.ui.SettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:744
+-keep class com.qianniu.zhaopin.app.ui.ShowHtml5Activity { <init>(...); }
+
+# view AndroidManifest.xml #generated:556
+-keep class com.qianniu.zhaopin.app.ui.SplashActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:682
+-keep class com.qianniu.zhaopin.app.ui.SubscriptionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:562
+-keep class com.qianniu.zhaopin.app.ui.TaxActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:575
+-keep class com.qianniu.zhaopin.app.ui.TaxCityListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:567
+-keep class com.qianniu.zhaopin.app.ui.TaxDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:579
+-keep class com.qianniu.zhaopin.app.ui.TaxFreeStatementActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:571
+-keep class com.qianniu.zhaopin.app.ui.TaxRateSettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:280
+-keep class com.qianniu.zhaopin.app.ui.TransactionRecordsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:688
+-keep class com.qianniu.zhaopin.app.ui.UpdateVersionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:112
+-keep class com.qianniu.zhaopin.app.ui.UserFindPwdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:119
+-keep class com.qianniu.zhaopin.app.ui.UserFindPwdMailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:125
+-keep class com.qianniu.zhaopin.app.ui.UserFindPwdMobileActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:77
+-keep class com.qianniu.zhaopin.app.ui.UserLoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:88
+-keep class com.qianniu.zhaopin.app.ui.UserRegisterActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:741
+-keep class com.qianniu.zhaopin.app.ui.exposurewage.ExposureCommentActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:735
+-keep class com.qianniu.zhaopin.app.ui.exposurewage.ExposureWageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:733
+-keep class com.qianniu.zhaopin.app.ui.exposurewage.ExposureWageGetCountActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:727
+-keep class com.qianniu.zhaopin.app.ui.exposurewage.ExposureWageHomeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:731
+-keep class com.qianniu.zhaopin.app.ui.exposurewage.ExposureWageMoreActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:737
+-keep class com.qianniu.zhaopin.app.ui.exposurewage.SearchResultActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:739
+-keep class com.qianniu.zhaopin.app.ui.exposurewage.SearchResultDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:725
+-keep class com.qianniu.zhaopin.app.ui.integrationmall.IntegrationGoodsListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:710
+-keep class com.qianniu.zhaopin.app.ui.integrationmall.IntegrationMallActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:714
+-keep class com.qianniu.zhaopin.app.ui.integrationmall.IntegrationOrderActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:716
+-keep class com.qianniu.zhaopin.app.ui.integrationmall.IntegrationSearchActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:712
+-keep class com.qianniu.zhaopin.app.ui.integrationmall.IntegrationUseDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:308
+-keep class com.qianniu.zhaopin.app.ui.testActivity { <init>(...); }
+
+# view res/layout/activity_extrascataloglist.xml #generated:50
+# view res/layout/activity_extrascataloglist_manager.xml #generated:58
+# view res/layout/fragment_subscription.xml #generated:14
+-keep class com.qianniu.zhaopin.app.view.BounceListView { <init>(...); }
+
+# view res/layout/resume_education_item.xml #generated:92
+# view res/layout/resume_project_item.xml #generated:92
+# view res/layout/resume_workexperience_item.xml #generated:92
+-keep class com.qianniu.zhaopin.app.view.DateTextView { <init>(...); }
+
+# view res/layout/resume_education_item.xml #generated:118
+# view res/layout/resume_project_item.xml #generated:118
+# view res/layout/resume_workexperience_item.xml #generated:118
+-keep class com.qianniu.zhaopin.app.view.EndDateTextView { <init>(...); }
+
+# view res/layout/fragment_exposure_wage_share.xml #generated:2
+-keep class com.qianniu.zhaopin.app.view.ExposureWageShareView { <init>(...); }
+
+# view res/layout/activity_exposure_wage_home.xml #generated:73
+# view res/layout/activity_exposure_wage_home.xml #generated:79
+-keep class com.qianniu.zhaopin.app.view.ExposureWageTableLayout { <init>(...); }
+
+# view res/layout/activity_jobrecommend.xml #generated:144
+# view res/layout/resumelist_activity.xml #generated:220
+-keep class com.qianniu.zhaopin.app.view.HorizontalListView { <init>(...); }
+
+# view res/layout/main_footerbar.xml #generated:127
+# view res/layout/main_footerbar.xml #generated:30
+# view res/layout/main_footerbar.xml #generated:63
+# view res/layout/main_footerbar.xml #generated:95
+-keep class com.qianniu.zhaopin.app.view.ImageRadioButton { <init>(...); }
+
+# view res/layout/resume_edit_main_activity.xml #generated:164
+# view res/layout/resume_edit_main_activity.xml #generated:173
+# view res/layout/resume_edit_main_activity.xml #generated:182
+# view res/layout/resume_edit_main_activity.xml #generated:191
+-keep class com.qianniu.zhaopin.app.view.ResumeMultiTagBriefItem { <init>(...); }
+
+# view res/layout/resume_edit_main_activity.xml #generated:146
+# view res/layout/resume_edit_main_activity.xml #generated:155
+-keep class com.qianniu.zhaopin.app.view.ResumeSigleTagBriefItem { <init>(...); }
+
+# view res/layout/company_item.xml #generated:106
+# view res/layout/list_item_rewardinfo_waterfall.xml #generated:143
+-keep class com.qianniu.zhaopin.app.widget.CompanyLabelFlowLayout { <init>(...); }
+
+# view res/layout/activity_hot_label.xml #generated:44
+# view res/layout/activity_reward_search_label.xml #generated:28
+# view res/layout/activity_rewardsearch.xml #generated:48
+-keep class com.qianniu.zhaopin.app.widget.HotLabelFlowLayout { <init>(...); }
+
+# view res/layout/activity_campaignlist.xml #generated:38
+# view res/layout/activity_comment_list.xml #generated:34
+# view res/layout/activity_conversionrecord.xml #generated:33
+# view res/layout/activity_deliveryaddresslist.xml #generated:38
+# view res/layout/activity_industry_company.xml #generated:30
+# view res/layout/activity_industry_seek_worthy.xml #generated:36
+# view res/layout/activity_my_reward_list.xml #generated:25
+# view res/layout/activity_mycollection.xml #generated:41
+# view res/layout/activity_myrecord.xml #generated:33
+# view res/layout/activity_post_list.xml #generated:24
+# view res/layout/activity_transactionrecords.xml #generated:33
+# view res/layout/fragment_extramain.xml #generated:86
+# view res/layout/fragment_infotypeslist.xml #generated:51
+# view res/layout/fragment_reward.xml #generated:48
+# view res/layout/infolist_activity.xml #generated:25
+-keep class com.qianniu.zhaopin.app.widget.PullToRefreshListView { <init>(...); }
+
+# view res/layout/activity_exposure_wage_getcount.xml #generated:34
+-keep class com.qianniu.zhaopin.app.widget.ScrollableTabView { <init>(...); }
+
+# view res/layout/activity_setting.xml #generated:185
+-keep class com.qianniu.zhaopin.app.widget.SlideSwitchView { <init>(...); }
+
+# view res/layout/activity_publish_reward.xml #generated:358
+# view res/layout/resume_jobtarget.xml #generated:258
+-keep class com.qianniu.zhaopin.app.widget.VerticalScrollInterceptLineralayout { <init>(...); }
+
+# view res/layout/subsfragment_layout.xml #generated:49
+-keep class com.qianniu.zhaopin.indicator.TitlePageIndicator { <init>(...); }
+
+# view AndroidManifest.xml #generated:702
+-keep class com.qianniu.zhaopin.receiver.BootBroadcastReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:612
+-keep class com.qianniu.zhaopin.thp.SinaWeiboShareActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:619
+-keep class com.qianniu.zhaopin.thp.TencentWeiboShareActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:632
+-keep class com.qianniu.zhaopin.thp.WeChatShareActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:652
+-keep class com.qianniu.zhaopin.thp.ui.AlipayAccountBindingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:605
+-keep class com.qianniu.zhaopin.thp.ui.TencentWeiboAuthorize { <init>(...); }
+
+# view AndroidManifest.xml #generated:640
+-keep class com.qianniu.zhaopin.thp.ui.ThpShareActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:626
+-keep class com.qianniu.zhaopin.wxapi.WXEntryActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:414
+-keep class com.tencent.tauth.AuthActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:596
+-keep class com.tencent.weibo.sdk.android.component.Authorize { <init>(...); }
+
+# view AndroidManifest.xml #generated:598
+-keep class com.tencent.weibo.sdk.android.component.PublishActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:602
+-keep class com.tencent.weibo.sdk.android.component.ReAddActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:429
+-keep class com.umeng.socialize.view.ShareActivity { <init>(...); }
+
+# view res/layout/umeng_socialize_post_share.xml #generated:2
+# view sw550dp-large\res/layout-sw550dp-large/umeng_socialize_post_share.xml #generated:2
+-keep class com.umeng.socialize.view.wigets.KeyboardListenRelativeLayout { <init>(...); }
+
+# view res/layout/umeng_socialize_comment_view.xml #generated:30
+-keep class com.umeng.socialize.view.wigets.PullToRefreshListView { <init>(...); }
+
+# view res/layout/umeng_socialize_at_view.xml #generated:21
+-keep class com.umeng.socialize.view.wigets.SearchBox { <init>(...); }
+
+# view res/layout/umeng_socialize_at_view.xml #generated:38
+-keep class com.umeng.socialize.view.wigets.SectionListView { <init>(...); }
+
+# view res/layout/umeng_socialize_at_view.xml #generated:47
+-keep class com.umeng.socialize.view.wigets.SlideBar { <init>(...); }
+
+# view res/layout/umeng_socialize_ucenter_platform_item.xml #generated:31
+-keep class com.umeng.socialize.view.wigets.SwitchImageView { <init>(...); }
+

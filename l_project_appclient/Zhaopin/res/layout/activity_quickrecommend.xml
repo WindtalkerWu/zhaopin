@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/jobrecommend_rl_top"
+        style="@style/common_top_layout_style" >
+
+        <ImageButton
+			android:id="@+id/quickrecommend_btn_goback"
+			style="@style/common_top_left_title_style" 
+			android:src="@drawable/common_button_back"/>
+
+        <TextView
+            android:id="@+id/quickrecommend_tv_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/str_quickrecommend_title" />
+        
+		<ImageButton
+            android:id="@+id/quickrecommend_btn_contact"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_contact" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+			<LinearLayout
+	            android:layout_marginLeft="10.0dip"
+	            android:layout_marginRight="10.0dip"
+	            android:layout_marginTop="10.0dip"
+	            style="@style/common_form_vertical_style"
+	            >
+			    <!-- 名字 -->
+				<RelativeLayout style="@style/common_form_item_style" >
+
+                    <LinearLayout
+                        android:id="@+id/quickrecommend_rl_name"
+                        style="@style/common_form_item_textviewlayout_style" >
+
+                        <TextView
+                            style="@style/common_form_item_textview_style"
+                            android:text="@string/str_quickrecommend_name" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/quickrecommend_rl_edname"
+                        style="@style/common_form_item_editlayout_style"
+                        android:layout_toRightOf="@id/quickrecommend_rl_name" >
+
+                        <EditText
+                            android:id="@+id/quickrecommend_et_name"
+                            style="@style/common_form_item_edittext_style"
+                            android:hint="@string/str_quickrecommend_hint_name"
+                            android:imeOptions="actionNext" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                      
+				<include layout="@layout/common_form_line" />
+			    <!-- 联系电话 -->
+			    <RelativeLayout style="@style/common_form_item_style" >
+
+                    <LinearLayout
+                        android:id="@+id/quickrecommend_rl_tel"
+                        style="@style/common_form_item_textviewlayout_style" >
+
+                        <TextView
+                            style="@style/common_form_item_textview_style"
+                            android:text="@string/str_quickrecommend_tel" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/quickrecommend_rl_edtel"
+                        style="@style/common_form_item_editlayout_style"
+                        android:layout_toRightOf="@id/quickrecommend_rl_tel" >
+
+                        <EditText
+                            android:id="@+id/quickrecommend_et_tel"
+                            style="@style/common_form_item_edittext_style"
+                            android:inputType="number"
+                            android:hint="@string/str_quickrecommend_hint_tel"
+                            android:imeOptions="actionNext" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                      
+				<include layout="@layout/common_form_line" 
+				    android:visibility="gone"/>
+			    <!-- 邮箱 -->
+				<RelativeLayout style="@style/common_form_item_style"
+				    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:id="@+id/quickrecommend_rl_mail"
+                        style="@style/common_form_item_textviewlayout_style" >
+
+                        <TextView
+                            style="@style/common_form_item_textview_style"
+                            android:text="@string/str_quickrecommend_mail" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/quickrecommend_rl_edmail"
+                        style="@style/common_form_item_editlayout_style"
+                        android:layout_toRightOf="@id/quickrecommend_rl_mail" >
+
+                        <EditText
+                            android:id="@+id/quickrecommend_et_mail"
+                            style="@style/common_form_item_edittext_style"
+                            android:hint="@string/str_quickrecommend_hint_mail"
+                            android:imeOptions="actionNext" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                 
+				<include layout="@layout/common_form_line" />
+			    <!-- 职位 -->
+				<RelativeLayout style="@style/common_form_item_style" >
+
+                    <LinearLayout
+                        android:id="@+id/quickrecommend_rl_job"
+                        style="@style/common_form_item_textviewlayout_style" >
+
+                        <TextView
+                            style="@style/common_form_item_textview_style"
+                            android:text="@string/str_quickrecommend_job" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/quickrecommend_rl_edjob"
+                        style="@style/common_form_item_editlayout_style"
+                        android:layout_toRightOf="@id/quickrecommend_rl_job" >
+
+                        <EditText 
+                             android:id="@+id/quickrecommend_et_job"
+							 style="@style/common_form_item_edittext_style"
+                             />
+                    </RelativeLayout>
+                </RelativeLayout>
+                
+				<include layout="@layout/common_form_line" />
+				<!-- 推荐理由 -->
+			    <RelativeLayout style="@style/common_form_big_item_style" >
+
+                    <LinearLayout
+                        android:id="@+id/quickrecommend_rl_reason"
+                        style="@style/common_form_big_item_textviewlayout_style" >
+
+                        <TextView
+                            style="@style/common_form_item_textview_style"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/str_quickrecommend_reason" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/quickrecommend_rl_edreason"
+                        style="@style/common_form_item_editlayout_style"
+                        android:layout_toRightOf="@id/quickrecommend_rl_reason" >
+
+                        <EditText
+                            android:id="@+id/quickrecommend_et_reason"
+                            style="@style/common_form_item_big_edittext_style"
+                            android:gravity="top"
+                            android:hint="@string/str_quickrecommend_hint_reason"
+                            android:imeOptions="actionDone"
+                            android:maxLength="500"
+                            android:paddingBottom="15dp"
+                            android:paddingTop="15dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+	       </LinearLayout>
+           <RelativeLayout
+               android:id="@+id/quickrecommend_lp_confirm"
+               android:layout_marginTop="24.0dip"
+               android:layout_gravity="center_horizontal"
+               style="@style/common_button_green_big"
+               >
+			   <TextView
+			   	   style="@style/common_button_text"
+              	   android:text="@string/str_quickrecommend_confirm"
+			       />
+           </RelativeLayout>
+	    </LinearLayout>
+    </ScrollView>
+    <View
+        android:id="@+id/quickrecommend_loading"
+        style="@style/common_big_loading_style"  />
+</LinearLayout>

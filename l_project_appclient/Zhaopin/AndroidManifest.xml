@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qianniu.zhaopin"
+    android:versionCode="1"
+    android:versionName="2.0.4" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!--
+    	注: 1. 通讯录推荐显示控制开关为true时(ConfigOptions中的RECOMMEND_CONTACTS的值为true)，
+    		必须添加READ_CONTACTS权限
+    	   2. 通讯录推荐显示控制开关为false时(ConfigOptions中的RECOMMEND_CONTACTS的值为false)，
+    		最后去掉READ_CONTACTS权限,以免被360等工具判断为会读取用户通话记录
+    -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name="com.qianniu.zhaopin.app.AppContext"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- 高德地图定位 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="0be8ac5f852f1b22c69188d14cbd3190" />
+
+        <activity
+            android:name="com.qianniu.zhaopin.app.AppStart"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustNothing" >
+            <intent-filter>
+                <action android:name="com.matrixdigi.action.fragment.info" />
+                <action android:name="com.matrixdigi.action.fragment.reward" />
+                <action android:name="com.matrixdigi.action.fragment.extra" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.UserLoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="com.matrixdigi.action.login" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.UserRegisterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+            <intent-filter>
+                <action android:name="com.matrixdigi.action.register" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.QianniuLoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+            <intent-filter>
+                <action android:name="com.matrixdigi.action.qianniulogin" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.UserFindPwdActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.UserFindPwdMailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.UserFindPwdMobileActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 悬赏搜索条件设置界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.RewardSearchActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 城市选择 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.CityChooseActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 行业选择 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.IndustryChooseActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+
+        <!-- 教育分类选择 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.JobFunctionsChooseActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.JobFunctionsChooseForBottomActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+
+        <!-- 悬赏任务详情界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.RewardInfoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 公司详情界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.CompanyInfoAcitivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 地图界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.MapActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 我要推荐界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.RewardRecommendActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 推荐理由选择界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.OneLevelChooseActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 推荐界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.JobRecommendActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 快速推荐界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.QuickRecommendActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 我的收藏界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.MyCollectionActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 我的记录界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.MyRecordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 我的账号界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.MyAccountActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 我的余额界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.MyBalanceActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 积分兑换记录 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ConversionRecordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 收货地址列表 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.DeliveryAddressListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 新增收货地址界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.DeliveryAddressActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 积分充值界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.IntegralRechargeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 积分管理界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.MyIntegralActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 交易记录界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.TransactionRecordsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 申请退款界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ApplyRefundActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.InfoListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 引导界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.GuideActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.testActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="com.matrixdigi.action.test" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ForumInfoDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ExtrasCatalogListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.CustomManagerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ResumeListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ResumePreviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ResumeEditHomeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ResumeEditMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ResumeEditPersonalInfoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ResumeEditJobTargetActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ResumeEditWorkExpItemActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ResumeEditProjectItemActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ResumeEditEducationItemActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ResumeEditListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ResumeEditLanguageItemActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ResumeEditQuickActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.CommonStaticItemListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ResumeNewGuideActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ResumeEditDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- ###################QQ登录SDK使用的Activity###################### -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100511917" />
+            </intent-filter>
+        </activity>
+        <!-- ###################友盟SDK使用的Activity###################### -->
+        <!-- 分享编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+
+        <!-- 设置界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.RewardSearchLabelActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 热门标签 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.HotLabelActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 我的悬赏 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.MyRewardListActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+
+        <!-- 我的悬赏详情页面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.MyRewardDetailActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 添加悬赏 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.PublishRewardActivity"
+            android:theme="@style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+        <!-- 邮箱认证 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.MailAuthActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 手机认证 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.MobileAuthActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 修改密码 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ModifyPwdActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 反馈意见 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.FeedbackActivity"
+            android:theme="@style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+        <!-- 功能介绍 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.FeaturesIntroductionActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 牵牛推荐 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.AppRecommentActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 友盟APPKEY -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="522feb6756240b7a6705698d" >
+        </meta-data>
+        <!-- 友盟渠道设置 -->
+        <!-- 官网 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="officalsite" />
+        <!-- 安卓市场 -->
+        <!--
+            <meta-data
+            android:name="UMENG_CHANNEL"
+
+            android:value="hiapk" />
+        -->
+        <!-- 91市场 -->
+        <!--
+            <meta-data
+            android:name="UMENG_CHANNEL"
+
+            android:value="91" />
+        -->
+        <meta-data
+            android:name="THPID_ONE"
+            android:value="wxad5b813061866c32" >
+        </meta-data>
+        <meta-data
+            android:name="THPID_TWO"
+            android:value="a100580163" >
+        </meta-data>
+        <meta-data
+            android:name="THPSECRET_TWO"
+            android:value="9cb67fd8047e74c23310c93a90c009ac" >
+        </meta-data>
+        <meta-data
+            android:name="THPID_THREE"
+            android:value="a3594840959" >
+        </meta-data>
+        <meta-data
+            android:name="THPSECRET_THREE"
+            android:value="4bd617b5a265b6bdfe2a73f587af97b6" >
+        </meta-data>
+
+        <service android:name="com.qianniu.zhaopin.app.service.ConnectionService" >
+        </service>
+
+        <!-- 引导界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.SplashActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+
+        <!-- 税率模块 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.TaxActivity"
+            android:theme="@style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.TaxDetailActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.TaxRateSettingActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.TaxCityListActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.TaxFreeStatementActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.CampaignListActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.CampaignDetailActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ProfessionalInfoActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 腾讯微博分享 -->
+        <activity android:name="com.tencent.weibo.sdk.android.component.Authorize" >
+        </activity>
+        <activity
+            android:name="com.tencent.weibo.sdk.android.component.PublishActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity android:name="com.tencent.weibo.sdk.android.component.ReAddActivity" >
+        </activity>
+        <!-- 腾讯微博授权界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.thp.ui.TencentWeiboAuthorize"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 新浪分享 -->
+        <activity
+            android:name="com.qianniu.zhaopin.thp.SinaWeiboShareActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 腾讯分享 -->
+        <activity
+            android:name="com.qianniu.zhaopin.thp.TencentWeiboShareActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 微信朋友，微信朋友圈分享 -->
+        <activity
+            android:name="com.qianniu.zhaopin.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.thp.WeChatShareActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 分享界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.thp.ui.ThpShareActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 支付宝 -->
+        <activity
+            android:name="com.alipay.android.app.sdk.WapPayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 支付宝账号绑定界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.thp.ui.AlipayAccountBindingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.InsidersListActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.CompanyListActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.SeekWorthyActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.PostListActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.CommentActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.CommentListActivity"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.SubscriptionActivity"
+            android:theme="@style/StyledIndicators" >
+        </activity>
+        <activity android:name="com.qianniu.zhaopin.app.ui.MoreProfessionalInfoActivity" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.UpdateVersionActivity"
+            android:theme="@android:style/Theme.Translucent" >
+
+            <!-- android:theme="@style/dialog" @android:style/Theme.Translucent @android:style/Theme.Dialog -->
+            <intent-filter>
+                <action android:name="qn.update.version" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.qianniu.zhaopin.app.ui.MoreModuleActivity" >
+        </activity>
+
+        <receiver android:name="com.qianniu.zhaopin.receiver.BootBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.qianniu.zhaopin.app.ui.integrationmall.IntegrationMallActivity" >
+        </activity>
+        <activity android:name="com.qianniu.zhaopin.app.ui.integrationmall.IntegrationUseDetailActivity" >
+        </activity>
+        <activity android:name="com.qianniu.zhaopin.app.ui.integrationmall.IntegrationOrderActivity" >
+        </activity>
+        <activity android:name="com.qianniu.zhaopin.app.ui.integrationmall.IntegrationSearchActivity" >
+        </activity>
+        <!-- 完善资料界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.PerfectInformationActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity android:name="com.qianniu.zhaopin.app.ui.integrationmall.IntegrationGoodsListActivity" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.exposurewage.ExposureWageHomeActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity android:name="com.qianniu.zhaopin.app.ui.exposurewage.ExposureWageMoreActivity" >
+        </activity>
+        <activity android:name="com.qianniu.zhaopin.app.ui.exposurewage.ExposureWageGetCountActivity" >
+        </activity>
+        <activity android:name="com.qianniu.zhaopin.app.ui.exposurewage.ExposureWageActivity" >
+        </activity>
+        <activity android:name="com.qianniu.zhaopin.app.ui.exposurewage.SearchResultActivity" >
+        </activity>
+        <activity android:name="com.qianniu.zhaopin.app.ui.exposurewage.SearchResultDetailActivity" >
+        </activity>
+        <activity android:name="com.qianniu.zhaopin.app.ui.exposurewage.ExposureCommentActivity" >
+        </activity>
+        <!-- 显示html5界面 -->
+        <activity
+            android:name="com.qianniu.zhaopin.app.ui.ShowHtml5Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qianniu.zhaopin.app.gossip.GossipMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoTitleBar" >
+        </activity>
+    </application>
+
+</manifest>

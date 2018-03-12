@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/exposure_comment_top"
+        style="@style/common_top_layout_style" >
+
+        <ImageView
+            android:id="@+id/exposure_comment_goback"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/exposure_comment_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/comment_title" />
+
+        <ImageView
+            android:id="@+id/exposure_comment_title_submit"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_save" />
+    </RelativeLayout>
+
+    <EditText
+            android:id="@+id/exposure_comment_content"
+            style="@style/common_text_multi_input_comment_edittext_style"
+            android:layout_gravity="top"
+            android:hint="@string/exposure_comment_content_hint"
+            android:maxLength="500"
+            android:layout_marginLeft="10.0dip"
+        	android:layout_marginRight="10.0dip"
+       		android:layout_marginTop="10.0dip"
+            android:background="@drawable/common_form_bg" />
+
+    <Button
+        android:id="@+id/exposure_comment_dosubmit"
+        style="@style/common_button_green_match"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/exposure_comment_submit"
+        android:textSize="16sp" />
+
+</LinearLayout>

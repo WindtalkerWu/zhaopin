@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/resume_home_bg"
+    android:orientation="vertical" >
+
+   	<RelativeLayout style="@style/common_top_layout_style" >
+
+        <ImageView
+            android:id="@+id/mybalance_btn_back"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/mybalance_tv_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/str_mybalance_title" 
+            />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layerType="software" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical" >
+
+           <!--  <include layout="@layout/resume_simpleinfo_layout" /> -->
+           <!--
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+		        >
+		
+		        <RelativeLayout
+		            android:id="@+id/resume_photo_item"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center"
+		            android:layout_marginTop="10dp" >
+		
+		            <ImageView
+		                android:id="@+id/complete_imgview"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerInParent="true" />
+		
+		            <ImageView
+		                android:id="@+id/headphoto_imgview"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerInParent="true" />
+		        </RelativeLayout>
+		    </LinearLayout>
+		    -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp" >
+                
+                <LinearLayout style="@style/common_form_vertical_style" >
+	                <!-- 账号余额  -->
+	                <RelativeLayout style="@style/common_form_item_style" 
+	                    android:visibility="gone"
+	                    >
+	
+	                    <LinearLayout
+	                        android:id="@+id/mybalance_ll_accountbalancetitle"
+	                        style="@style/common_form_item_textviewlayout_style"
+	                        android:orientation="horizontal" >
+							<TextView
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:text="@string/str_reward_rmb"
+	                            android:textColor="@color/red" />
+	                        <TextView
+	                            style="@style/common_form_item_textview_style"
+	                            android:text="@string/str_mybalance_accountbalance" />
+	                    </LinearLayout>
+	
+	                    <RelativeLayout
+	                        style="@style/common_form_item_editlayout_style"
+	                        android:layout_toRightOf="@id/mybalance_ll_accountbalancetitle" >
+	
+	                        <TextView
+	                            android:id="@+id/mybalance_tv_accountbalance"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_centerVertical="true"
+	                            android:textSize="14sp"
+	                            android:singleLine="true"
+	                            android:background="@null"
+	                            android:textColor="@color/list_subTitle"
+	                            android:textColorHint="@color/tips_gray"
+	                            android:ellipsize="end"
+	                            android:gravity="center_vertical"
+	                            android:paddingLeft="10dp"
+	                            android:text="0.00"
+	                            />
+	                        <TextView 
+								android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_toRightOf="@id/mybalance_tv_accountbalance"
+	                            android:layout_centerVertical="true"
+	                            android:textSize="14sp"
+	                            android:text="@string/str_mybalance_yuan"
+	                            />
+	                    </RelativeLayout>
+	                </RelativeLayout>
+	                
+	                <include layout="@layout/common_form_line" 
+	                    android:visibility="gone"/>
+	                
+	                <!-- 积分余额 -->
+	                <RelativeLayout style="@style/common_form_item_style"
+	                    android:visibility="gone" >
+	
+	                    <LinearLayout
+	                        android:id="@+id/mybalance_ll_integraltitle"
+	                        style="@style/common_form_item_textviewlayout_style"
+	                        android:orientation="horizontal" >
+	                        <TextView
+	                            style="@style/common_form_item_textview_style"
+	                            android:text="@string/str_mybalance_integral" />
+	                    </LinearLayout>
+	
+	                   	<RelativeLayout
+	                        style="@style/common_form_item_editlayout_style"
+	                        android:layout_toRightOf="@id/mybalance_ll_integraltitle" >
+	
+	                        <TextView
+	                            android:id="@+id/mybalance_tv_integral"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_centerVertical="true"
+	                            android:textSize="14sp"
+	                            android:singleLine="true"
+	                            android:background="@null"
+	                            android:textColor="@color/list_subTitle"
+	                            android:textColorHint="@color/tips_gray"
+	                            android:ellipsize="end"
+	                            android:gravity="center_vertical"
+	                            android:paddingLeft="10dp"
+	                            android:text="0.00"
+	                            />
+	                        <TextView 
+								android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_toRightOf="@id/mybalance_tv_integral"
+	                            android:layout_centerVertical="true"
+	                            android:textSize="14sp"
+	                            android:text="@string/str_mybalance_qianniub"
+	                            />
+	                    </RelativeLayout>
+	                </RelativeLayout>
+	                
+	                <include layout="@layout/common_form_line"
+	                    android:visibility="gone"
+	                     />
+	                
+	                <!-- 牵牛账号 -->
+	                <RelativeLayout style="@style/common_form_item_style"
+	                    android:visibility="gone"
+	                     >
+	
+	                    <LinearLayout
+	                        android:id="@+id/mybalance_ll_qianniuaccounttitle"
+	                        style="@style/common_form_item_textviewlayout_style"
+	                        android:orientation="horizontal" >
+	                        <TextView
+	                            style="@style/common_form_item_textview_style"
+	                            android:text="@string/str_mybalance_qianniuaccount" />
+	                    </LinearLayout>
+	
+	                    <RelativeLayout
+	                        style="@style/common_form_item_editlayout_style"
+	                        android:layout_toRightOf="@id/mybalance_ll_qianniuaccounttitle" >
+							<TextView
+							    android:id="@+id/mybalance_tv_qianniuaccount_authentication"
+							    android:layout_width="wrap_content"
+							    android:layout_height="wrap_content"
+							    android:gravity="center_vertical"
+							    android:layout_centerVertical="true"
+							    android:layout_alignParentRight="true"
+	                            android:layout_marginRight="30.0dip"
+	                            android:text="@string/str_mybalance_aliplayaccount_noauthentication"
+	                            android:textColor="@color/red"
+						    />
+							
+	                        <TextView
+	                            android:id="@+id/mybalance_tv_qianniuaccount"
+	                            style="@style/common_form_item_edit_textview_style"
+	                            android:layout_toLeftOf="@id/mybalance_tv_qianniuaccount_authentication"
+	                            android:hint="@string/str_mybalance_qianniuaccount_hint" />
+	                    </RelativeLayout>
+	                </RelativeLayout>
+	                
+	                <include layout="@layout/common_form_line" 
+	                    android:visibility="gone"/>
+	                
+	                <!-- 支付宝账号 -->
+	                <RelativeLayout style="@style/common_form_item_style" 
+	                    >
+	
+	                    <LinearLayout
+	                        android:id="@+id/mybalance_ll_aliplayaccounttitle"
+	                        style="@style/common_form_item_textviewlayout_style"
+	                        android:orientation="horizontal" >
+	                        <TextView
+	                            style="@style/common_form_item_textview_style"
+	                            android:text="@string/str_mybalance_aliplayaccount" />
+	                    </LinearLayout>
+	
+	                    <RelativeLayout
+	                        android:id="@+id/mybalance_rl_aliplayaccount"
+	                        style="@style/common_form_item_editlayout_style"
+	                        android:layout_toRightOf="@id/mybalance_ll_aliplayaccounttitle" >
+	
+	                        <ImageView
+	                            android:id="@+id/mybalance_img_aliplayaccount_text_icon"
+	                            style="@style/common_form_item_edit_next_style" />
+							<TextView
+							    android:id="@+id/mybalance_tv_aliplayaccount_binding"
+							    android:layout_width="wrap_content"
+							    android:layout_height="wrap_content"
+							    android:gravity="center_vertical"
+							    android:layout_centerVertical="true"
+						    	android:layout_alignParentRight="true"
+                           	 	android:layout_marginRight="30.0dip"
+	                            android:text="@string/str_mybalance_aliplayaccount_nobinding"
+	                            android:textColor="@color/red"
+							    />
+	                        <TextView
+	                            android:id="@+id/mybalance_tv_aliplayaccount"
+	                            style="@style/common_form_item_edit_textview_style"
+	                            android:layout_toLeftOf="@id/mybalance_tv_aliplayaccount_binding"
+	                            android:hint="@string/str_mybalance_aliplayaccount_hint" />
+	                    </RelativeLayout>
+	                </RelativeLayout>
+	                
+	                <include layout="@layout/common_form_line" />
+	                
+	                <!-- 累计收入  -->
+	                <RelativeLayout style="@style/common_form_item_style" >
+	
+	                    <LinearLayout
+	                        android:id="@+id/mybalance_ll_accumulatedincometitle"
+	                        style="@style/common_form_item_textviewlayout_style"
+	                        android:orientation="horizontal" >
+							<TextView
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:text="@string/str_reward_rmb"
+	                            android:textColor="@color/red" />
+	                        <TextView
+	                            style="@style/common_form_item_textview_style"
+	                            android:text="@string/str_mybalance_accumulatedincome" />
+	                    </LinearLayout>
+	
+	                    <RelativeLayout
+	                        style="@style/common_form_item_editlayout_style"
+	                        android:layout_toRightOf="@id/mybalance_ll_accumulatedincometitle" >
+	
+	                        <TextView
+	                            android:id="@+id/mybalance_tv_accumulatedincome"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_centerVertical="true"
+	                            android:textSize="14sp"
+	                            android:singleLine="true"
+	                            android:background="@null"
+	                            android:textColor="@color/list_subTitle"
+	                            android:textColorHint="@color/tips_gray"
+	                            android:ellipsize="end"
+	                            android:gravity="center_vertical"
+	                            android:paddingLeft="10dp"
+	                            android:text="0.00"
+	                            />
+	                        <TextView 
+								android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_toRightOf="@id/mybalance_tv_accumulatedincome"
+	                            android:layout_centerVertical="true"
+	                            android:textSize="14sp"
+	                            android:text="@string/str_mybalance_yuan"
+	                            />
+	                    </RelativeLayout>
+	                </RelativeLayout>
+	                
+	                <include layout="@layout/common_form_line" />
+	                
+	                <!-- 累计支出  -->
+	                <RelativeLayout style="@style/common_form_item_style" >
+	
+	                    <LinearLayout
+	                        android:id="@+id/mybalance_ll_totalexpenditure"
+	                        style="@style/common_form_item_textviewlayout_style"
+	                        android:orientation="horizontal" >
+							<TextView
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:text="@string/str_reward_rmb"
+	                            android:textColor="@color/red" />
+	                        <TextView
+	                            style="@style/common_form_item_textview_style"
+	                            android:text="@string/str_mybalance_totalexpenditure" />
+	                    </LinearLayout>
+	
+	                    <RelativeLayout
+	                        style="@style/common_form_item_editlayout_style"
+	                        android:layout_toRightOf="@id/mybalance_ll_totalexpenditure" >
+	
+	                        <TextView
+	                            android:id="@+id/mybalance_tv_totalexpenditure"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_centerVertical="true"
+	                            android:textSize="14sp"
+	                            android:singleLine="true"
+	                            android:background="@null"
+	                            android:textColor="@color/list_subTitle"
+	                            android:textColorHint="@color/tips_gray"
+	                            android:ellipsize="end"
+	                            android:gravity="center_vertical"
+	                            android:paddingLeft="10dp"
+	                            android:text="0.00"
+	                            />
+	                        <TextView 
+								android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_toRightOf="@id/mybalance_tv_totalexpenditure"
+	                            android:layout_centerVertical="true"
+	                            android:textSize="14sp"
+	                            android:text="@string/str_mybalance_yuan"
+	                            />
+	                    </RelativeLayout>
+	                </RelativeLayout>
+	                
+	                <include layout="@layout/common_form_line" />
+	                	                
+	                <!-- 交易记录  -->
+	                <RelativeLayout style="@style/common_form_item_style" >
+	
+	                    <LinearLayout
+	                        android:id="@+id/mybalance_ll_transactionrecordstitle"
+	                        style="@style/common_form_item_textviewlayout_style"
+	                        android:orientation="horizontal" >
+							<TextView
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:text="@string/str_reward_rmb"
+	                            android:textColor="@color/red" />
+	                        <TextView
+	                            style="@style/common_form_item_textview_style"
+	                            android:text="@string/str_mybalance_transactionrecords" />
+	                    </LinearLayout>
+	
+	                    <RelativeLayout
+	                        android:id="@+id/mybalance_rl_transactionrecords"
+	                        style="@style/common_form_item_editlayout_style"
+	                        android:layout_toRightOf="@id/mybalance_ll_transactionrecordstitle" >
+	
+	                        <ImageView
+	                            android:id="@+id/publish_reward_times_text_icon"
+	                            style="@style/common_form_item_edit_next_style" />
+	
+	                        <TextView
+	                            android:id="@+id/mybalance_tv_transactionrecords"
+	                            style="@style/common_form_item_edit_textview_style"
+	                            android:layout_toLeftOf="@id/publish_reward_times_text_icon"
+	                            android:text="@string/str_mybalance_transactionrecordsnum"
+	                             />
+	                    </RelativeLayout>
+	                </RelativeLayout>
+	             </LinearLayout>
+                
+                <TextView
+                    android:id="@+id/mybalance_tv_qianniuintegral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_qianniuintegral_title"
+                    android:textColor="@color/resume_button_color"
+                    android:textSize="14.0sp" />
+                
+				<TextView 
+				    android:id="@+id/mybalance_tv_tel"
+				    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/setting_tele_note"
+                    android:textSize="11sp"
+                    android:textColor="@color/list_subTitle"
+                    android:autoLink="phone"
+                    android:paddingTop="20.0dip"
+                    />
+				
+	            <Button 
+	               android:id="@+id/mybalance_btn_withdrawals"
+	               style="@style/common_button_red_match"
+	               android:text="@string/str_mybalance_withdrawals"
+	               android:layout_margin="15dp" />
+            
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <WebView
+	    android:id="@+id/mybalance_webview"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:visibility="gone"
+	    />
+
+</LinearLayout>

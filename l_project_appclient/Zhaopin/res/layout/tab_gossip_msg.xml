@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tv_tab"
+    android:gravity="center" 
+    android:textColor="@color/gossip_tab_textcolor"
+    android:textSize="@dimen/text_size_18"
+ 	android:background="@drawable/common_tabs_reward" >
+ 	
+</TextView>

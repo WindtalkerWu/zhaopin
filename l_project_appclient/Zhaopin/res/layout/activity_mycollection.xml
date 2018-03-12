@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/mycollection_rl_top" 
+        style="@style/common_top_layout_style" 
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:id="@+id/mycollection_btn_goback"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/mycollection_tv_title"
+            android:textSize="18.0sp"
+			android:textColor="@color/white"
+			android:ellipsize="end"
+			android:gravity="center"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:singleLine="true"
+			android:layout_centerInParent="true"
+            android:background="@drawable/common_tv_bg_pulldown_normal"
+            android:text="@string/str_mycollection_sort_reward" 
+            />
+    </RelativeLayout>
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+        android:layout_below="@id/mycollection_rl_top"
+        android:layout_marginTop="8.0dip"
+	    android:orientation="vertical"
+	     >
+		<include layout="@layout/progress_item"/>
+		
+		<com.qianniu.zhaopin.app.widget.PullToRefreshListView
+	        android:id="@+id/mycollection_lv_reward"
+	        style="@style/widget_listview"
+	        android:listSelector="@drawable/listview_item_empty_selector"
+	         />
+	
+	</LinearLayout>
+    <ListView 
+        android:id="@+id/mycollection_lv_pulldown"
+        android:layout_width="108dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mycollection_rl_top"
+        android:layout_centerHorizontal="true"
+        android:divider="@null"
+		android:cacheColorHint="#00000000"
+        android:visibility="gone"
+        android:listSelector="@drawable/listview_item_empty_selector"
+        />
+
+</RelativeLayout>

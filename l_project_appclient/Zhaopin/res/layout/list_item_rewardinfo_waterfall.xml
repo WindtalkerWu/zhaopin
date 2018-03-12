@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     >
+	<LinearLayout
+	    android:id="@+id/list_item_rewadinfo_waterfall_ll"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+    	android:background="@drawable/common_list_item_selector"
+	    android:orientation="vertical"
+		android:layout_marginTop="6.6dip"
+		android:layout_marginBottom="6.6dip"
+		android:layout_marginLeft="3.3dip"
+		android:layout_marginRight="3.3dip"
+		android:padding="0dp"
+	    >
+	    <!-- 金额和类型  -->
+		<RelativeLayout
+	       android:id="@+id/list_item_rewadinfo_waterfall_rl_title"
+	       android:layout_width="fill_parent"
+	       android:layout_height="28.0dip"
+	       >
+			<!-- 发布者类型图片  -->
+	        <ImageView
+	            android:id="@+id/list_item_rewadinfo_waterfall_img_publishertype"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="3.0dip"
+	       	 	android:src="@drawable/common_img_publisher_company"
+	            />
+			<!-- 姓名/公司名称  -->
+	        <TextView 
+	            android:id="@+id/list_item_rewadinfo_waterfall_tv_title"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toRightOf="@id/list_item_rewadinfo_waterfall_img_publishertype"
+	            android:layout_toLeftOf="@+id/list_item_rewadinfo_waterfall_img_attention"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="3.0dip"
+	            android:layout_marginRight="3.0dip"
+			    android:singleLine="true"
+			    android:textSize="16.0sp"
+			    android:textColor="@color/black"
+	            />
+	        <!-- 关注图片  -->
+	        <ImageView
+	            android:id="@id/list_item_rewadinfo_waterfall_img_attention"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_toLeftOf="@+id/list_item_rewadinfo_waterfall_tv_attention"
+	            android:layout_marginRight="3.0dip"
+	       	 	android:src="@drawable/common_bg_attention"
+	            />
+	        <!-- 关注数 -->
+			<TextView 
+	            android:id="@id/list_item_rewadinfo_waterfall_tv_attention"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_marginRight="3.0dip"
+	            android:layout_alignParentRight="true"
+			    android:singleLine="true"
+			    android:textSize="14.0sp"
+			    android:textColor="@color/list_subTitle"
+			    android:gravity="right"
+	            />
+	    </RelativeLayout >
+		<ImageView
+			android:id="@+id/list_item_rewadinfo_waterfall_img_line"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@drawable/common_form_line" />
+		<RelativeLayout
+		   android:id="@+id/list_item_rewadinfo_waterfall_rl_logo"
+		   android:layout_width="fill_parent"
+		   android:layout_height="wrap_content"
+		   android:visibility="gone"
+		   >
+		   <ImageView
+		        android:id="@+id/list_item_rewadinfo_waterfall_img_logo"
+				android:layout_width="match_parent"
+				android:layout_height="67dip"
+				android:layout_alignParentTop="true"
+                android:layout_marginLeft="0.5dip"
+                android:layout_marginRight="0.5dip"
+				android:scaleType="fitXY"
+				android:src="@drawable/common_img_companylogo" 
+				/>
+		   <ImageView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/list_item_rewadinfo_waterfall_img_logo"
+				android:background="@drawable/common_form_line" />
+	    </RelativeLayout >
+	    <!-- 金额和类型  -->
+		<RelativeLayout
+		   android:id="@+id/list_item_rewadinfo_waterfall_rl_rewardprice"
+		   android:layout_width="fill_parent"
+		   android:layout_height="wrap_content"
+		   android:layout_marginTop="3.0dip"
+		   >
+	        <!-- 悬赏金额  -->
+	        <TextView 
+	            android:id="@+id/list_item_rewadinfo_waterfall_tv_rewardprice"
+	            android:layout_width="80.0dip"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="3.0dip"
+			    android:singleLine="true"
+			    android:textSize="16.0sp"
+			    android:textColor="@color/red"
+	            />
+	        <!-- 悬赏任务 类型 -->
+	        <TextView 
+	            android:id="@+id/list_item_rewadinfo_waterfall_tv_rewardtype"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toRightOf="@id/list_item_rewadinfo_waterfall_tv_rewardprice"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="3.0dip"
+			 	android:singleLine="true"
+			    android:textSize="14.0sp"
+	        	android:visibility="gone"
+	            />
+		</RelativeLayout >
+		<!-- 职位名称 -->
+		<TextView 
+			android:id="@+id/list_item_rewadinfo_waterfall_tv_position"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="3.0dip"
+			android:layout_marginLeft="3.0dip"
+			android:singleLine="true"
+			android:textSize="16.0sp"
+			android:textColor="@color/list_subTitle"
+			/>
+		<!-- 标签 -->
+		<com.qianniu.zhaopin.app.widget.CompanyLabelFlowLayout
+			android:id="@+id/rewardsearch_label_flow_bg"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"/>
+		<!-- 关注人数 -->
+	    <RelativeLayout
+	        android:id="@+id/list_item_rewadinfo_waterfall_rl_num"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="3.0dip"
+	        android:layout_marginBottom="6.0dip"
+	        >
+			<RelativeLayout
+		        android:id="@+id/list_item_rewadinfo_waterfall_rl_validdate"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentTop="true"
+		        android:layout_centerVertical="true"
+	        	>
+	        	<!-- 剩余天数  -->
+		        <TextView 
+		            android:id="@+id/list_item_rewadinfo_waterfall_tv_validdate"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		       		android:layout_alignParentLeft="true"
+		            android:layout_marginLeft="3.0dip"
+				    android:singleLine="true"
+				    android:textSize="14.0sp"
+					android:textColor="@color/list_subTitle"
+		            />
+	        	<!-- 城市  -->
+		        <TextView 
+		            android:id="@+id/list_item_rewadinfo_waterfall_tv_city"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		       		android:layout_alignParentRight="true"
+		            android:layout_marginRight="3.0dip"
+		            android:layout_marginLeft="3.0dip"
+		            android:layout_toRightOf="@id/list_item_rewadinfo_waterfall_tv_validdate"
+				    android:singleLine="true"
+				    android:textSize="14.0sp"
+					android:textColor="@color/list_subTitle"
+					android:gravity="right"
+		            />
+		        <!-- 是否已读  -->
+		        <!--
+		        <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toRightOf="@id/list_item_rewadinfo_waterfall_tv_validdate"
+		            android:layout_marginLeft="3.0dip"
+		       	 	android:src="@drawable/new_bar"
+		            />
+		         -->
+	        </RelativeLayout>
+			<!-- 关注人数  -->
+			<!--
+			<RelativeLayout
+		        android:id="@+id/list_item_rewadinfo_waterfall_rl_attention"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+				android:layout_below="@id/list_item_rewadinfo_waterfall_tv_validdate"
+				android:layout_marginTop="3.0dip"
+	       		 >
+		        <TextView 
+		            android:id="@+id/list_item_rewadinfo_waterfall_tv_attention"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="3.0dip"
+		            android:layout_alignParentLeft="true"
+				    android:singleLine="true"
+				    android:textSize="14.0sp"
+				    android:textColor="@color/red"
+		            />
+		        <TextView 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="3.0dip"
+		            android:layout_toRightOf="@id/list_item_rewadinfo_waterfall_tv_attention"
+		            android:text="@string/str_reward_attention"
+				    android:singleLine="true"
+				    android:textSize="14.0sp"
+				    android:textColor="@color/list_subTitle"
+		            />
+	       	</RelativeLayout>
+	       	-->
+	    </RelativeLayout>
+		<!-- 时间 -->
+		<!--
+	    <RelativeLayout
+	        android:id="@+id/list_item_rewadinfo_waterfall_rl_time"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="3.0dip"
+	        android:visibility="gone"
+	        >
+	         -->
+	        <!-- 截止时间 -->
+	       	<!--
+	        <TextView 
+	            android:id="@+id/list_item_rewadinfo_waterfall_tv_enddate"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="3.0dip"
+			 	android:singleLine="true"
+			    android:textSize="14.0sp"
+			    android:text="截止: 10月1日"
+	            />
+	        -->
+	        <!-- 发布时间  -->
+	        <!--
+	        <TextView 
+	            android:id="@+id/list_item_rewadinfo_waterfall_tv_endtime"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toRightOf="@id/list_item_rewadinfo_waterfall_tv_enddate"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="10.0dip"
+			    android:singleLine="true"
+			    android:textSize="14.0sp"
+			    android:text="上午 10:00"
+	            />
+	    </RelativeLayout>
+	     -->
+	</LinearLayout >
+</RelativeLayout >

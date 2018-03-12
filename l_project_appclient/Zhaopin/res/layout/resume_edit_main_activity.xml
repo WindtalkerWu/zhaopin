@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/resume_edit_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/resume_home_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/common_top_layout_style" >
+
+        <ImageButton
+            android:id="@+id/resume_edit_goback"
+            style="@style/common_top_left_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_button_back" />
+
+        <ImageView
+            android:id="@+id/resume_edit_save"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_save"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/resume_edit_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/resume_edit_title" />
+
+        <ImageButton
+            android:id="@+id/resume_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/resume_edit_save"
+            android:background="@color/full_transparent"
+            android:src="@drawable/common_button_preview"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/resume_basic_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/common_form_bg" >
+
+        <RelativeLayout
+            android:id="@+id/resume_photo_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp" >
+
+            <ImageView
+                android:id="@+id/complete_imgview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/qianniu_logobg" />
+
+            <ImageView
+                android:id="@+id/headphoto_imgview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/resume_selfinfo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/resume_photo_item"
+            android:orientation="vertical"
+            android:paddingLeft="8dp" >
+
+            <TextView
+                android:id="@+id/resume_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="9dp"
+                android:text="@string/str_quickrecommend_name"
+                android:textColor="@color/list_title"
+                android:textSize="@dimen/text_size_18" />
+
+            <TextView
+                android:id="@+id/resume_job_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginBottom="5dp"
+                android:text="@string/resume_hopetitle"
+                android:textColor="@color/list_subTitle"
+                android:textSize="@dimen/text_size_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <ImageView
+                    android:id="@+id/default_imgview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/default_normal" />
+
+                <ImageView
+                    android:id="@+id/credit_imgview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/credit_noraml" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20.0dip"
+            android:src="@drawable/common_img_next_big" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroolview_container"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="6dp" 
+        android:layout_marginRight="6dp" 
+        android:layout_marginBottom="6dp" 
+        android:fadingEdge="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <com.qianniu.zhaopin.app.view.ResumeSigleTagBriefItem
+                android:id="@+id/resume_fastcontent_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@color/dividing_line_color"
+                android:orientation="vertical" >
+            </com.qianniu.zhaopin.app.view.ResumeSigleTagBriefItem>
+
+            <com.qianniu.zhaopin.app.view.ResumeSigleTagBriefItem
+                android:id="@+id/resume_jobintension_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@color/dividing_line_color"
+                android:orientation="vertical" >
+            </com.qianniu.zhaopin.app.view.ResumeSigleTagBriefItem>
+
+            <com.qianniu.zhaopin.app.view.ResumeMultiTagBriefItem
+                android:id="@+id/resume_workexperience_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@color/dividing_line_color"
+                android:orientation="vertical" >
+            </com.qianniu.zhaopin.app.view.ResumeMultiTagBriefItem>
+
+            <com.qianniu.zhaopin.app.view.ResumeMultiTagBriefItem
+                android:id="@+id/resume_project_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@color/dividing_line_color"
+                android:orientation="vertical" >
+            </com.qianniu.zhaopin.app.view.ResumeMultiTagBriefItem>
+
+            <com.qianniu.zhaopin.app.view.ResumeMultiTagBriefItem
+                android:id="@+id/resume_education_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@color/dividing_line_color"
+                android:orientation="vertical" >
+            </com.qianniu.zhaopin.app.view.ResumeMultiTagBriefItem>
+
+            <com.qianniu.zhaopin.app.view.ResumeMultiTagBriefItem
+                android:id="@+id/resume_language_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@color/dividing_line_color"
+                android:orientation="vertical" >
+            </com.qianniu.zhaopin.app.view.ResumeMultiTagBriefItem>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

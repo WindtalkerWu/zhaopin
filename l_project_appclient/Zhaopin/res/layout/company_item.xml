@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false" >
+
+    <RelativeLayout
+        android:id="@+id/company_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3.3dp"
+        android:layout_marginRight="3.3dp"
+        android:layout_marginTop="6.6dp"
+        android:background="@drawable/common_list_item_selector"
+        android:padding="0dp" >
+
+        <TextView
+            android:id="@+id/company_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="小米"
+            android:textColor="@color/list_title"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/company_item_head_portrait_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/company_item_name"
+            android:orientation="vertical" >
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/common_form_line" />
+
+            <ImageView
+                android:id="@+id/company_item_head_portrait"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:background="@drawable/qianniu_bg_widget"
+                android:scaleType="fitXY" />
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/common_form_line" />
+        </LinearLayout>
+
+ 	<RelativeLayout
+ 	    android:id="@+id/company_item_attention_count_bg"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_alignParentRight="true"
+ 	    android:layout_below="@id/company_item_head_portrait_bg"
+ 	    android:layout_marginLeft="5dp"
+        android:layout_marginRight="3.3dp"
+ 	    android:layout_gravity="center_horizontal" >
+
+ 	    <TextView
+ 	        android:id="@+id/company_item_attention_count"
+ 	        android:layout_width="wrap_content"
+ 	        android:layout_height="wrap_content"
+ 	        android:layout_alignParentRight="true"
+ 	        android:paddingBottom="5dp"
+ 	        android:paddingRight="5dp"
+ 	        android:paddingTop="5dp"
+ 	        android:singleLine="true"
+ 	        android:textColor="@color/list_subTitle"
+ 	        android:layout_centerVertical="true"
+ 	        android:gravity="center_vertical"
+ 	        android:text="dfadD"
+ 	        android:textSize="12sp" />
+
+ 	    <ImageView
+ 	        android:id="@+id/company_item_attention_count_img"
+ 	        android:layout_width="wrap_content"
+ 	        android:layout_height="wrap_content"
+ 	        android:layout_marginTop="10.5dp"
+ 	        android:layout_marginRight="2dp"
+ 	        android:layout_toLeftOf="@id/company_item_attention_count"
+ 	        android:background="@drawable/common_bg_attention" />
+
+ 	    <TextView
+ 	        android:id="@+id/company_item_post_count"
+ 	        android:layout_width="wrap_content"
+ 	        android:layout_height="wrap_content"
+ 	        android:layout_alignParentLeft="true"
+ 	        android:layout_centerVertical="true"
+ 	        android:singleLine="true"
+ 	        android:text="dfadafdsa"
+ 	        android:gravity="center_vertical"
+ 	        android:textSize="14sp"
+ 	        android:textColor="@color/list_subTitle" />
+ 	</RelativeLayout>
+
+    <com.qianniu.zhaopin.app.widget.CompanyLabelFlowLayout
+        android:id="@+id/company_item_labels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/company_item_attention_count_bg" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="8dp"
+        android:layout_below="@id/company_item_labels" />
+    </RelativeLayout>
+
+</merge>

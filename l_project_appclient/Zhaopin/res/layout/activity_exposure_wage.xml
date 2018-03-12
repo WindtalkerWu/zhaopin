@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/exposure_wage_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/exposure_wage_top_bg"
+            style="@style/common_top_layout_style" >
+
+            <ImageButton
+                android:id="@+id/exposure_wage_goback"
+                style="@style/common_top_left_title_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/common_button_back" />
+
+            <TextView
+                android:id="@+id/exposure_wage_title"
+                style="@style/common_top_center_bigtitle_style"
+                android:text="@string/exposure_wage_title_txt" />
+
+            <ImageView
+                android:id="@+id/exposure_wage_dosubmit"
+                style="@style/common_top_right_title_style"
+                android:src="@drawable/common_button_save" />
+        </RelativeLayout>
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            style="@style/common_tabWidget_style"
+            android:layout_weight="0" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0" >
+        </FrameLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/exposure_wage_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</TabHost>

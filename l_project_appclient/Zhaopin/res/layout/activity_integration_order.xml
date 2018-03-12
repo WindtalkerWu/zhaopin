@@ -1,0 +1,209 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/integration_order_title_bg"
+        style="@style/common_top_layout_style" >
+
+        <ImageButton
+            android:id="@+id/integration_order_title_goback"
+            style="@style/common_top_left_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/integration_order_title_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/integration_order_title_txt" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/integration_order_address_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/integration_get_item_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/qianniu_logobg1" />
+
+        <LinearLayout
+            android:id="@+id/integration_get_item_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/integration_get_item_image"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/integration_get_item_integration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/integration_get_item_attention"
+                    android:singleLine="true"
+                    android:text="收货人:顾志军"
+                    android:textColor="@color/list_title"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@id/integration_get_item_attention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="12345678900"
+                    android:textColor="@color/list_title"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/integration_get_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="收货地址：上海XXXXXX"
+                android:textColor="@color/list_title"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/common_form_line" />
+
+    <RelativeLayout
+        android:id="@+id/integration_order_goods_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/integration_order_goods_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:src="@drawable/qianniu_logobg1" />
+
+        <LinearLayout
+            android:id="@+id/integration_order_goods_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/integration_order_goods_image"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/integration_order_goods_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/integration_order_goods_integration"
+                android:singleLine="true"
+                android:text="星巴克手工饮料"
+                android:textColor="@color/list_title"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@id/integration_order_goods_integration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="全额支付850000积分"
+                android:textColor="@color/list_title"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/common_form_line" />
+
+    <RelativeLayout
+        android:id="@+id/integration_order_goodscount_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/integration_order_goodscount_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:text="兑换数量："
+            android:textColor="@color/list_title"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/integration_order_goodscount_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/common_add_press" />
+
+        <TextView
+            android:id="@+id/integration_order_goods_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/integration_order_goodscount_add"
+            android:singleLine="true"
+            android:text="1"
+            android:textColor="@color/list_title"
+            android:textSize="16sp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp" />
+
+        <ImageView
+            android:id="@+id/integration_order_goodscount_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/integration_order_goods_count"
+            android:scaleType="fitXY"
+            android:src="@drawable/common_add_press" />
+    </RelativeLayout>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/common_form_line" />
+     <TextView
+            android:id="@+id/integration_order_integration_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="当前总积分：XXXXX"
+            android:textColor="@color/list_title"
+            android:textSize="16sp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp" />
+     <Button
+                android:id="@+id/integration_order_doSubmit"
+                style="@style/common_button_green_big"
+                android:text="@string/integration_use_order_ok"
+                android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

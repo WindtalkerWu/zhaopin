@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/showhtml5_lp_top"
+        style="@style/common_top_layout_style"
+        android:layout_alignParentTop="true" >
+
+        <ImageButton
+            android:id="@+id/showhtml5_btn_goback"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/showhtml5_tv_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/str_rewardinfo_title_job" />
+
+        <ImageButton
+            android:id="@+id/showhtml5_btn_share"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_share" 
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/showhtml5_lp_top"
+        android:orientation="vertical" >
+
+        <WebView
+            android:id="@+id/showhtml5_webview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+     <ViewStub
+            android:id="@+id/showhtml5_lp_progress"
+            style="@style/viewstub_progress_small_style"
+            android:layout_centerInParent="true"
+            android:layout="@layout/progressbar_small" />
+</RelativeLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/citychoose_rl_top"
+        style="@style/common_top_layout_style" >
+
+        <ImageButton
+            android:id="@+id/citychoose_btn_goback"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/citychoose_tv_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/str_citychoose_title" />
+
+        <ImageButton
+            android:id="@+id/citychoose_btn_save"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_save" />
+    </RelativeLayout>
+    <!-- 搜索 -->
+
+    <RelativeLayout
+        android:id="@+id/citychoose_rl_search"
+        style="@style/searchbar_input_layout_style"
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/citychoose_et_search"
+            style="@style/searchbar_input_edittext_style" />
+
+        <ImageView
+            android:id="@+id/citychoose_iv_clean"
+            style="@style/common_input_cleaner_style"
+            android:layout_width="40.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/citychoose_rl_choose"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 定位当前城市 -->
+
+        <RelativeLayout
+            android:id="@+id/citychoose_rl_gps"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:padding="12dp" 
+            >
+
+            <TextView
+                android:id="@+id/citychoose_tv_cityname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="上海"
+                android:textColor="@color/resume_button_color"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/citychoose_tv_getcitymode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:layout_toRightOf="@id/citychoose_tv_cityname"
+                android:layout_alignBottom="@id/citychoose_tv_cityname"
+                android:textColor="@color/list_subTitle"
+                android:textSize="12sp"
+                android:text="GPS定位" 
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+        <!-- 城市列表 -->
+
+        <RelativeLayout
+            android:id="@+id/citychoose_rl_city"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/citychoose_rl_gps" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/citychoose_lv_city"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@drawable/common_form_line"
+                    android:listSelector="@drawable/listview_item_nocolor_selector"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+            <com.qianniu.zhaopin.app.adapter.SideBar
+                android:id="@+id/citychoose_sideBar"
+                android:layout_width="20.0dip"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right|center_vertical" />
+        </RelativeLayout>
+        <!-- 城市搜索列表 -->
+
+        <RelativeLayout
+            android:id="@+id/citychoose_rl_citysearch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/citychoose_rl_gps" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/citychoose_lv_citysearch"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@drawable/common_form_line"
+                    android:listSelector="@drawable/listview_item_nocolor_selector"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

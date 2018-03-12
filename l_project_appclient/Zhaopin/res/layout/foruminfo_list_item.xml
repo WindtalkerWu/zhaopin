@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:paddingLeft="10.0dip"
+    android:paddingRight="10.0dip" >
+
+    <TextView
+        android:id="@+id/foruminfo_item_time_tv"
+        style="@style/ChattingUISplit"
+        android:background="@drawable/common_transparent_bg"
+        android:text="2013,1,2" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_list_item_default_selector" >
+
+        <LinearLayout
+            android:id="@+id/foruminfo_item_cotent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/topSlot"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/common_form_bg"
+                android:orientation="vertical"
+                android:padding="0dp" >
+
+                <TextView
+                    android:id="@+id/foruminfo_item_title_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="6dp"
+                    android:singleLine="true"
+                    android:text="@string/app_name"
+                    android:textColor="@color/list_title"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/foruminfo_item_date_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6.0dip"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/list_subTitle"
+                    android:textSize="12sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="152.0dip"
+                    android:padding="0dp" >
+
+                    <LinearLayout
+                        android:id="@+id/foruminfo_item_iv_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="vertical"
+                        android:padding="0dp" >
+
+                        <include
+                            android:id="@+id/adzone_item_line"
+                            layout="@layout/common_form_line"
+                            android:padding="0.5dp" />
+
+                        <ImageView
+                            android:id="@+id/foruminfo_item_photo_iv"
+                            android:layout_width="match_parent"
+                            android:layout_height="150.0dip"
+                            android:padding="0dp"
+                            android:scaleType="centerCrop" />
+
+                        <include
+                            android:id="@+id/adzone_item_line"
+                            layout="@layout/common_form_line"
+                            android:padding="0dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/title_ll_in_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/half_alpha_black"
+                        android:gravity="center_vertical"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/title_textview_in_image"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="32.0dip"
+                            android:padding="2.0dip"
+                            android:text="@string/app_name"
+                            android:textColor="@color/white"
+                            android:textSize="19sp" />
+                    </LinearLayout>
+
+                    <!--
+                         <ProgressBar
+                        android:id="@+id/item_loading_pb"
+                        style="@style/largeCustomProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/download_fail_tips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/msg_state_fail_resend"
+                        android:gravity="center_vertical"
+                        android:text="@string/download_fail"
+                        android:visibility="gone" />
+                    -->
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/foruminfo_item_content_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10.0dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="@string/app_name"
+                    android:textColor="@color/list_subTitle"
+                    android:textSize="14sp" />
+
+                <include layout="@layout/common_form_line" >
+                </include>
+
+                <LinearLayout
+                    android:id="@+id/detail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:text="@string/read_all"
+                        android:textColor="@color/list_title" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/common_small_next" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

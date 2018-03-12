@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+  <RelativeLayout
+        android:id="@+id/jobfunctionchoose_rl_top"
+        style="@style/common_top_layout_style" >
+
+        <ImageButton
+            android:id="@+id/jobfunctionchoose_btn_goback"
+            style="@style/common_top_left_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/jobfunctionchoose_tv_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/str_jobfunctionchoose_title" />
+
+    </RelativeLayout>
+    <ExpandableListView
+        android:id ="@+id/jobfunctionchoose_elv_industrychoose"  
+        android:layout_width ="fill_parent"  
+        android:layout_height ="wrap_content"
+        android:groupIndicator="@null" 
+        android:divider="@drawable/deep_gray_line"
+        android:childDivider="@drawable/deep_gray_line"
+        android:cacheColorHint="#00000000" />
+</LinearLayout>

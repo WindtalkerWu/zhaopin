@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/integration_get_item_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_list_item_selector"
+    android:padding="8dp" >
+
+    <ImageView
+        android:id="@+id/integration_get_item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/qianniu_logobg1" />
+
+    <LinearLayout
+        android:id="@+id/integration_get_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_toRightOf="@id/integration_get_item_image"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/integration_get_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="上传简历"
+            android:textColor="@color/list_title"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/integration_get_item_integration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/integration_get_item_attention"
+                android:singleLine="true"
+                android:text="可赚积分：40"
+                android:textColor="@color/list_subTitle"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@id/integration_get_item_attention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="关注度:50"
+                android:textColor="@color/list_subTitle"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/integration_get_item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/integration_get_item_doget"
+                android:singleLine="true"
+                android:text="现金价:20"
+                android:textColor="@color/list_subTitle"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@id/integration_get_item_doget"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/common_button_green"
+                android:text="马上赚"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

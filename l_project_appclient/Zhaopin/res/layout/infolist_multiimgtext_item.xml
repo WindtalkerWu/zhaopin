@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qianniu.zhaopin.app.ui.InfoListMultiImgTxtItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/info_listitem_multi_imgtxtcontainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+	<include layout="@layout/list_item_multi_imgtxt"/>
+</com.qianniu.zhaopin.app.ui.InfoListMultiImgTxtItem>

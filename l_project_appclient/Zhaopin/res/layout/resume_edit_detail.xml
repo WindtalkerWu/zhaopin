@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/resume_home_bg"
+    android:orientation="vertical" >
+      <RelativeLayout style="@style/common_top_layout_style" >
+
+        <ImageButton
+            android:id="@+id/resume_edit_goback"
+            style="@style/common_top_left_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_button_back" />
+
+        <ImageView
+            android:id="@+id/resume_edit_save"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_save"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/resume_edit_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/resume_completeresume" />
+    </RelativeLayout>  
+ <LinearLayout
+     android:id="@+id/resume_whole_container"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     android:padding="15.0dip" 
+     android:visibility="visible" >
+
+     <RelativeLayout
+         android:id="@+id/resume_jobintension_item"
+         style="@style/common_form_item_style1"
+         android:background="@drawable/common_list_item_selector" >
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:paddingLeft="15.0dip"
+             android:text="求职意向"
+             android:textColor="@color/resume_text_color"
+             android:textSize="16.0sp" />
+
+         <ImageView
+             android:id="@+id/common_item_arrow2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:layout_marginRight="10.0dip"
+             android:src="@drawable/common_img_next_big" />
+
+         <TextView
+             android:id="@+id/resume_hopeText"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_toLeftOf="@id/common_item_arrow2"
+             android:paddingRight="10.0dip"
+             android:text="@string/resume_edit_noncomlete"
+             android:textColor="@color/tips_gray"
+             android:textSize="13.0sp" />
+     </RelativeLayout>
+
+     <RelativeLayout
+         android:id="@+id/resume_workexperience_item"
+         style="@style/common_form_item_style1"
+         android:background="@drawable/common_list_item_selector" >
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:paddingLeft="15.0dip"
+             android:text="工作经历"
+             android:textColor="@color/resume_text_color"
+             android:textSize="16.0sp" />
+
+         <ImageView
+             android:id="@+id/common_item_arrow3"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:layout_marginRight="10.0dip"
+             android:src="@drawable/common_img_next_big" />
+
+         <TextView
+             android:id="@+id/resume_workText"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_toLeftOf="@id/common_item_arrow3"
+             android:paddingRight="10.0dip"
+             android:text="@string/resume_edit_noncomlete"
+             android:textColor="@color/tips_gray"
+             android:textSize="13.0sp" />
+     </RelativeLayout>
+
+     <RelativeLayout
+         android:id="@+id/resume_project_item"
+         style="@style/common_form_item_style1"
+         android:background="@drawable/common_list_item_selector" >
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:paddingLeft="15.0dip"
+             android:text="项目经历"
+             android:textColor="@color/resume_text_color"
+             android:textSize="16.0sp" />
+
+         <ImageView
+             android:id="@+id/common_item_arrow4"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:layout_marginRight="10.0dip"
+             android:src="@drawable/common_img_next_big" />
+
+         <TextView
+             android:id="@+id/resume_projectText"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_toLeftOf="@id/common_item_arrow4"
+             android:paddingRight="10.0dip"
+             android:text="@string/resume_edit_noncomlete"
+             android:textColor="@color/tips_gray"
+             android:textSize="13.0sp" />
+     </RelativeLayout>
+
+     <RelativeLayout
+         android:id="@+id/resume_education_item"
+         style="@style/common_form_item_style1"
+         android:background="@drawable/common_list_item_selector" >
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:paddingLeft="15.0dip"
+             android:text="教育经历"
+             android:textColor="@color/resume_text_color"
+             android:textSize="16.0sp" />
+
+         <ImageView
+             android:id="@+id/common_item_arrow5"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:layout_marginRight="10.0dip"
+             android:src="@drawable/common_img_next_big" />
+
+         <TextView
+             android:id="@+id/resume_educationText"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_toLeftOf="@id/common_item_arrow5"
+             android:paddingRight="10.0dip"
+             android:text="@string/resume_edit_noncomlete"
+             android:textColor="@color/tips_gray"
+             android:textSize="13.0sp" />
+     </RelativeLayout>
+
+     <RelativeLayout
+         android:id="@+id/resume_language_item"
+         style="@style/common_form_item_style1"
+         android:background="@drawable/common_list_item_selector" >
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:paddingLeft="15.0dip"
+             android:text="语言技能"
+             android:textColor="@color/resume_text_color"
+             android:textSize="16.0sp" />
+
+         <ImageView
+             android:id="@+id/common_item_arrow5"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:layout_marginRight="10.0dip"
+             android:src="@drawable/common_img_next_big" />
+
+         <TextView
+             android:id="@+id/resume_languageText"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_toLeftOf="@id/common_item_arrow5"
+             android:paddingRight="10.0dip"
+             android:text="@string/resume_edit_noncomlete"
+             android:textColor="@color/tips_gray"
+             android:textSize="13.0sp" />
+     </RelativeLayout>
+ </LinearLayout>
+           
+</LinearLayout>

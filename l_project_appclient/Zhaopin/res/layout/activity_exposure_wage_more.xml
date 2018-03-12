@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+   <RelativeLayout
+        android:id="@+id/exposure_wage_more_top"
+        style="@style/common_top_layout_style" >
+
+        <ImageButton
+            android:id="@+id/exposure_wage_more_goback"
+            style="@style/common_top_left_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/exposure_wage_more_title"
+            style="@style/common_top_center_bigtitle_style" />
+    </RelativeLayout>
+    <ListView 
+        android:id="@+id/exposure_wage_more_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/common_form_line"
+		android:cacheColorHint="#00000000"
+        android:background="@color/white" />
+  </LinearLayout>

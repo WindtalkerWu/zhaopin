@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_linearlayout_footer"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/main_tab_group"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/main_footbar_bg"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingTop="2.0dip" >
+
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@null" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+
+                <com.qianniu.zhaopin.app.view.ImageRadioButton
+                    android:id="@+id/main_footbar_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/main_footerbar_widgetbg"
+                    android:src="@drawable/main_footerbar_news" />
+
+                <ImageView
+                    android:id="@+id/main_tab_news_unread_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/main_footbar_news"
+                    android:layout_alignTop="@id/main_footbar_news"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="0dp"
+                    android:paddingTop="6dp"
+                    android:src="@drawable/new_bar"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@null" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+
+                <com.qianniu.zhaopin.app.view.ImageRadioButton
+                    android:id="@+id/main_footbar_reward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/main_footerbar_widgetbg"
+                    android:src="@drawable/main_footerbar_reward" />
+
+                <ImageView
+                    android:id="@+id/main_tab_active_jump_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/main_footbar_reward"
+                    android:layout_alignTop="@id/main_footbar_reward"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="0dp"
+                    android:padding="6dp"
+                    android:src="@drawable/tab_unread_bg"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@null" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+
+                <com.qianniu.zhaopin.app.view.ImageRadioButton
+                    android:id="@+id/main_footbar_extra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/main_footerbar_widgetbg"
+                    android:src="@drawable/main_footerbar_extra" />
+
+                <ImageView
+                    android:id="@+id/main_tab_active_forum_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/main_footbar_extra"
+                    android:layout_alignTop="@id/main_footbar_extra"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="0dp"
+                    android:padding="6dp"
+                    android:src="@drawable/tab_unread_bg"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@null" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+
+                <com.qianniu.zhaopin.app.view.ImageRadioButton
+                    android:id="@+id/main_footbar_my"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/main_footerbar_widgetbg"
+                    android:src="@drawable/main_footerbar_active" />
+
+                <ImageView
+                    android:id="@+id/main_tab_active_unread_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/main_footbar_my"
+                    android:layout_alignTop="@id/main_footbar_my"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="0dp"
+                    android:padding="6dp"
+                    android:src="@drawable/tab_unread_bg"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

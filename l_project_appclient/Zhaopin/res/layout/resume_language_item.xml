@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/resume_home_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/common_top_layout_style" >
+
+        <ImageButton
+            android:id="@+id/resume_language_item_goback"
+            style="@style/common_top_left_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_button_back" />
+
+        <ImageButton
+            android:id="@+id/resume_edit_save"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_save"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/resume_language_item_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/resume_addlanguageskill" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="20.0dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout style="@style/LineStyle_Layout" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/publish_reward_must"
+                        android:textColor="@color/red" />
+
+                    <TextView
+                        style="@style/LineStyle_Text"
+                        android:text="语言类别" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/language_class"
+                    style="@style/LineStyle_Button"
+                    android:hint="请选择语言类别" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout style="@style/LineStyle_Layout" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/publish_reward_must"
+                        android:textColor="@color/red"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        style="@style/LineStyle_Text"
+                        android:text="掌握程度" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/master_degree"
+                    style="@style/LineStyle_Button"
+                    android:hint="请选择掌握程度" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout style="@style/LineStyle_Layout" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/publish_reward_must"
+                        android:textColor="@color/red"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        style="@style/LineStyle_Text"
+                        android:text="读写能力" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/read_write"
+                    style="@style/LineStyle_Button"
+                    android:hint="请选择读写能力" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout style="@style/LineStyle_Layout" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/publish_reward_must"
+                        android:textColor="@color/red"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        style="@style/LineStyle_Text"
+                        android:text="听说能力" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/listen_speak"
+                    style="@style/LineStyle_Button"
+                    android:hint="请选择听说能力" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp" >
+
+                <Button
+                    android:id="@+id/resume_education_item_delete"
+                    style="@style/LineStyle_center"
+                    android:background="@drawable/common_button_gray"
+                    android:minHeight="@dimen/default_button_height"
+                    android:text="@string/frame_language_delete" />
+
+                <Button
+                    android:id="@+id/resume_education_item_submit"
+                    style="@style/LineStyle_center"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/common_button_green"
+                    android:minHeight="@dimen/default_button_height"
+                    android:text="@string/frame_title_save" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

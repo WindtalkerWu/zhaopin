@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/scrolling_tabs" >
+	<TextView android:id="@+id/scrolling_tab_title"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_centerHorizontal="true"
+    	android:layout_alignParentTop="true"
+    	android:textColor="@color/resume_button_color"
+    	android:textSize="16sp" />
+	<TextView android:id="@+id/scrolling_tab_count"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_centerHorizontal="true"
+    	android:layout_below="@id/scrolling_tab_title"
+    	android:textSize="12sp"
+    	android:text="0"/>
+</RelativeLayout>

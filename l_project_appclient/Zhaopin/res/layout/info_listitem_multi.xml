@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <include layout="@layout/list_item_simpletxt" />
+
+    <include layout="@layout/list_item_common" />
+
+    <include layout="@layout/infolist_simpleimgtext_item" />
+
+    <include layout="@layout/infolist_multiimgtext_item" />
+
+</FrameLayout>

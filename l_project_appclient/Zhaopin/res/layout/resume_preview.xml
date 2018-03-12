@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout style="@style/common_top_layout_style" >
+
+            <ImageButton
+                android:id="@+id/resume_preview_goback"
+                style="@style/common_top_left_title_style"
+                android:src="@drawable/common_button_back" />
+
+            <ImageButton
+                android:id="@+id/resume_preview_share"
+                style="@style/common_top_right_title_style"
+                android:src="@drawable/common_button_share"
+                android:text="@string/frame_title_share" />
+
+            <ImageButton
+                android:id="@+id/resume_preview_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/resume_preview_share"
+                android:background="@color/full_transparent"
+                android:src="@drawable/common_button_edit"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/resume_detail_title"
+                style="@style/common_top_center_bigtitle_style" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fadingEdge="none"
+            android:scrollbars="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    style="@style/detail_cut_line"
+                    android:visibility="gone" />
+
+                <WebView
+                    android:id="@+id/resume_detail_webview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!--
+         <ProgressBar
+        android:id="@+id/resume_detail_head_progress"
+        style="@style/loading_small"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="5dip"
+        android:visibility="visible" />
+    -->
+
+    <ViewStub
+        android:id="@+id/resume_detail_head_progress"
+        style="@style/viewstub_progress_small_style"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="5dip"
+        android:layout="@layout/progressbar_small" />
+
+</RelativeLayout>

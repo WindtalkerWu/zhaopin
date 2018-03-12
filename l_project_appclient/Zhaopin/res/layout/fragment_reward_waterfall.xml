@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/fragment_reward_rl_top" 
+        style="@style/common_top_layout_style" 
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/fragment_reward_btn_type"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_personal" 
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/fragment_reward_btn_search"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_search" />
+        
+		<ImageView
+            android:id="@+id/fragment_reward_btn_publishreward"
+      		android:layout_width="wrap_content"
+       		android:layout_height="fill_parent"
+       		android:layout_centerVertical="true"
+       		android:scaleType="centerInside"
+            android:layout_toLeftOf="@id/fragment_reward_btn_search"
+			android:background="@color/full_transparent"
+            android:src="@drawable/common_button_rmb"/>
+
+        <TextView
+            android:id="@+id/fragment_reward_sortname"
+			android:textSize="18.0sp"
+			android:textColor="@color/white"
+			android:ellipsize="end"
+			android:gravity="center"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:singleLine="true"
+			android:layout_centerInParent="true"
+            android:background="@drawable/common_tv_bg_pulldown_normal"
+            android:text="@string/str_reward_sort_new" 
+            />
+    </RelativeLayout>
+     <com.huewu.pla.lib.MultiColumnPullToRefreshListView
+        xmlns:pla="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_listview_reward"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_reward_rl_top"
+        pla:plaColumnNumber="2"
+        pla:plaLandscapeColumnNumber="2"
+        pla:plaColumnPaddingLeft = "3.3dip"
+        pla:plaColumnPaddingRight = "3.3dip"
+        pla:listSelector="@drawable/listview_item_empty_selector"
+        android:cacheColorHint="#00000000"
+        android:padding="0dip"
+        android:visibility="gone"/>
+    <ListView 
+        android:id="@+id/fragment_reward_lv_pulldown"
+        android:layout_width="108dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_reward_rl_top"
+        android:layout_centerHorizontal="true"
+        android:divider="@null"
+		android:cacheColorHint="#00000000"
+        android:visibility="gone"
+        android:listSelector="@drawable/listview_item_empty_selector"
+        />
+
+</RelativeLayout>

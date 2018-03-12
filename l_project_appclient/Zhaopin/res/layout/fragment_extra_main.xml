@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/common_top_layout_style" >
+
+        <ImageView
+            android:id="@+id/fragment_extra_set"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_help"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/fragment_extra_more"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_more"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/fragment_extra_rightbt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/fragment_extra_more"
+            android:background="@color/full_transparent"
+            android:src="@drawable/common_button_subscription"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/fragment_extra_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/app_extra_title_moreinfo" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/extra_main_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="@drawable/listview_item_empty_selector"
+        android:scrollbars="none"
+        android:scrollingCache="false" >
+    </ListView>
+
+</LinearLayout>

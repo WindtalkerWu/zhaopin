@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/setting_title_bg"
+        style="@style/common_top_layout_style" >
+
+        <ImageButton
+            android:id="@+id/setting_goback"
+            style="@style/common_top_left_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/setting_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/setting_title_txt" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/setting_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/setting_title_bg"
+        android:background="@color/bg_color" >
+
+        <LinearLayout
+            android:id="@+id/setting_content_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp" >
+            
+            <ImageView
+                android:id="@+id/setting_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_launcher" 
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:id="@+id/setting_app_versionname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="11sp"
+                android:text="V1.0"
+                android:textColor="@color/list_subTitle"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="30dp" />
+
+            <RelativeLayout
+                android:id="@+id/setting_select_city_item"
+                style="@style/common_form_item_bg_nomargine_style"
+                android:visibility="visible" >
+
+                <TextView
+                    style="@style/common_form_item_left_tv_nowidth_style"
+                    android:text="@string/setting_select_city" />
+
+                <ImageView
+                    android:id="@+id/setting_select_city_item_arrow" 
+                    style="@style/common_form_item_right_image_style"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/setting_select_to_sorce_item"
+                style="@style/common_form_item_bg_nomargine_style"
+                android:layout_marginTop="-1dp" >
+
+                <TextView
+                    style="@style/common_form_item_left_tv_nowidth_style"
+                    android:text="@string/setting_to_sorce" />
+
+                <ImageView
+                    android:id="@+id/setting_select_to_sorce_item_arrow4"
+                    style="@style/common_form_item_right_image_style" />
+            </RelativeLayout>
+             <RelativeLayout
+                android:id="@+id/setting_features_introduction_item"
+                style="@style/common_form_item_bg_nomargine_style"
+                android:layout_marginTop="-1dp" >
+
+                <TextView
+                    style="@style/common_form_item_left_tv_nowidth_style"
+                    android:text="@string/setting_features_introduction" />
+
+                <ImageView
+                    android:id="@+id/setting_features_introduction_item_arrow"
+                    style="@style/common_form_item_right_image_style" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/setting_feedback_item"
+                style="@style/common_form_item_bg_nomargine_style"
+                android:layout_marginTop="-1dp" >
+
+                <TextView
+                    style="@style/common_form_item_left_tv_nowidth_style"
+                    android:text="@string/setting_feedback" />
+
+                <ImageView
+                    android:id="@+id/setting_feedback_item_arrow"
+                    style="@style/common_form_item_right_image_style" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/setting_check_version_item"
+                style="@style/common_form_item_bg_nomargine_style"
+                android:layout_marginTop="-1dp" >
+
+                <TextView
+                    style="@style/common_form_item_left_tv_nowidth_style"
+                    android:text="@string/setting_check_version" />
+
+                <ImageView
+                    android:id="@+id/setting_check_version_item_arrow"
+                    style="@style/common_form_item_right_image_style" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/setting_modify_pwd_item"
+                style="@style/common_form_item_bg_nomargine_style"
+                android:layout_marginTop="-1dp" >
+
+                <TextView
+                    style="@style/common_form_item_left_tv_nowidth_style"
+                    android:text="@string/setting_modify_pwd" />
+
+                <ImageView
+                    android:id="@+id/setting_modify_pwd_item_arrow"
+                    style="@style/common_form_item_right_image_style" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/setting_secure_pwd_item"
+                style="@style/common_form_item_bg_nomargine_style"
+                android:layout_marginTop="-1dp"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/common_form_item_left_tv_nowidth_style"
+                    android:text="@string/setting_secure_pwd" />
+
+                <ImageView
+                    android:id="@+id/setting_secure_pwd_item_arrow"
+                    style="@style/common_form_item_right_image_style" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/setting_subscription_management_item"
+                style="@style/common_form_item_bg_nomargine_style"
+                android:layout_marginTop="-1dp" >
+
+                <TextView
+                    style="@style/common_form_item_left_tv_nowidth_style"
+                    android:text="@string/setting_subscription_management" />
+
+                <ImageView
+                    android:id="@+id/setting_subscription_management_item_arrow"
+                   	style="@style/common_form_item_right_image_style" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/setting_qn_recommend_item"
+                style="@style/common_form_item_bg_nomargine_style"
+                android:layout_marginTop="-1dp" >
+
+                <TextView
+                    style="@style/common_form_item_left_tv_nowidth_style"
+                    android:text="@string/setting_qn_recommend" />
+
+                <ImageView
+                    android:id="@+id/setting_qn_recommend_item_arrow"
+                    style="@style/common_form_item_right_image_style" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/setting_task_showtype_item"
+                style="@style/common_form_item_bg_nomargine_style"
+                android:layout_marginTop="-1dp"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/common_form_item_left_tv_nowidth_style"
+                    android:text="@string/setting_task_showtype" />
+
+                <com.qianniu.zhaopin.app.widget.SlideSwitchView
+                    android:id="@+id/setting_task_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp" />
+            </RelativeLayout>
+            
+
+            <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/setting_tele_note"
+                    android:textSize="11sp"
+                    android:textColor="@color/list_subTitle"
+                    android:autoLink="phone"
+                    android:paddingTop="15dp"/>
+            <Button android:id="@+id/setting_exit_account"
+               style="@style/common_button_red_match"
+               android:text="@string/setting_exit_account"
+               android:layout_margin="15dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

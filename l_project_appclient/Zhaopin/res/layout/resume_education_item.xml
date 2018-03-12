@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/resume_home_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/common_top_layout_style" >
+
+        <ImageButton
+            android:id="@+id/resume_education_item_goback"
+            style="@style/common_top_left_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_button_back" />
+
+        <ImageButton
+            android:id="@+id/resume_edit_save"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_save"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/resume_education_item_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/resume_addeducationexperience" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="20dp" >
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout style="@style/LineStyle_Layout" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/publish_reward_must"
+                        android:textColor="@color/red" />
+
+                    <TextView
+                        style="@style/LineStyle_Text"
+                        android:text="学校名称" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/school"
+                    style="@style/LineStyle_Edit"
+                    android:hint="请输入学校名称" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout style="@style/LineStyle_Layout" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/publish_reward_must"
+                        android:textColor="@color/red"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        style="@style/LineStyle_Text"
+                        android:text="开始时间" />
+                </LinearLayout>
+
+                <com.qianniu.zhaopin.app.view.DateTextView
+                    android:id="@+id/start_time"
+                    style="@style/LineStyle_Button"
+                    android:hint="请选择开始时间" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout style="@style/LineStyle_Layout" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/publish_reward_must"
+                        android:textColor="@color/red"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        style="@style/LineStyle_Text"
+                        android:text="结束时间" />
+                </LinearLayout>
+
+                <com.qianniu.zhaopin.app.view.EndDateTextView
+                    android:id="@+id/end_time"
+                    style="@style/LineStyle_Button"
+                    android:hint="请选择结束时间" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout style="@style/LineStyle_Layout" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/publish_reward_must"
+                        android:textColor="@color/red"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        style="@style/LineStyle_Text"
+                        android:text="专业" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/major"
+                    style="@style/LineStyle_Button"
+                    android:hint="请输入专业" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout style="@style/LineStyle_Layout" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/publish_reward_must"
+                        android:textColor="@color/red"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        style="@style/LineStyle_Text"
+                        android:text="学历" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/degree"
+                    style="@style/LineStyle_Button"
+                    android:hint="请选择学历" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp" >
+
+                <Button
+                    android:id="@+id/resume_education_item_delete"
+                    style="@style/LineStyle_center"
+                    android:background="@drawable/common_button_gray"
+                    android:minHeight="@dimen/default_input_height"
+                    android:text="@string/frame_eduction_delete" />
+
+                <Button
+                    android:id="@+id/resume_education_item_submit"
+                    style="@style/LineStyle_center"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/common_button_green"
+                    android:minHeight="@dimen/default_input_height"
+                    android:text="@string/frame_title_save" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

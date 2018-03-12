@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/resume_home_bg"
+    android:orientation="vertical" >
+
+   	<RelativeLayout style="@style/common_top_layout_style" >
+
+        <ImageView
+            android:id="@+id/myintegral_btn_back"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/myintegral_tv_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/str_myintegral_title" 
+            />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layerType="software" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical" >
+
+           <!--  <include layout="@layout/resume_simpleinfo_layout" /> -->
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+		        >
+		
+		        <RelativeLayout
+		            android:id="@+id/myintegral_rl_photo"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center"
+		            android:layout_marginTop="10dp" >
+		
+		            <ImageView
+		                android:id="@+id/myintegral_img_complete"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerInParent="true" />
+		
+		            <ImageView
+		                android:id="@+id/myintegral_img_headphoto"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerInParent="true" />
+		        </RelativeLayout>
+		    </LinearLayout>
+		    
+		    <!-- 等级 -->
+		    <RelativeLayout
+				android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        >
+				<ImageView
+					android:id="@+id/myintegral_img_level"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:layout_marginRight="10.0dip"
+					android:src="@drawable/ic_stat_custom" 
+				/>
+				<TextView 
+				    android:id="@+id/myintegral_tv_level"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_toLeftOf="@id/myintegral_img_level"
+				    />
+		    </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp" >
+                
+                <LinearLayout style="@style/common_form_vertical_style" >
+	                <!-- 总积分  -->
+	                <RelativeLayout style="@style/common_form_item_style" >
+	
+	                    <LinearLayout
+	                        android:id="@+id/myintegral_ll_integraltitle"
+	                        style="@style/common_form_item_textviewlayout_style"
+	                        android:orientation="horizontal" >
+	                        <TextView
+	                            style="@style/common_form_item_textview_style"
+	                            android:text="@string/str_myintegral_integral" />
+	                    </LinearLayout>
+	
+	                    <RelativeLayout
+	                        style="@style/common_form_item_editlayout_style"
+	                        android:layout_toRightOf="@id/myintegral_ll_integraltitle" >
+				            <ImageView
+				                android:id="@+id/myintegral_img_money"
+				                android:layout_width="wrap_content"
+				                android:layout_height="wrap_content"
+				                android:layout_alignParentLeft="true"
+				                android:layout_centerVertical="true"
+				                android:layout_marginLeft="10.0dip"
+				                android:src="@drawable/ic_stat_custom" 
+				                />
+				            
+	                        <TextView
+	                            android:id="@+id/myintegral_tv_integral"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_centerVertical="true"
+	                            android:textSize="14sp"
+	                            android:singleLine="true"
+	                            android:background="@null"
+	                            android:textColor="@color/list_subTitle"
+	                            android:textColorHint="@color/tips_gray"
+	                            android:ellipsize="end"
+	                            android:gravity="center_vertical"
+	                            android:paddingLeft="3dp"
+	                            android:text="1500"
+	                            android:layout_toRightOf="@id/myintegral_img_money"
+	                            />
+	                    </RelativeLayout>
+	                </RelativeLayout>
+	                
+	                <include layout="@layout/common_form_line" />
+
+	                <!-- 兑换记录 -->
+	                <RelativeLayout style="@style/common_form_item_style" 
+	                    >
+	                    <LinearLayout
+	                        android:id="@+id/myintegral_ll_conversionrecordtitle"
+	                        style="@style/common_form_item_textviewlayout_style"
+	                        android:orientation="horizontal" >
+	                        <TextView
+	                            style="@style/common_form_item_textview_style"
+	                            android:text="@string/str_myintegral_conversionrecord" />
+	                    </LinearLayout>
+	
+	                    <RelativeLayout
+	                        android:id="@+id/myintegral_rl_conversionrecord"
+	                        style="@style/common_form_item_editlayout_style"
+	                        android:layout_toRightOf="@id/myintegral_ll_conversionrecordtitle" >
+	
+	                        <ImageView
+	                            android:id="@+id/publish_reward_times_text_icon"
+	                            style="@style/common_form_item_edit_next_style" />
+	
+	                        <TextView
+	                            android:id="@+id/myintegral_tv_conversionrecord"
+	                            style="@style/common_form_item_edit_textview_style"
+	                            android:layout_toLeftOf="@id/publish_reward_times_text_icon"
+	                            android:hint="@string/str_myintegral_conversionrecordhint"
+	                             />
+	                    </RelativeLayout>
+	                </RelativeLayout>
+	                
+	                <include layout="@layout/common_form_line" />
+	                
+	                <!-- 收货地址 -->
+	                <RelativeLayout style="@style/common_form_item_style" 
+	                    >
+	                    <LinearLayout
+	                        android:id="@+id/myintegral_ll_addresstitle"
+	                        style="@style/common_form_item_textviewlayout_style"
+	                        android:orientation="horizontal" >
+	                        <TextView
+	                            style="@style/common_form_item_textview_style"
+	                            android:text="@string/str_myintegral_address" />
+	                    </LinearLayout>
+	
+	                    <RelativeLayout
+	                        android:id="@+id/myintegral_rl_address"
+	                        style="@style/common_form_item_editlayout_style"
+	                        android:layout_toRightOf="@id/myintegral_ll_addresstitle" >
+	
+	                        <ImageView
+	                            android:id="@+id/publish_reward_times_text_icon"
+	                            style="@style/common_form_item_edit_next_style" />
+	
+	                        <TextView
+	                            android:id="@+id/myintegral_tv_address"
+	                            style="@style/common_form_item_edit_textview_style"
+	                            android:layout_toLeftOf="@id/publish_reward_times_text_icon"
+	                            android:hint="@string/str_myintegral_addresshint"
+	                             />
+	                    </RelativeLayout>
+	                </RelativeLayout>
+	                
+	                <include layout="@layout/common_form_line" />
+	                	                
+	                <!-- 我要充值  -->
+	                <RelativeLayout style="@style/common_form_item_style" >
+	
+	                    <LinearLayout
+	                        android:id="@+id/myintegral_ll_rechargetitle"
+	                        style="@style/common_form_item_textviewlayout_style"
+	                        android:orientation="horizontal" >
+							<TextView
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:text="@string/str_reward_rmb"
+	                            android:textColor="@color/red" />
+	                        <TextView
+	                            style="@style/common_form_item_textview_style"
+	                            android:text="@string/str_myintegral_recharge" />
+	                    </LinearLayout>
+	
+	                    <RelativeLayout
+	                        android:id="@+id/myintegral_rl_recharge"
+	                        style="@style/common_form_item_editlayout_style"
+	                        android:layout_toRightOf="@id/myintegral_ll_rechargetitle" >
+	
+	                        <ImageView
+	                            android:id="@+id/publish_reward_times_text_icon"
+	                            style="@style/common_form_item_edit_next_style" />
+	
+	                        <TextView
+	                            android:id="@+id/myintegral_tv_recharge"
+	                            style="@style/common_form_item_edit_textview_style"
+	                            android:layout_toLeftOf="@id/publish_reward_times_text_icon"
+	                            android:hint="@string/str_myintegral_rechargehint"
+	                             />
+	                    </RelativeLayout>
+	                </RelativeLayout>
+	             </LinearLayout>
+                
+                <TextView
+                    android:id="@+id/myintegral_tv_qianniuintegral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_qianniuintegral_title"
+                    android:textColor="@color/resume_button_color"
+                    android:textSize="14.0sp" />
+                
+				<RelativeLayout
+	               android:id="@+id/myintegral_lp_gomall"
+	               android:layout_gravity="center_horizontal"
+	               style="@style/common_button_green_big"
+	               android:layout_marginTop="20.0dip"
+               		>
+				   <TextView
+				   	   style="@style/common_button_text"
+	              	   android:text="@string/str_myintegral_gomall"
+				       />
+          		 </RelativeLayout>
+          		 
+				<TextView 
+				    android:id="@+id/myintegral_tv_tel"
+				    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/setting_tele_note"
+                    android:textSize="11sp"
+                    android:textColor="@color/list_subTitle"
+                    android:autoLink="phone"
+                    android:paddingTop="20.0dip"
+                    />
+            
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

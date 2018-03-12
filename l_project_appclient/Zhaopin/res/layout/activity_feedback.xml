@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <RelativeLayout
+        android:id="@+id/feedback_title_bg"
+        style="@style/common_top_layout_style" >
+
+        <ImageButton
+            android:id="@+id/feedback_goback"
+            style="@style/common_top_left_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/feedback_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/feedback_title_txt" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/feedback_content_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/feedback_title_bg"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="20.0dip"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/feedback_content"
+            style="@style/common_text_multi_input_edittext_style"
+            android:layout_gravity="top"
+            android:background="@drawable/common_form_bg"
+            android:hint="@string/feedback_content_hint"
+            android:maxLength="500" />
+
+        <Button
+            android:id="@+id/feedback_dosubmit"
+            style="@style/common_button_green_match"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/feedback_submit"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

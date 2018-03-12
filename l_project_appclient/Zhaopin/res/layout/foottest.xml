@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_linearlayout_footer"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@drawable/widget_bar_bg_n"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <FrameLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:background="@null" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center_horizontal"
+            android:visibility="visible" >
+
+            <RadioButton
+                android:id="@+id/main_footbar_news"
+                style="@style/main_footbar_radio"
+                android:drawableTop="@drawable/widget_bar_news"
+                android:text="消息" />
+
+            <TextView
+                android:id="@+id/main_tab_unread_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/main_footbar_news"
+                android:layout_alignRight="@id/main_footbar_news"
+                android:background="@drawable/tab_unread_bg"
+                android:textColor="@color/white"
+                android:textSize="10.0dip"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <ImageView
+        style="@style/main_footbar_cutline"
+        android:src="@drawable/widget_bar_cut_off" />
+
+    <FrameLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:background="@null" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center_horizontal"
+            android:visibility="visible" >
+
+            <RadioButton
+                android:id="@+id/main_footbar_news"
+                style="@style/main_footbar_radio"
+                android:drawableTop="@drawable/widget_bar_news"
+                android:text="消息" />
+
+            <TextView
+                android:id="@+id/main_tab_unread_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/main_footbar_news"
+                android:layout_alignRight="@id/main_footbar_news"
+                android:background="@drawable/tab_unread_bg"
+                android:textColor="@color/white"
+                android:textSize="10.0dip"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <ImageView
+        style="@style/main_footbar_cutline"
+        android:src="@drawable/widget_bar_cut_off" />
+
+    <FrameLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:background="@null" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center_horizontal"
+            android:visibility="visible" >
+
+            <RadioButton
+                android:id="@+id/main_footbar_news"
+                style="@style/main_footbar_radio"
+                android:drawableTop="@drawable/widget_bar_news"
+                android:text="消息" />
+
+            <TextView
+                android:id="@+id/main_tab_unread_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/main_footbar_news"
+                android:layout_alignRight="@id/main_footbar_news"
+                android:background="@drawable/tab_unread_bg"
+                android:textColor="@color/white"
+                android:textSize="10.0dip"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <ImageView
+        style="@style/main_footbar_cutline"
+        android:src="@drawable/widget_bar_cut_off" />
+
+    <FrameLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:background="@null" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center_horizontal"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:id="@+id/contain1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                <RadioButton
+                    android:id="@+id/main_footbar_news"
+                    style="@style/main_footbar_radio"
+                    android:drawableTop="@drawable/widget_bar_news"
+                    android:text="消息" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/main_tab_unread_tv"
+				android:gravity="top|right|center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tab_unread_bg"
+                android:textColor="@color/white"
+                android:textSize="10.0dip"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

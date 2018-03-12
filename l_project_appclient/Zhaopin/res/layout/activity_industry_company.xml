@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_color" >
+    <RelativeLayout
+        android:id="@+id/industry_insiders_title_bg"
+        style="@style/common_top_layout_style"
+        android:layout_alignParentTop="true" >
+
+        <ImageButton
+            android:id="@+id/industry_insiders_goback"
+            style="@style/common_top_left_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/industry_insiders_title_txt"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/industry_insiders_title_txt" />
+        <Button
+            android:id="@+id/industry_insiders_apply"
+            style="@style/common_top_right_title_style"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/industry_insiders_apply" />
+    </RelativeLayout>
+    <com.qianniu.zhaopin.app.widget.PullToRefreshListView
+        android:id="@+id/insiders_list"
+        style="@style/common_listview"
+        android:listSelector="@drawable/listview_item_empty_selector"
+        android:layout_below="@id/industry_insiders_title_bg"
+        android:dividerHeight="6.6dp"
+        android:paddingLeft="6.6dp"
+        android:visibility="gone"
+        android:scrollbars="none"/>
+     <com.huewu.pla.lib.MultiColumnPullToRefreshListView
+        xmlns:pla="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/company_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/industry_insiders_title_bg"
+        pla:plaColumnNumber="2"
+        pla:plaLandscapeColumnNumber="3"
+        pla:plaColumnPaddingLeft="3.3dp"
+        pla:plaColumnPaddingRight="3.3dp"
+        android:visibility="gone"
+       	pla:listSelector="@drawable/listview_item_empty_selector" />
+
+</RelativeLayout>

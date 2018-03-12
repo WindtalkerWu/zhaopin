@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/resume_home_bg"
+    android:orientation="vertical" >
+
+   	<RelativeLayout style="@style/common_top_layout_style" >
+
+        <ImageView
+            android:id="@+id/myaccount_btn_back"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/myaccount_tv_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/str_myaccount_title" 
+            />
+        
+		<ImageButton
+            android:id="@+id/myaccount_btn_rightsubmit"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_save"
+			android:visibility="gone"
+             />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layerType="software" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical" >
+
+           <!--  <include layout="@layout/resume_simpleinfo_layout" /> -->
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+		        >
+		
+		        <RelativeLayout
+		            android:id="@+id/resume_photo_item"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center"
+		            android:layout_marginTop="10dp" >
+		
+		            <ImageView
+		                android:id="@+id/myaccount_img_complete"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerInParent="true" />
+		
+		            <ImageView
+		                android:id="@+id/myaccount_img_headphoto"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_centerInParent="true" />
+		        </RelativeLayout>
+		    </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp" >
+                
+               <LinearLayout style="@style/common_form_vertical_style" >
+
+		             <!-- 姓名 -->
+		 			<RelativeLayout style="@style/common_form_item_style" >
+		
+						<LinearLayout android:id="@+id/myaccount_ll_nametitle"
+							style="@style/common_form_item_textviewlayout_style"
+							android:orientation="horizontal" >
+							<TextView
+		                          android:layout_width="wrap_content"
+		                          android:layout_height="wrap_content"
+		                          android:text="@string/publish_reward_must"
+		                          android:textColor="@color/red" />
+		                      <TextView android:id="@+id/myaccount_tv_nametitle"
+		                          style="@style/common_form_item_textview_style"
+		                          android:text="@string/str_myaccount_nametitle" />
+						</LinearLayout>
+		
+						<RelativeLayout
+							style="@style/common_form_item_editlayout_style"
+							android:layout_toRightOf="@id/myaccount_ll_nametitle" 
+							android:focusable="true"  
+        					android:focusableInTouchMode="true"
+							>
+		
+							<EditText
+		                        android:id="@+id/myaccount_et_name"
+		                        style="@style/common_form_item_edittext_style"
+		                        android:hint="@string/str_myaccount_namehint"
+		                        android:imeOptions="actionNext"
+		                        />
+						</RelativeLayout>
+					</RelativeLayout>
+					<include layout="@layout/common_form_line" />
+					 <!-- 性别 -->
+					<RelativeLayout style="@style/common_form_item_style" >
+		
+		                   <LinearLayout
+		                       android:id="@+id/myaccount_ll_gendertitle"
+		                       style="@style/common_form_item_textviewlayout_style"
+		                       android:orientation="horizontal" >
+		                       <TextView
+		                           android:layout_width="wrap_content"
+		                           android:layout_height="wrap_content"
+		                           android:text="@string/publish_reward_must"
+		                           android:textColor="@color/red" />
+		                       <TextView
+		                           style="@style/common_form_item_textview_style"
+		                           android:text="@string/str_myaccount_gendertitle" />
+		                   </LinearLayout>
+		
+		                   <RadioGroup
+		                       android:id="@+id/myaccount_rg_gender"
+		                       android:layout_width="match_parent"
+		                       android:layout_height="match_parent"
+		                       android:layout_toRightOf="@id/myaccount_ll_gendertitle"
+		                       android:gravity="center_vertical"
+		                       android:orientation="horizontal" >
+								<!-- 男 -->
+		                       <RadioButton
+		                           android:id="@+id/myaccount_rb_male"
+		                           style="@style/CustomRadioButtonTheme"
+		                           android:layout_width="wrap_content"
+		                           android:layout_height="wrap_content"
+		                           android:layout_marginLeft="10dp"
+		                           android:text="@string/str_myaccount_male"
+		                           android:textColor="@color/list_subTitle"
+		                           android:textSize="14sp"
+		                           android:checked="true" />
+								<!-- 女 -->
+		                       <RadioButton
+		                           android:id="@+id/myaccount_rb_female"
+		                           style="@style/CustomRadioButtonTheme"
+		                           android:layout_width="wrap_content"
+		                           android:layout_height="wrap_content"
+		                           android:layout_marginLeft="35dp"
+		                           android:text="@string/str_myaccount_female"
+		                           android:textColor="@color/list_subTitle"
+		                           android:textSize="14sp" />
+		                   </RadioGroup>
+		               </RelativeLayout>
+		               
+					<include layout="@layout/common_form_line" 
+					    android:visibility="gone"
+					    />
+		            <!-- 手机号 -->
+		            <RelativeLayout
+		                style="@style/common_form_item_style"
+		                android:padding="0dp" 
+		                android:visibility="gone"
+		                >
+						<LinearLayout
+							android:id="@+id/myaccount_ll_phonetitle"
+							style="@style/common_form_item_textviewlayout_style"
+							android:orientation="horizontal" >
+		                       <TextView
+		                           android:layout_width="wrap_content"
+		                           android:layout_height="wrap_content"
+		                           android:text="@string/publish_reward_must"
+		                           android:textColor="@color/red" />
+		                       <TextView
+		                           style="@style/common_form_item_textview_style"
+		                           android:text="@string/str_myaccount_phonetitle" />
+		                 </LinearLayout>
+		
+		                <RelativeLayout
+		                    android:id="@+id/myaccount_rl_phone"
+		                    style="@style/common_form_item_editlayout_style"
+		                    android:layout_toRightOf="@id/myaccount_ll_phonetitle"
+							android:focusable="true"  
+        					android:focusableInTouchMode="true"
+		                     >
+		                    <!-- 
+							<ImageView
+	                            android:id="@+id/mybalance_img_aliplayaccount_text_icon"
+	                            style="@style/common_form_item_edit_next_style" />
+							 <TextView
+							    android:id="@+id/mybalance_tv_phone_binding"
+							    android:layout_width="wrap_content"
+							    android:layout_height="wrap_content"
+							    android:gravity="center_vertical"
+							    android:layout_centerVertical="true"
+						    	android:layout_alignParentRight="true"
+                           	 	android:layout_marginRight="30.0dip"
+	                            android:text="@string/str_myaccount_nobinding"
+	                            android:textColor="@color/red"
+							    />
+							  
+	                        <TextView
+	                            android:id="@+id/mybalance_tv_phone"
+	                            style="@style/common_form_item_edit_textview_style"
+	                            android:layout_toLeftOf="@id/mybalance_tv_phone_binding"
+	                            android:hint="@string/str_myaccount_phonehint" />
+	                            -->
+							<EditText
+		                        android:id="@+id/myaccount_tv_phone"
+		                        style="@style/common_form_item_edittext_style"
+		                        android:hint="@string/str_myaccount_phonehint"
+		                        android:imeOptions="actionNext"
+		                        android:inputType="phone" />
+		                </RelativeLayout>
+		            </RelativeLayout>
+		            
+
+					<ImageView
+	               	    android:id="@+id/myaccount_img_authcodeline"
+    					android:layout_width="match_parent"
+    					android:layout_height="0.5dp"
+    					android:background="@drawable/common_form_line"
+    					android:visibility="gone"
+    					 />  
+		            
+					<!-- 获取验证码 -->
+		            <RelativeLayout
+		                android:id="@+id/myaccount_rl_authcodeall"
+		                style="@style/common_form_item_style"
+		                android:padding="0dp"
+		                android:visibility="gone"
+		                 >
+		
+						<LinearLayout
+							android:id="@+id/myaccount_ll_authcodetitle"
+							style="@style/common_form_item_textviewlayout_style"
+							android:orientation="horizontal" >
+		                       <TextView
+		                           android:layout_width="wrap_content"
+		                           android:layout_height="wrap_content"
+		                           android:text="@string/publish_reward_must"
+		                           android:textColor="@color/red"
+		                           android:visibility="gone"
+		                            />
+		                       <TextView
+		                           style="@style/common_form_item_textview_style"
+		                           android:text="@string/str_myaccount_authcodetitle" />
+		                 </LinearLayout>
+		
+		                <RelativeLayout
+		                    style="@style/common_form_item_editlayout_style"
+		                    android:layout_toRightOf="@id/myaccount_ll_authcodetitle"
+							android:focusable="true"  
+        					android:focusableInTouchMode="true"
+		                     >
+		
+		                    <Button
+		                        android:id="@+id/myaccount_btn_getauthcode"
+		                        android:layout_width="80dp"
+		                        android:layout_height="match_parent"
+		                        android:layout_alignParentRight="true"
+		                        android:background="@drawable/common_button_green"
+		                        android:text="@string/str_myaccount_getauthcode"
+		                        android:textColor="@color/white"
+		                        android:textSize="11sp" />
+		
+		                    <EditText
+		                        android:id="@+id/myaccount_et_authcode"
+		                        style="@style/common_form_item_edittext_style"
+		                        android:layout_toLeftOf="@+id/myaccount_btn_getauthcode"
+		                        android:hint="@string/str_myaccount_authcodehint"
+		                        android:imeOptions="actionDone"
+		                        android:inputType="text" />
+		                </RelativeLayout>
+		            </RelativeLayout>
+		            
+	               	<ImageView
+	               	    android:id="@+id/myaccount_img_mybalanceallline"
+    					android:layout_width="match_parent"
+    					android:layout_height="0.5dp"
+    					android:background="@drawable/common_form_line"
+    					android:visibility="gone"
+    					 />  
+    					        
+	                <!-- 我的余额  -->
+	                <RelativeLayout
+	                    android:id="@+id/myaccount_rl_mybalanceall"
+	                     style="@style/common_form_item_style"
+	                     android:visibility="gone"
+	                      >
+	
+	                    <LinearLayout
+	                        android:id="@+id/myaccount_ll_mybalancetitle"
+	                        style="@style/common_form_item_textviewlayout_style"
+	                        android:orientation="horizontal" >
+	                        <TextView
+	                            style="@style/common_form_item_textview_style"
+	                            android:text="@string/str_myaccount_mybalancetitle" />
+	                    </LinearLayout>
+	
+	                    <RelativeLayout
+	                        android:id="@+id/myaccount_rl_mybalance"
+	                        style="@style/common_form_item_editlayout_style"
+	                        android:layout_toRightOf="@id/myaccount_ll_mybalancetitle" >
+	
+	                        <ImageView
+	                            android:id="@+id/publish_reward_times_text_icon"
+	                            style="@style/common_form_item_edit_next_style" />
+	
+	                        <TextView
+	                            android:id="@+id/myaccount_tv_mybalance"
+	                            style="@style/common_form_item_edit_textview_style"
+	                            android:layout_toLeftOf="@id/publish_reward_times_text_icon"
+	                            android:text="0.00 元"
+	                             />
+	                    </RelativeLayout>
+	                </RelativeLayout>
+	             </LinearLayout>
+				
+	            <Button 
+	               android:id="@+id/myaccount_btn_submit"
+	               style="@style/common_button_green_match"
+	               android:text="@string/str_myaccount_submit"
+	               android:layout_margin="15.0dip" 
+	               android:visibility="gone"
+	               />
+            
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

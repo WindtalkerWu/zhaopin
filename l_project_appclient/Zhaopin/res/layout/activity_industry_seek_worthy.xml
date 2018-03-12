@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_color" >
+    <RelativeLayout
+        android:id="@+id/industry_detail_title_bg"
+        style="@style/common_top_layout_style" >
+
+        <ImageView
+            android:id="@+id/industry_detail_title_goback"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/industry_detail_title"
+            style="@style/common_top_center_small_title_style"
+            android:text="@string/industry_detail_title" />
+        <ImageView
+            android:id="@+id/industry_detail_subscription"
+      		android:layout_width="wrap_content"
+       		android:layout_height="fill_parent"
+       		android:layout_centerVertical="true"
+       		android:scaleType="centerCrop"
+            android:layout_toLeftOf="@+id/industry_detail_title_commentwall"
+			android:background="@color/full_transparent"
+            android:src="@drawable/common_button_subscription_add"
+            android:visibility="invisible" />
+        <ImageView
+            android:id="@id/industry_detail_title_commentwall"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_discuss" />
+    </RelativeLayout>
+    <!-- <include layout="@layout/industry_seek_worthy_top" /> -->
+    <com.qianniu.zhaopin.app.widget.PullToRefreshListView
+        android:id="@+id/industry_detail_list"
+        style="@style/common_listview"
+        android:scrollbars="none"
+        android:listSelector="@drawable/listview_item_empty_selector"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" />
+
+</LinearLayout>

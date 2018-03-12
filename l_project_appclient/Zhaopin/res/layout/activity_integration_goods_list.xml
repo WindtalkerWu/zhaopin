@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/integration_goods_list_title_bg"
+        style="@style/common_top_layout_style">
+
+        <ImageButton
+            android:id="@+id/integration_goods_list_title_goback"
+            style="@style/common_top_left_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/integration_goods_list_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/integration_goods_list_title_search" />
+    </RelativeLayout>
+    <ListView android:id="@+id/integration_goods_list"
+        style="@style/common_listview"
+        android:layout_below="@id/integration_goods_list_title_bg"/>
+
+</RelativeLayout>

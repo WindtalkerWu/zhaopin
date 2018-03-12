@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/common_listitem_style"
+    android:layout_width="match_parent"
+    android:layout_height="80dp" >
+
+    <FrameLayout
+        android:id="@+id/listitem_rightiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="3dp" >
+
+        <ImageView
+            android:id="@+id/listitem_rightbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_item_arrow_bg"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/listitem_rightcheckedbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_img_next_big"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/listitem_rightiv"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/listitem_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="@color/list_title"
+            android:textSize="@dimen/text_size_15" />
+
+        <TextView
+            android:id="@+id/listitem_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/list_subTitle"
+            android:textSize="@dimen/text_size_12"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_multi_imgtxtcontainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/space_14"
+    android:paddingRight="@dimen/space_14"
+    android:visibility="visible" >
+
+<!--     android:background="@android:color/transparent" -->
+
+    <TextView
+        android:id="@+id/info_item_time_tv"
+        style="@style/ChattingUISplit"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/common_transparent_bg"
+        android:padding="5dp"
+        android:text="2013,1,2"
+        android:textColor="@color/white"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_form_bg"
+        android:orientation="vertical"
+        android:padding="0dp" >
+
+        <LinearLayout
+            android:id="@+id/info_item_multi_TopSlot"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="151.0dip"
+                android:paddingLeft="0.5dp"
+                android:paddingRight="0.5dp"
+                android:paddingTop="0.5dp"
+                android:background="@drawable/common_list_item_default_selector" >
+
+                <LinearLayout
+                    android:id="@+id/info_item_top_photo_iv_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:padding="0dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                    android:id="@+id/info_item_top_photo_iv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150.0dip"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/qianniu_bg_small" />
+
+                    <include
+                        android:id="@+id/adzone_item_line"
+                        layout="@layout/common_form_line"
+                        android:padding="0dp" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/info_item_top_title_in_image"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/half_alpha_black"
+                    android:gravity="center_vertical"
+                    android:minHeight="32.0dip"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingRight="15dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="19sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/info_item_Slotcotent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="0dp" >
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

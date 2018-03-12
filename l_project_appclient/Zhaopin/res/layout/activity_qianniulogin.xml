@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/qianniulogin_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/bg_color">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+			<RelativeLayout style="@style/common_top_layout_style" >
+				<ImageButton
+					android:id="@+id/qianniulogin_btn_goback"
+					style="@style/common_top_left_title_style" 
+					android:src="@drawable/common_button_back"/>
+
+	             <TextView
+	                  android:id="@+id/qianniulogin_tv_title"
+	                  style="@style/common_top_center_bigtitle_style"
+	                  android:text="@string/usermanager_login_button_login" />
+              
+	             <!--
+				<ImageButton
+		            android:id="@+id/qianniulogin_btn_login"
+		            style="@style/common_top_right_title_style"
+		            android:src="@drawable/common_button_save" />
+		        -->
+				<Button
+		            android:id="@+id/qianniulogin_btn_register"
+		            style="@style/fillheight_top_right_title_style"
+		            android:text="@string/usermanager_login_button_register"
+		            android:visibility="visible" />
+            </RelativeLayout>
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_marginTop="10.0dip"
+                        style="@style/common_form_vertical_style"
+                        >
+						<!-- 用户名 -->
+                        <RelativeLayout 
+                            style="@style/common_form_item_style" >
+
+							<RelativeLayout
+		                        android:id="@+id/qianniulogin_rl_username"
+		                        style="@style/common_form_item_imagelayout_style" >
+
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+								    android:layout_centerInParent="true"
+								    android:src="@drawable/common_button_userid"
+								    />
+                   			</RelativeLayout>
+                            <RelativeLayout
+                                style="@style/common_form_item_editlayout_style"
+                                android:layout_toRightOf="@id/qianniulogin_rl_username" >
+
+								<EditText
+		                            android:id="@+id/qianniulogin_et_username"
+		                            style="@style/common_form_item_edittext_style"
+		                            android:hint="@string/usermanager_login_hint_username"
+		                            android:imeOptions="actionNext"/>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <include layout="@layout/common_form_line" />
+                        
+                         <RelativeLayout 
+                            style="@style/common_form_item_style" >
+
+							<RelativeLayout
+		                        android:id="@+id/qianniulogin_rl_userpass"
+		                        style="@style/common_form_item_imagelayout_style" >
+
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+								    android:layout_centerInParent="true"
+								    android:src="@drawable/common_button_userkey"
+								    />
+                   			</RelativeLayout>
+                            <RelativeLayout
+                                style="@style/common_form_item_editlayout_style"
+                                android:layout_toRightOf="@id/qianniulogin_rl_userpass" >
+
+								<EditText
+		                            android:id="@+id/qianniulogin_et_password"
+		                            style="@style/common_form_item_edittext_style"
+		                            android:hint="@string/usermanager_login_hint_password"
+		                            android:password="true"
+		                            android:imeOptions="actionNext"/>
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10.0dip"
+                        android:layout_marginTop="10.0dip"
+                        >
+                         <!-- 忘记密码 -->
+                        <TextView
+                            android:id="@+id/qianniulogin_tv_forgetpass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10.0dip"
+                            android:layout_marginTop="10.0dip"
+                            android:gravity="right"
+                            android:text="@string/usermanager_login_info_forgetpass"
+                            android:textColor="@color/red"
+                            android:textSize="13.0sp" />
+                         <!-- 注册 -->
+                         <!--
+                        <TextView
+                            android:id="@+id/qianniulogin_tv_register"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@id/qianniulogin_tv_forgetpass"
+                            android:layout_marginRight="10.0dip"
+                            android:layout_marginTop="10.0dip"
+                            android:gravity="right"
+                            android:text="@string/usermanager_login_button_register"
+                            android:textColor="@color/blue"
+                            android:textSize="13.0sp" />
+                         -->
+                    </RelativeLayout>
+                    
+                    <RelativeLayout
+				    	android:layout_width="fill_parent"
+				    	android:layout_height="wrap_content"
+				   		 >
+                        <!-- 登录 -->
+						<RelativeLayout
+			               android:id="@+id/qianniulogin_rl_login"
+			               android:layout_centerInParent="true"
+			               style="@style/common_button_green_big"
+			              		>
+						   <TextView
+						   	   style="@style/common_button_text"
+			              	   android:text="@string/usermanager_login_button_login"
+						       />
+			           	</RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/common_top_layout_style" >
+
+        <ImageButton
+            android:id="@+id/resume_language_list_goback"
+            style="@style/common_top_left_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_button_back" />
+
+        <ImageView
+            android:id="@+id/resume_language_list_add"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_add" />
+
+        <TextView
+            android:id="@+id/resume_language_list_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="语言技能" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/resume_language_list_empty"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="您暂时还没添加任何语言技能"
+            android:textColor="@color/resume_text_color"
+            android:textSize="16.0sp" />
+
+        <ListView
+            android:id="@+id/resume_language_list_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/common_form_line"
+            android:listSelector="@drawable/listview_item_empty_selector" />
+    </FrameLayout>
+
+</LinearLayout>

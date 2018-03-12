@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout style="@style/common_top_layout_style" >
+
+            <ImageButton
+                android:id="@+id/foruminfo_detail_goback"
+                style="@style/common_top_left_title_style"
+                android:src="@drawable/common_button_back" />
+
+            <ImageButton
+                android:id="@+id/foruminfo_detail_share"
+                style="@style/common_top_right_title_style"
+                android:src="@drawable/common_button_share" />
+
+            <TextView
+                android:id="@+id/foruminfo_detail_title"
+                style="@style/common_top_center_bigtitle_style" />
+
+            <ViewStub
+                android:id="@+id/foruminfo_detail_head_progress"
+                style="@style/viewstub_progress_small_style"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:layout_toLeftOf="@id/foruminfo_detail_share"
+                android:layout="@layout/progressbar_small" />
+            <!--
+                 <ProgressBar
+                android:id="@+id/foruminfo_detail_head_progress"
+                style="@style/loading_small"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:layout_toLeftOf="@id/foruminfo_detail_share"
+                android:visibility="gone" />
+            -->
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/news_detail_scrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fadingEdge="none"
+            android:scrollbars="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/news_detail_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6.0dip"
+                    android:layout_marginRight="6.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6.0dip"
+                    android:layout_marginRight="6.0dip"
+                    android:layout_marginTop="6.0dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/news_detail_author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/author_text"
+                        android:textSize="@dimen/text_size_13" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6.0dip"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <TextView
+                        android:id="@+id/news_detail_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6.0dip"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10.0dip" />
+
+                    <TextView
+                        android:id="@+id/news_detail_commentcount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.0dip"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_size_12" />
+                </LinearLayout>
+
+                <View
+                    style="@style/detail_cut_line"
+                    android:visibility="gone" />
+
+                <WebView
+                    android:id="@+id/foruminfo_detail_webview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/app_recommend_title_bg"
+        style="@style/common_top_layout_style" >
+
+        <ImageView
+            android:id="@+id/app_recommend_goback"
+            style="@style/common_top_left_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/app_recommend_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/app_recommend_title_txt" />
+        <!-- <ProgressBar
+                android:id="@+id/app_recommend_head_progress"
+                style="@style/loading_small"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:layout_alignParentRight="true"
+                android:visibility="gone" /> -->
+        <ViewStub
+            android:id="@+id/app_recommend_head_progress"
+            style="@style/viewstub_progress_small_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:layout="@layout/progressbar_small" />
+    </RelativeLayout>
+    <WebView android:id="@+id/app_recommend_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_recommend_title_bg"
+        android:scrollbars="none"/>
+
+</RelativeLayout>

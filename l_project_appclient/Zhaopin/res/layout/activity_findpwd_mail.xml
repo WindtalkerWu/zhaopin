@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/bg_color">
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout style="@style/common_top_layout_style" >
+
+                <ImageButton
+                    android:id="@+id/fpm_mail_btn_goback"
+                    style="@style/common_top_left_title_style" 
+                    android:src="@drawable/common_button_back"/>
+
+                <Button
+                    android:id="@+id/fpm_mail_btn_submit"
+                    style="@style/common_top_right_title_style"
+                    android:text="@string/str_findpwd_mail_btn_submit" />
+
+                <TextView
+                    android:id="@+id/fpm_mail_title"
+                    style="@style/common_top_center_bigtitle_style"
+                    android:text="@string/str_findpwd_mail_btn_title" />
+            </RelativeLayout>
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+					<LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:background="@drawable/common_around_corner_bg"
+                        android:orientation="vertical" >
+                        
+					    <!-- 用户名 -->
+						<RelativeLayout style="@style/common_text_input_layout_style" >
+
+                            <TextView
+                                android:id="@+id/fpm_mail_tv_username"
+                                style="@style/common_text_input_textview_style"
+                                android:text="@string/str_findpwd_moblie_title_username" />
+
+                            <RelativeLayout
+                                style="@style/common_text_input_edit_layout_style"
+                                android:layout_toRightOf="@id/fpm_mail_tv_username" >
+
+                                <EditText
+                                    android:id="@+id/fpm_mail_username"
+                                    style="@style/common_text_input_edittext_style"
+                                    android:hint="@string/str_findpwd_mail_hint_username"
+                                    android:imeOptions="actionNext" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                        
+						
+                    </LinearLayout>
+                    
+					<TextView
+			            android:id="@+id/fpm_mail_prompt"
+			            android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+		           		android:layout_marginTop="10.0dip"
+			            android:paddingRight="12.0dip"
+			            android:paddingLeft="12.0dip"
+			            android:paddingBottom="30dp"
+			            android:text="@string/str_findpwd_mail_tv_prompt"
+			            />
+                </LinearLayout>
+             </ScrollView>
+         </LinearLayout>
+         
+		 <TextView
+            android:id="@+id/fpm_mail_contact"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:paddingBottom="30dp"
+            android:text="@string/customer_service_hotline_telephone"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_middle" />
+		 
+		 <View
+            android:id="@+id/findpwd_mail_loading"
+            style="@style/common_big_loading_style" />
+      </RelativeLayout>
+</LinearLayout>

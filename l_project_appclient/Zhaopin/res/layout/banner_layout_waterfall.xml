@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+<!--     <ImageView
+        android:id="@+id/info_item_top_photo_iv"
+        android:layout_width="fill_parent"
+        android:layout_height="135dp"
+        android:background="@color/lightgrey"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner1" /> -->
+
+</LinearLayout>

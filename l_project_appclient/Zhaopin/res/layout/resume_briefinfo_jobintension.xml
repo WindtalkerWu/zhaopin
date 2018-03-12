@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="求职状态:"
+            android:textColor="@color/list_subTitle"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/job_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="0dp"
+            android:textColor="@color/list_subTitle"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="-2dp"
+        android:minHeight="@dimen/default_input_height"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="期望职位:"
+            android:textColor="@color/list_subTitle"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/position_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="0dp"
+            android:textColor="@color/list_subTitle"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="-2dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="期望行业:"
+            android:textColor="@color/list_subTitle"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/hope_industry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="0dp"
+            android:textColor="@color/list_subTitle"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="-2dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="期望地区:"
+            android:textColor="@color/list_subTitle"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/hope_city"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="0dp"
+            android:textColor="@color/list_subTitle"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

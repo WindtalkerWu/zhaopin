@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout style="@style/common_top_layout_style" >
+
+            <ImageButton
+                android:id="@+id/extracatlist_goback"
+                style="@style/common_top_left_title_style"
+                android:src="@drawable/common_button_back" />
+
+            <TextView
+                android:id="@+id/extracatlist_title"
+                style="@style/common_top_center_bigtitle_style"
+                android:text="更多" />
+
+            <ImageView
+                android:id="@+id/extracatlist_rightbt"
+                style="@style/common_top_right_title_style"
+                android:src="@drawable/common_button_subscription" 
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/column_group_container_hs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="15dp"
+            android:scrollbars="none"
+            android:background="@color/bar_bg"
+            android:visibility="visible" >
+
+            <RadioGroup
+                android:id="@+id/column_group_rg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+            </RadioGroup>
+        </HorizontalScrollView>
+
+        <com.qianniu.zhaopin.app.view.BounceListView
+            android:id="@+id/extracatlist_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:divider="@drawable/common_form_line"
+            android:listSelector="@drawable/listview_item_empty_selector"
+            android:fadingEdge="none"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:scrollbars="none"
+            android:scrollingCache="false" />
+    </LinearLayout>
+    <!--
+         <include
+        layout="@layout/progress_item" 
+        android:layout_centerInParent="true"
+        />
+    -->
+
+    <LinearLayout
+        android:id="@+id/commom_loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="15dip"
+        android:paddingTop="10dip"
+        android:visibility="gone" >
+
+       <!--  <ProgressBar
+            android:id="@+id/common_loading_progress"
+            style="@style/loading_small" /> -->
+        
+        <ViewStub
+            android:id="@+id/common_loading_progress"
+            style="@style/viewstub_progress_small_style"
+            android:layout="@layout/progressbar_small" />
+
+        <TextView
+            android:id="@+id/common_loading_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/load_ing"
+            android:textColor="@color/listitem_black" />
+    </LinearLayout>
+
+</RelativeLayout>

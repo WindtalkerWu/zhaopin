@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">牵牛招聘</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- dialog 提示用语 -->
+    <string name="dialog_delete_title">删除提示</string>
+    <string name="dialog_delete_msg">您确定要删除该内容？</string>
+    <string name="dialog_quitedittitle">提示</string>
+    <string name="dialog_quiteditmsg">还未提交,确定要放弃本次修改么？</string>
+    <string name="dialog_ok">确定</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_dataloadmsg">加载中...</string>
+    <string name="dialog_datasubmitmsg">请稍候...</string>
+    <string name="dialog_data_get_err">获取数据失败</string>
+    <string name="dialog_submit_success">"成功提交到服务器"</string>
+    <string name="dialog_submit_failed">"无法提交到服务器"</string>
+    <string name="dialog_appquit_title">退出提示</string>
+    <string name="dialog_appquit_msg">确定要退出牵牛吗？</string>
+    <string name="dialog_download_title">下载提示</string>
+    <string name="dialog_mobilenet_alertmsg">您当前使用的是移动数据网络，将会产生额外的下载流量，是否继续？</string>
+    <string name="dialog_save_success">已保存</string>
+    <string name="dialog_save_faile">保存失败</string>
+    <string name="dialog_delete_success">已删除</string>
+    <string name="dialog_delete_faile">删除失败</string>
+    <string name="dialog_setdefault_success">已设为默认</string>
+    <string name="dialog_setdefault_faile">默认设置失败</string>
+    <string name="dialog_submit_nodata">暂不可以订阅，请返回查看其他内容或重新登录</string>
+    <string name="notification_newmsg">您有新的消息通知</string>
+
+    <!-- 下拉刷新，上拉加载 -->
+    <!--
+    <string name="dm_pull_to_refresh_pull_label">下拉可以刷新</string>
+    <string name="dm_pull_to_refresh_release_label">松开可以刷新</string>
+    <string name="dm_pull_to_refresh_refreshing_label">加载中...</string>
+    <string name="dm_pull_to_refresh_tap_label">下拉可以刷新</string>
+    <string name="dm_pull_to_refresh_update">最近更新：</string>
+
+    -->
+    <!-- 登录 /注册/ 找回账号密码 -->
+    <string name="usermanager_forgot_hint_email">注册时所填的邮箱地址</string>
+    <string name="usermanager_forgot_hint_mobile">注册时所填的手机号码</string>
+    <string name="usermanager_forgot_hint_username">注册时所填的昵称或邮箱</string>
+    <string name="usermanager_forgot_info_email">输入注册时登记的Email，我们把用户名和密码发送到该邮箱。</string>
+    <string name="usermanager_forgot_info_optional_input">Email和用户名必须填写一项，用于匹配用户信息。</string>
+    <string name="usermanager_forgot_tips_email_must_input">请输入你的Email地址</string>
+    <string name="usermanager_forgot_tips_mobile">请输入你的手机号码</string>
+    <string name="usermanager_forgot_title_mobile">手机号</string>
+    <string name="usermanager_login_button_login">登 录</string>
+    <string name="usermanager_login_button_qqlogin">使用QQ账户登录</string>
+    <string name="usermanager_login_button_sinalogin">使用新浪微博账户登录</string>
+    <string name="usermanager_login_button_register">注册</string>
+    <string name="usermanager_login_forgot_byemail">使用邮箱重置密码</string>
+    <string name="usermanager_login_forgot_bymobile">使用手机号重置密码</string>
+    <string name="usermanager_login_forgot_title">请选择重置密码的方式</string>
+    <string name="usermanager_login_hint_password">输入密码</string>
+    <string name="usermanager_login_hint_username">输入手机号/邮件地址</string>
+    <string name="usermanager_login_info_autologin">自 动 登 录</string>
+    <string name="usermanager_login_info_forgetpass">忘记密码?</string>
+    <string name="usermanager_login_info_register">赶紧去注册吧！</string>
+    <string name="usermanager_login_tips_password_must_input">密码不能为空！</string>
+    <string name="usermanager_login_tips_should_login">该功能需要登录后才能使用！</string>
+    <string name="usermanager_login_tips_username_must_input">用户名不能为空！</string>
+    <string name="usermanager_login_title_password">"密    码"</string>
+    <string name="usermanager_login_title_username">用户名</string>
+    <string name="usermanager_password_hint_current_password">你现在的密码</string>
+    <string name="usermanager_password_hint_new_password">新密码</string>
+    <string name="usermanager_password_hint_new_password_confirm">请确认你的新密码</string>
+    <string name="usermanager_password_tips_new_must_input">新密码不能为空！</string>
+    <string name="usermanager_password_tips_not_fit">两次输入新密码不一致！</string>
+    <string name="usermanager_password_tips_old_must_input">旧密码不能为空！</string>
+    <string name="usermanager_password_tips_re_must_input">请输入你的重复密码</string>
+    <string name="usermanager_password_title_current_password">"旧密码    "</string>
+    <string name="usermanager_password_title_new_password">"新密码    "</string>
+    <string name="usermanager_password_title_new_password_confirm">确认密码</string>
+    <string name="usermanager_register_button_submit">提交</string>
+    <string name="usermanager_register_hint_email">你常用的邮箱地址</string>
+    <string name="usermanager_register_hint_mobile_prompt">该手机号码用于找回密码</string>
+    <string name="usermanager_register_hint_password">4位以上，区分大小写</string>
+    <string name="usermanager_register_hint_password_confirm">请重新输入密码</string>
+    <string name="usermanager_register_hint_username_prompt">须以字母开头，至少4位</string>
+    <string name="usermanager_register_tips_createresume">"账号已注册成功！
+现在是否创建简历？"</string>
+    <string name="usermanager_register_tips_username_must_input">请输入用户名</string>
+    <string name="usermanager_register_title_email">Email</string>
+    <string name="usermanager_register_title_password_confrim">确认密码</string>
+    <string name="usermanager_reset_hint_verifycode">请输入验证码</string>
+    <string name="usermanager_reset_tips_verifycode">验证码不能为空！</string>
+    <string name="usermanager_reset_title_verifycode">"验证码    "</string>
+    <string name="register_title">注册</string>
+    <string name="register_btn_submit">提交</string>
+    <string name="register_title_username">用户名</string>
+    <string name="register_hint_username">输入手机号/邮件地址</string>
+    <string name="register_title_userpwd">用户密码</string>
+    <string name="register_hint_userpwd">输入密码</string>
+    <string name="register_title_userpwd_confirm">密码确认</string>
+    <string name="register_hint_userpwd_confirm">再次输入密码</string>
+    <string name="register_cb_read">我已经阅读并且同意</string>
+    <string name="register_tv_read">《牵牛用户协议》</string>
+    <string name="register_tv_prompt">温馨提示：请尽量填写真实手机号或者邮箱，以使我们将相关信息通知您</string>
+    <string name="str_findpwd_title">忘记密码</string>
+    <string name="str_findpwd_btn_moblie">通过手机找回密码</string>
+    <string name="str_findpwd_btn_mail">通过邮箱找回密码</string>
+    <string name="str_findpwd_moblie_btn_title">手机找回密码</string>
+    <string name="str_findpwd_moblie_btn_submit">提交</string>
+    <string name="str_findpwd_moblie_btn_verify">获取验证码</string>
+    <string name="str_findpwd_moblie_title_username">用户名</string>
+    <string name="str_findpwd_moblie_title_verify">验证码 </string>
+    <string name="str_findpwd_moblie_title_userpwd">新密码</string>
+    <string name="str_findpwd_moblie_title_userpwd_confirm">密码确认</string>
+    <string name="str_findpwd_moblie_hint_username">请输入您的手机号</string>
+    <string name="str_findpwd_moblie_hint_verify">请输入验证码</string>
+    <string name="str_findpwd_moblie_hint_userpwd">请输入新密码</string>
+    <string name="str_findpwd_moblie_hint_userpwd_confirm">请再次输入密码</string>
+    <string name="str_findpwd_moblie_tv_prompt">温馨提示：为了保护您的账号安全性，密码长度至少为6位</string>
+    <string name="str_findpwd_mail_btn_title">邮箱找回密码</string>
+    <string name="str_findpwd_mail_btn_submit">提交</string>
+    <string name="str_findpwd_mail_hint_username">请输入您的邮箱</string>
+    <string name="str_findpwd_mail_tv_prompt">温馨提示：新密码将会发到您的已注册的邮箱里，请您注意查收</string>
+    <!-- 未登录或Token异常等提示 -->
+    <string name="usermanager_token_invalid">该账号无效，请重新登录</string>
+    <string name="usermanager_token_overtime">账号使用超时，请重新登录</string>
+    <string name="usermanager_task_null">暂时没有任何记录</string>
+    <string name="usermanager_unlogin">未登录，请先登录！</string>
+
+    <!-- 悬赏任务列表界面 -->
+    <string name="str_reward_sort_new">最新发布</string>
+    <string name="str_reward_sort_youlike">猜您喜欢</string>
+    <string name="str_reward_sort_peripheral_reward">周边悬赏</string>
+    <string name="str_reward_sort_reward">悬赏金额</string>
+    <string name="str_reward_type_interview">[ 面试 ]</string>
+    <string name="str_reward_type_entry">[ 入职 ]</string>
+    <string name="str_reward_type_job">推荐红包</string>
+    <string name="str_reward_rmb">¥</string>
+    <string name="str_reward_publisherdate_title">截止:</string>
+    <string name="str_reward_validdate">剩余 %s 天</string>
+    <string name="str_reward_attention">人关注</string>
+
+    <!-- 牵牛悬赏信息界面 -->
+    <string name="str_rewardinfo_title_job">职位详情</string>
+    <string name="str_rewardinfo_title_personal">个人悬赏详情</string>
+    <string name="str_rewardinfo_jobrecommend">我要赚钱</string>
+    <string name="str_rewardinfo_candidate">投简历</string>
+    <string name="str_rewardinfo_candidateok">已投简历</string>
+    <string name="str_rewardinfo_recommend">推荐</string>
+    <!-- 公司信息界面 -->
+    <string name="str_companyinfo_title">公司详情</string>
+    <!-- 地图界面 -->
+    <string name="str_map_title">公司地址</string>
+    <!-- 城市选择界面 -->
+    <string name="str_citychoose_title">城市/地区</string>
+    <string name="str_citychoose_hotcity">热点城市</string>
+    <!-- 行业选择界面 -->
+    <string name="str_industrychoose_title">行业</string>
+    <!-- 职能分类选择界面 -->
+    <string name="str_jobfunctionchoose_title">职位名称</string>
+    <!-- 悬赏搜索界面 -->
+    <string name="str_rewardsearch_title">搜索</string>
+    <string name="str_rewardsearch_area">地区</string>
+    <string name="str_rewardsearch_industry">行业</string>
+    <string name="str_rewardsearch_historysearch">历史搜索</string>
+    <string name="str_rewardsearch_confirm">确定</string>
+    <string name="str_rewardsearch_all">全部</string>
+    <string name="str_rewardsearch_nohistory">无历史搜索记录</string>
+
+    <!-- 应聘提示界面 -->
+    <string name="str_candidatesprompt_title">投简历</string>
+    <string name="str_candidatesprompt_msg1">您确定要应聘%s的</string>
+    <string name="str_candidatesprompt_msg2">%s吗？</string>
+    <string name="str_candidatesprompt_msg">您确定要向%1$s的%2$s职位投简历吗？</string>
+    <string name="str_candidatesprompt_prompt">将在1-2个工作日内给您答复</string>
+    <!-- 忘记密码界面 -->
+    <string name="str_findpwdpop_title">忘记密码</string>
+    <string name="str_findpwdpop_hint_method">请输入您的账户名(手机号或邮箱)</string>
+    <string name="str_findpwdpop_button_mobile">手机号找回</string>
+    <string name="str_findpwdpop_button_mail">邮箱找回</string>
+    <!-- 我来推荐界面 -->
+    <string name="str_jobrecommend_title">我要赚钱</string>
+    <string name="str_jobrecommend_name">姓名</string>
+    <string name="str_jobrecommend_hint_name">请输入推荐人姓名</string>
+    <string name="str_jobrecommend_tel">联系电话</string>
+    <string name="str_jobrecommend_hint_tel">请输入联系电话</string>
+    <string name="str_jobrecommend_reason">推荐理由</string>
+    <string name="str_jobrecommend_hint_reason">请选择推荐理由</string>
+    <string name="str_jobrecommend_hint_detailreason">请输入详细推荐理由，不超过500个字符</string>
+    <string name="str_jobrecommend_submit">提交</string>
+    <string name="str_jobrecommend_ask_content">您确定要认领这个赏金任务吗？</string>
+
+    <!-- 推荐理由选择界面 -->
+    <string name="str_recommendreasonchoose_title">推荐理由</string>
+    <string name="str_recommendreasonchoose_friend">朋友推荐</string>
+    <string name="str_recommendreasonchoose_hr">我是HR</string>
+    <string name="str_recommendreasonchoose_company">我是企业</string>
+    <string name="str_recommendreasonchoose_headhunt">我是猎头</string>
+    <string name="str_recommendreasonchoose_other">其他</string>
+    <!-- 推荐界面 -->
+    <string name="str_rewardrecommend_title">推荐朋友</string>
+    <string name="str_rewardrecommend_recommend">简历推荐</string>
+    <string name="str_rewardrecommend_quickrecommend">通讯录推荐</string>
+    <!-- 快速推荐界面 -->
+    <string name="str_quickrecommend_title">推荐朋友</string>
+    <string name="str_quickrecommend_name">姓名</string>
+    <string name="str_quickrecommend_hint_name">请输入推荐人姓名</string>
+    <string name="str_quickrecommend_tel">联系电话</string>
+    <string name="str_quickrecommend_hint_tel">请输入联系电话</string>
+    <string name="str_quickrecommend_mail">邮箱</string>
+    <string name="str_quickrecommend_hint_mail">请输入邮箱</string>
+    <string name="str_quickrecommend_job">职位</string>
+    <string name="str_quickrecommend_hint_job">请输入职位</string>
+    <string name="str_quickrecommend_reason">推荐理由</string>
+    <string name="str_quickrecommend_hint_reason">请输入详细推荐理由，不超过500个字符</string>
+    <string name="str_quickrecommend_confirm">确定</string>
+    <string name="str_quickrecommend_ask_content">您确定要推荐%1$s应聘%2$s公司的%3$s职位吗？</string>
+    <!-- 我的收藏界面 -->
+    <string name="str_mycollection_sort_company">公司收藏</string>
+    <string name="str_mycollection_sort_reward">任务收藏</string>
+    <!-- 我的记录界面 -->
+    <string name="str_myrecord_title">我的记录</string>
+    <string name="str_myrecord_talentreview">人才审核</string>
+    <string name="str_myrecord_platformreview">平台审核</string>
+    <string name="str_myrecord_interview">企业面试</string>
+    <string name="str_myrecord_entry">入职录用</string>
+    <string name="str_myrecord_reward">奖金</string>
+    <string name="str_myrecord_applytype_candidates">应聘人</string>
+    <string name="str_myrecord_applytype_recommend">被推荐人</string>
+    <!-- 交易记录界面 -->
+    <string name="str_transactionrecords_title">交易记录</string>
+    <string name="str_transactionrecords_income">收入</string>
+    <string name="str_transactionrecords_incomesign">+</string>
+    <string name="str_transactionrecords_pay">支付</string>
+    <string name="str_transactionrecords_paysign">-</string>
+    <string name="str_transactionrecords_dtetail">明细:</string>
+    <!-- 我的账号界面 -->
+    <string name="str_myaccount_title">我的账号</string>
+    <string name="str_myaccount_perfectinformationtitle">完善资料</string>
+    <string name="str_myaccount_nametitle">姓名</string>
+    <string name="str_myaccount_namehint">请输入姓名</string>
+    <string name="str_myaccount_gendertitle">性别</string>
+    <string name="str_myaccount_male">男</string>
+    <string name="str_myaccount_female">女</string>
+    <string name="str_myaccount_phonetitle">手机号</string>
+    <string name="str_myaccount_phonehint">请输入手机号</string>
+    <string name="str_myaccount_binding">已绑定</string>
+    <string name="str_myaccount_nobinding">未绑定</string>
+    <string name="str_myaccount_authcodetitle">验证码</string>
+    <string name="str_myaccount_authcodehint">请输入验证码</string>
+    <string name="str_myaccount_getauthcode">获取验证码</string>
+    <string name="str_myaccount_mybalancetitle">我的余额:</string>
+    <string name="str_myaccount_mybalance">%s 元</string>
+    <string name="str_myaccount_submit">提交</string>
+    <!-- 我的余额界面 -->
+    <string name="str_mybalance_title">我的余额</string>
+    <string name="str_mybalance_accountbalance">账号余额:</string>
+    <string name="str_mybalance_integral">积分余额:</string>
+    <string name="str_mybalance_qianniuaccount">牵牛账号:</string>
+    <string name="str_mybalance_qianniuaccount_hint">用户注册的牵牛账号</string>
+    <string name="str_mybalance_aliplayaccount_authentication">已认证</string>
+    <string name="str_mybalance_aliplayaccount_noauthentication">未认证</string>
+    <string name="str_mybalance_aliplayaccount">支付宝账号:</string>
+    <string name="str_mybalance_aliplayaccount_hint">请绑定支付宝账号</string>
+    <string name="str_mybalance_aliplayaccount_binding">已绑定</string>
+    <string name="str_mybalance_aliplayaccount_nobinding">未绑定</string>
+    <string name="str_mybalance_accumulatedincome">累计收入:</string>
+    <string name="str_mybalance_totalexpenditure">累计支出:</string>
+    <string name="str_mybalance_transactionrecords">交易记录:</string>
+    <string name="str_mybalance_transactionrecordsnum">共(%s)条交易记录</string>
+    <string name="str_mybalance_withdrawals">提现</string>
+    <string name="str_mybalance_yuan">元</string>
+    <string name="str_mybalance_qianniub">牵牛币</string>
+    <string name="str_mybalance_securepop_title">安全提示</string>
+    <string name="str_mybalance_securepop_msg">为了保障您的支付账户安全，请输入您的牵牛招聘登录密码</string>
+    <string name="str_mybalance_securepop_hint">请输入您的牵牛招聘登录密码</string>
+    <!-- 支付宝账号绑定界面 -->
+    <string name="str_aliplayaccount_binding_title">支付宝账号绑定</string>
+    <string name="str_aliplayaccount_binding_accout_hint">请输入要绑定的支付宝账号</string>
+    <string name="str_aliplayaccount_binding_accoutpwd_hint">请输入支付宝的登录密码</string>
+    <string name="str_aliplayaccount_binding">绑定</string>
+    <!-- 支付提示相关 -->
+    <string name="str_play_prompt" formatted="false">收款方：上海牵牛信息技术有限公司\n商品：牵牛招聘产品\n%1$s 元\n服务费(费率15%%, 用于支付第三方手续费)\n%2$s 元\n总计：%3$s 元\n温馨提示：每周最多发5次</string>
+    <!-- 申请退款界面 -->
+    <string name="str_applyrefund_title">申请退款</string>
+    <string name="str_applyrefund_name">姓名</string>
+    <string name="str_applyrefund_hint_name">请输入退款人姓名</string>
+    <string name="str_applyrefund_reason">退款理由</string>
+    <string name="str_applyrefund_hint_refundreason">请输入详细退款理由，不超过500个字符</string>
+    <string name="str_applyrefund_confirm">确定</string>
+    <string name="str_applyrefund_must">*</string>
+    <!-- 积分管理界面 -->
+    <string name="str_myintegral_title">积分管理</string>
+    <string name="str_myintegral_level">级别： Level %s</string>
+    <string name="str_myintegral_integral">总积分：</string>
+    <string name="str_myintegral_conversionrecord">兑换记录：</string>
+    <string name="str_myintegral_conversionrecordhint">暂无记录</string>
+    <string name="str_myintegral_address">收货地址：</string>
+    <string name="str_myintegral_addresshint">暂无地址</string>
+    <string name="str_myintegral_recharge">我要充值：</string>
+    <string name="str_myintegral_rechargehint">暂无记录</string>
+    <string name="str_myintegral_gomall">去商城逛逛</string>
+    <!-- 兑换记录界面 -->
+    <string name="str_conversionrecord_title">兑换记录</string>
+    <string name="str_conversionrecord_integraltitle">积分兑换价：</string>
+    <string name="str_conversionrecord_attentiontitle">关注度：</string>
+    <string name="str_conversionrecord_pricetitle">现金价：</string>
+    <string name="str_conversionrecord_rmb">¥</string>
+    <!-- 收货地址List界面 -->
+    <string name="str_deliveryaddresslist_title">收货地址</string>
+    <string name="str_deliveryaddresslist_nametitle">收货人:</string>
+    <string name="str_deliveryaddresslist_teltitle">联系方式:</string>
+    <string name="str_deliveryaddresslist_addresstitle">收货地址:</string>
+    <!-- 新增/编辑收货地址界面 -->
+    <string name="str_deliveryaddress_title">新增收货地址</string>
+    <string name="str_deliveryaddress_edittitle">编辑收货地址</string>
+    <string name="str_deliveryaddress_nametitle">收货人:</string>
+    <string name="str_deliveryaddress_namehint">请输入收货人名称</string>
+    <string name="str_deliveryaddress_teltitle">联系方式:</string>
+    <string name="str_deliveryaddress_telhint">请输入收货人联系方式</string>
+    <string name="str_deliveryaddress_postcodetitle">邮政编码:</string>
+    <string name="str_deliveryaddress_postcodehint">请输入收货人邮政编码</string>
+    <string name="str_deliveryaddress_addresstitle">详细地址:</string>
+    <string name="str_deliveryaddress_addresshint">请输入收货人详细地址</string>
+    <string name="str_deliveryaddress_save">保存</string>
+    <string name="str_deliveryaddress_del">删除收货地址</string>
+    <string name="str_deliveryaddress_setdefault">设为默认收货地址</string>
+    <!-- 积分充值界面 -->
+    <string name="str_integralrecharge_title">充值中心</string>
+    <string name="str_integralrecharge_rechargesumtitle">充值金额：</string>
+    <string name="str_integralrecharge_rechargesumhite">请输入要充值的金额</string>
+    <string name="str_integralrecharge_rmb">元</string>
+    <string name="str_integralrecharge_remark">1元人民币 = 1积分</string>
+    <string name="str_integralrecharge_gorecharge">进入支付宝充值</string>
+
+    <!-- 客服咨询热线电话 -->
+    <string name="customer_service_hotline_telephone">客服/咨询热线：021-60727869</string>
+    <!-- 标题字串 -->
+    <string name="frame_title_share">分 享</string>
+    <string name="frame_title_save">保 存</string>
+    <string name="frame_title_delete">删 除</string>
+    <string name="frame_workexperience_delete">删除工作经历</string>
+    <string name="frame_project_delete">删除项目经历</string>
+    <string name="frame_eduction_delete">删除教育经历</string>
+    <string name="frame_language_delete">删除语言技能</string>
+    <!-- Button 字串 -->
+    <string name="frame_btn_save">保存</string>
+    <string name="frame_btn_login">登录</string>
+    <string name="frame_btn_logout">注销</string>
+    <!-- 应用字串 -->
+    <string name="app_home_hint_keywords">请输入关键字</string>
+    <!-- 消息 -->
+    <string name="app_info_title_news">消息</string>
+    <!-- 号外 -->
+    <string name="app_extra_title_moreinfo">号外</string>
+    <string name="app_catalog_custommanager">订阅管理</string>
+    <string name="app_catalog_customselect">订阅</string>
+    <string name="app_catalog_customcancel">取消订阅</string>
+    <string name="app_catalog_customchange_success">订阅修改成功</string>
+    <string name="app_catalog_customchange_fail">订阅修改失败</string>
+    <string name="app_catalog_customselect_success">订阅成功</string>
+    <string name="app_catalog_customselect_fail">订阅失败</string>
+    <string name="app_catalog_customcancel_success">取消订阅成功</string>
+    <string name="app_catalog_customcancel_fail">取消订阅失败</string>
+    <!-- 活动字串 -->
+    <string name="app_title_campaign">活动</string>
+    <!-- 简历 -->
+    <string name="resume_unlogin">未登录</string>
+    <string name="resume_defaultresume">设置为默认简历</string>
+    <string name="resume_select_ok">选择简历</string>
+    <string name="resume_delresume">删除简历</string>
+    <string name="resume_newresume">新建简历</string>
+    <string name="resume_title_languageexp">语言技能</string>
+    <string name="resume_title_workexp">工作经历</string>
+    <string name="resume_title_projectexp">项目经历</string>
+    <string name="resume_title_educationexp">教育经历</string>
+    <string name="resume_edit_title">"编辑"</string>
+    <string name="resume_edit_comlete">"完整"</string>
+    <string name="resume_edit_uncomlete">"不完整"</string>
+    <string name="resume_edit_noncomlete">"未填写完整"</string>
+    <string name="resume_personalinfo">"个人资料"</string>
+    <string name="resume_jobtarget">求职意向</string>
+    <string name="resume_addworkexperience">添加工作经历</string>
+    <string name="resume_addprojectexperience">添加项目经历</string>
+    <string name="resume_addeducationexperience">添加教育经历</string>
+    <string name="resume_addlanguageskill">添加语言技能</string>
+    <string name="select_location">选择地区</string>
+    <string name="select_educationdegree">选择学历</string>
+    <string name="select_jobstatus">选择求职状态</string>
+    <string name="select_jobindustry">选择行业</string>
+    <string name="select_salary">选择薪水</string>
+    <string name="select_arrivetime">选择到岗时间</string>
+    <string name="select_language">选择语言</string>
+    <string name="select_spcialty">选择专业</string>
+    <string name="select_languagemastery">选择语言掌握程度</string>
+    <string name="select_languageliteracy">选择语言读写能力</string>
+    <string name="select_languagespeaking">选择语言听说能力</string>
+    <string name="resume_list_empty">简历列表为空，请新建一份简历！</string>
+    <string name="resume_hopetitle">期望职位</string>
+    <string name="resume_modifytime">更新时间</string>
+    <string name="resume_delresume_alertmsg">简历删除后将无法恢复，是否继续？</string>
+    <string name="resume_fastresume">快速简历</string>
+    <string name="resume_completeresume">完整简历</string>
+    <string name="resume_guide_fastcontent">您还未输入快速简历，点击“编辑”粘贴复制试试</string>
+    <string name="resume_guide_jobintension">点击“编辑”完善您的求职意向，让HR更快发现你</string>
+    <string name="resume_guide_workexp">您还没有任何工作经历，"添加"一个试试</string>
+    <string name="resume_guide_project">您还没有任何项目经历，"添加"一个试试</string>
+    <string name="resume_guide_education">您还没有任何教育经历，"添加"一个试试</string>
+    <string name="resume_guide_language">您还没有任何语言技能，"添加"一个试试</string>
+
+    <!-- 状态消息 -->
+    <string name="app_status_net_disconnected">网络连接失败，请检查网络设置</string>
+    <string name="remote_call_failed">Failure calling remote service</string>
+    <string name="confirm_install_hint">"安装提示"</string>
+    <string name="confirm_install">"为保证您的交易安全，需要您安装移动快捷支付，才能进行付款。\n\n点击确定，立即安装。"</string>
+    <string name="check_sign_failed">您的订单信息已被非法篡改。</string>
+
+    <!-- setting -->
+    <string name="setting_title_txt">设置</string>
+    <string name="setting_version_name">V%1$s</string>
+    <string name="setting_select_city">城市选择</string>
+    <string name="setting_to_sorce">去评分</string>
+    <string name="setting_features_introduction">功能介绍</string>
+    <string name="setting_feedback">意见反馈</string>
+    <string name="setting_check_version">检查新版本</string>
+    <string name="setting_modify_pwd">修改密码</string>
+    <string name="setting_secure_pwd">安全密码</string>
+    <string name="setting_task_showtype">任务展示切换</string>
+    <string name="setting_subscription_management">订阅管理</string>
+    <string name="setting_qn_recommend">牵牛推荐</string>
+    <string name="setting_tele_note">客服热线：021-60727869</string>
+    <string name="setting_exit_account">退出账号</string>
+    <string name="setting_toLogin">登录</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="reward_search_label_title_txt">筛选/搜索</string>
+
+    <!-- 弹出对话框 -->
+    <string name="string_alertdialog_kindlyreminder">温馨提示</string>
+    <string name="string_alertdialog_nologin">虽然您蛮牛的，但是您目前还是小牛游客或未登录，想赚钱就要赶紧注册呀！</string>
+    <string name="string_alertdialog_gologin">去登录</string>
+    <string name="string_alertdialog_stroll">随便逛逛</string>
+    <string name="string_alertdialog_recommendway">推荐方式</string>
+    <string name="string_alertdialog_contactsrecommend">通讯录推荐</string>
+    <string name="string_alertdialog_resumerecommend">简历推荐</string>
+    <string name="string_alertdialog_wechatfriend">微信好友</string>
+    <string name="string_alertdialog_wechatfriends">微信朋友圈</string>
+    <string name="string_alertdialog_back">再想想</string>
+
+    <!-- hot_label -->
+    <string name="hot_label_title_txt">筛选/搜索</string>
+    <string name="hot_label_tips">请选择您感兴趣的热词</string>
+    <string name="hot_label_tips_more">温馨提示：亲，您已选中%1$d个标签，您还可以选%2$d个标签。</string>
+    <string name="hot_label_save">保存</string>
+    <string name="hot_label_skip">跳过</string>
+    <!-- 我的悬赏列表界面 -->
+    <string name="my_reward_list_title_txt">我的悬赏（%1$d）</string>
+    <string name="my_reward_list_reward_status_1">进行中...</string>
+    <string name="my_reward_list_reward_status_2">暂停</string>
+    <string name="my_reward_list_reward_status_3">已过期</string>
+    <string name="my_reward_list_reward_status_4">审核中...</string>
+    <string name="my_reward_list_reward_enddata">截止:%1$s</string>
+    <string name="my_reward_list_reward_bonus">¥%1$s</string>
+    <string name="my_reward_list_reward_status_doing">进行中</string>
+    <string name="my_reward_list_reward_status_audit">审核中</string>
+    <string name="my_reward_list_reward_status_pause">已暂停</string>
+    <string name="my_reward_list_reward_status_todo">发布</string>
+    <string name="my_reward_list_reward_status_expired">已过期</string>
+    <string name="my_reward_list_auth_dialog_content">您尚未认证过手机号码，请先进行认证</string>
+    <string name="my_reward_list_auth_dialog_ok">马上认证</string>
+    <string name="my_reward_list_auth_dialog_cancel">取消</string>
+    <string name="my_reward_list_null">暂时没有任何悬赏</string>
+    <!-- 个人悬赏详情 -->
+    <string name="my_reward_detail_title_txt">个人悬赏详情</string>
+    <string name="my_reward_detail_pause">暂停发布</string>
+    <string name="my_reward_detail_edit">编辑</string>
+    <string name="my_reward_detail_error">请求失败</string>
+    <string name="my_reward_edit_nopause">请先暂定该悬赏，再进行编辑</string>
+    <string name="my_reward_detail_pay">支付赏金</string>
+    <string name="my_reward_detail_applyrefund">申请退款</string>
+    <!-- 发布悬赏界面 -->
+    <string name="publish_reward_title_txt">发布悬赏</string>
+    <string name="publish_reward_method_txt">悬赏方式</string>
+    <string name="publish_reward_must">*</string>
+    <string name="publish_reward_method_audition">面试</string>
+    <string name="publish_reward_method_entry">入职</string>
+    <string name="publish_reward_money">悬赏金额</string>
+    <string name="publish_reward_money_audition_hint">100元~5000元</string>
+    <string name="publish_reward_money_entry_hint">100元~20000元</string>
+    <string name="publish_reward_times">悬赏周期</string>
+    <string name="publish_reward_times_hint">请选择周期</string>
+    <string name="publish_reward_salary">期望年薪</string>
+    <string name="publish_reward_salary_hint">请输入期望年薪</string>
+    <string name="publish_reward_industry">期望行业</string>
+    <string name="publish_reward_industry_hint">请选择行业</string>
+    <string name="publish_reward_post">期望职位</string>
+    <string name="publish_reward_post_hint">请选择职位</string>
+    <string name="publish_reward_location_hint">请选择地点</string>
+    <string name="publish_reward_location">期望地点</string>
+    <string name="publish_reward_select_resume">选择简历</string>
+    <string name="publish_reward_select_resume_hint">请选择简历</string>
+    <string name="publish_reward_select_resume_default">默认</string>
+    <string name="publish_reward_introduce">我的自荐</string>
+    <string name="publish_reward_introduce_hint">请优先填写期望公司名称、自我介绍、个人优势的相关描述，不超过500个字符</string>
+    <string name="publish_reward_agreement">我已经阅读并同意《我的悬赏协议》</string>
+    <string name="publish_reward_publish">发&#160;&#160;布</string>
+    <string name="publish_reward_publish_error">发布失败</string>
+    <string name="publish_reward_getrewradmoreinfo_error">获取数据失败</string>
+    <string name="publish_reward_type_isnull">请选择悬赏方式</string>
+    <string name="publish_reward_bouns_isnull">请输入悬赏金额</string>
+    <string name="publish_reward_times_isnull">请选择悬赏周期</string>
+    <string name="publish_reward_expectation_isnull">请选择期望年薪</string>
+    <string name="publish_reward_industry_isnull">请选择期望的行业</string>
+    <string name="publish_reward_post_isnull">请输入期望的职位</string>
+    <string name="publish_reward_location_isnull">请现在期望的地点</string>
+    <string name="publish_reward_resume_isnull">请选择简历</string>
+    <string name="publish_reward_agreement_isnull">请先阅读并同意《我的悬赏协议》</string>
+    <string name="publish_reward_introduce_isnull">请填写自荐</string>
+    <string name="publish_reward_select_expectation_title">期望年薪</string>
+    <string name="publish_reward_select_times_title">悬赏周期</string>
+    <string name="publish_reward_payprompt_title">提示</string>
+    <string name="publish_reward_payprompt">非常抱歉, 您发布悬赏还没有付款喔: )赶紧付款, 任务很快被发布到平台上哦!</string>
+    <string name="publish_reward_pay">付款</string>
+    <string name="publish_reward_nopay">取消</string>
+    <string name="publish_reward_type_interview">面试悬赏</string>
+    <string name="publish_reward_type_entry">入职悬赏</string>
+    <string name="mobile_auth_title_txt">认证手机号码</string>
+    <string name="mobile_auth_mobile_hint">请输入手机号</string>
+    <string name="mobile_auth_code_hint">请输入验证码</string>
+    <string name="mobile_auth_getcode_txt">获取验证码</string>
+    <string name="mobile_auth_do_auth">认证</string>
+    <string name="mobile_auth_getcode_success">获取验证码成功，请查收短信</string>
+    <string name="mobile_auth_getcode_1949">该手机号已经被使用过</string>
+    <string name="mobile_auth_getcode_fail">获取验证码失败</string>
+    <string name="mobile_auth_mobile_null">请输入手机号码</string>
+    <string name="mobile_auth_mobile_equal">您已经认证过该手机号</string>
+    <string name="mobile_auth_mobile_error">号码无效，请重新输入</string>
+    <string name="mobile_auth_verifycode_error">认证失败</string>
+    <string name="mobile_auth_code_null">请输入验证码</string>
+    <string name="mail_auth_mail_hint">请输入邮箱</string>
+    <string name="mail_auth_mail_do_auth">认证</string>
+    <string name="mail_auth_title_txt">认证邮箱</string>
+    <string name="mail_auth_email_null">请输入邮箱</string>
+    <string name="mail_auth_email_equal">您已经认证过该邮箱</string>
+    <string name="mail_auth_email_error">邮箱格式不对</string>
+    <string name="mail_auth_email_verify_1949">邮箱已经被使用过</string>
+    <string name="mail_auth_verify_success">认证邮件已经成功发送到您的邮箱，请注意查收</string>
+    <string name="mail_auth_verify_fail">请求失败</string>
+    <string name="password_modify_title_txt">修改密码</string>
+    <string name="password_modify_old_pwd">旧密码</string>
+    <string name="password_modify_old_pwd_hint">请输入旧密码</string>
+    <string name="password_modify_new_pwd_1">新密码</string>
+    <string name="password_modify_new_pwd_1_hint">请输入新密码</string>
+    <string name="password_modify_new_pwd_2">新密码</string>
+    <string name="password_modify_new_pwd_2_hint">请再次输入新密码</string>
+    <string name="password_modify_submit">提交</string>
+    <string name="password_modify_oldpsd_isnull">请输入旧密码</string>
+    <string name="password_modify_newpwd_isnull">请输入新密码</string>
+    <string name="password_modify_newpwd1_isnull">请再次输入新密码</string>
+    <string name="password_modify_newpwd_error">两次密码不一致</string>
+    <string name="password_modify_code_error">您输入的验证码不对</string>
+    <string name="feedback_title_txt">意见反馈</string>
+    <string name="feedback_content_hint">请描述您对我们的建议，不超过500个字符</string>
+    <string name="feedback_submit">提交</string>
+    <string name="feedback_submit_fail">提交失败</string>
+    <string name="features_introduction_title_txt">功能介绍</string>
+    <string name="app_recommend_title_txt">牵牛推荐</string>
+    <string name="exit_account_title">确定要退出当前账号吗？</string>
+    <string name="read_all">阅读全文</string>
+    <string name="popup_window_take_picture">拍&#160;&#160;照</string>
+    <string name="popup_window_local_picture">从手机相册选择</string>
+    <string name="popup_window_cancel">取&#160;&#160;消</string>
+    <string name="popup_window_prompt_title">提示</string>
+    <string name="popup_window_tips_content"> 面试赏金最高不超过5000元\n入职赏金最高不超过20000元</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="str_user_agreement_title">《牵牛用户协议》</string>
+    <string name="str_user_agreement" formatted="false">        	欢迎通过万维网访问牵牛网站。下文所述的条款和条件规定本网站的使用，并在您使用本网站时对您进行法律约束。如果您不同意其中的任何条款，请不要访问本网站，也不要以其他方式使用本网站或本网站上提供的任何信息。请仔细阅读使用条款。\n\n
+        	总则\n
+			1.0使用本网站即表明您完全接受以下所有条款的约束，而不附加其他限制或条件，并保证您有充分的权力和权威代表本人和/或作为您雇主的代理人接受本网站的用户协议并承担此处所述的责任。\n
+			1.1上海地幔广告有限公司同意按照本协议的规定及其不时发布的操作规则提供牵牛网（www.1000new.com.cn）网络服务，为获得网络服务，服务使用人（以下称“用户”，包括猎头、精英人士、企业等）应当同意本协议的全部条款并按照页面上的提示完成全部的注册程序。用户在进行注册程序过程中点击“同意”按钮即表示用户完全接受本协议项下的全部条款。\n
+			1.2用户注册成功后，其用户帐号和密码由用户负责保管；用户应当对以其用户帐号进行的所有活动和事件负法律责任。\n
+			1.3牵牛网在必要时修改协议内容，并以电子邮件、传真或其它适当方法通知您。如果您不同意本协议修改后的内容，应通知本网站，则您将不再受本协议的约束，您所享有的会员资格与服务也将中止；如果您继续使用本网站，将被视为同意协议修改后的内容。\n
+			2.2用户在申请使用牵牛网络服务时，必须向猎聘网提供准确的个人资料，如个人资料有任何变动，必须及时更新。\n
+			2.3用户不应将其帐号、密码转让或出借予他人使用。如用户发现其帐号遭他人非法使用，应立即通知牵牛网。因黑客行为或用户的保管疏忽导致帐号、密码遭他人非法使用，牵牛网不承担任何责任。\n
+			2.4用户对其自行发表、上传或传送的内容负全部责任，所有用户不得在本社区任何页面发布、转载、传送含有下列内容之一的信息，否则本社区有权自行处理并不通知用户：\n
+			(1)违反宪法确定的基本原则的；\n
+			(2)危害国家安全，泄漏国家机密，颠覆国家政权，破坏国家统一的；\n
+			(3)损害国家荣誉和利益的；\n
+			(4)煽动民族仇恨、民族歧视，破坏民族团结的；\n
+			(5)破坏国家宗教政策，宣扬邪教和封建迷信的；\n
+			(6)散布谣言，扰乱社会秩序，破坏社会稳定的；\n
+			(7)散布淫秽、色情、赌博、暴力、恐怖或者教唆犯罪的；\n
+			(8)侮辱或者诽谤他人，侵害他人合法权益的；\n
+			(9)煽动非法集会、结社、游行、示威、聚众扰乱社会秩序的；\n
+			(10)以非法民间组织名义活动的；\n
+			(11)含有法律、行政法规禁止的其他内容的。\n
+			2.5用户在使用牵牛网络服务同时应做到：\n
+			(1)遵守所有与网络服务有关的网络协议、规定和程序；\n
+			(2) 不得为任何非法目的而使用网络服务系统；\n
+			(3)不得侵犯其他任何第三方的专利权、著作权、商标权、名誉权或其他任何合法权益；\n
+			(4)不得利用牵牛网网络服务系统进行未经牵牛网授权的广告；\n
+			(5)未经本网站同意，禁止给公布信息的个人或公司发电子邮件、打电话、寄信或进行其他接触的行为。\n
+			(6)用户接受以其注册的电子邮件地址接受牵牛网发送的邮件或其他邮件资料，若希望"退订"这些邮件资料，可点击电子邮件中的退订链接退订，也可向牵牛网邮箱abuse@www.1000new.com.cn申请取消订阅。\n
+			(7)牵牛网经理人用户禁止使用本网站向牵牛网猎头用户发布招聘信息，否则牵牛网有权关闭该经理人用户在本站的一切服务，并由经理人方承担违约责任。\n
+			(8)用户不得通过任何技术手段侵入牵牛网数据库，进行查阅、直接下载或者转发等功能操作，一经发现牵牛网有权停止该用户的账户所有功能，并停止为该用户所在公司名下的所有其他用户提供任何服务。\n
+			2.6如用户违反以上规则造成牵牛网被第三方索赔的，用户应全额补偿牵牛网一切费用(包括但不限于各种赔偿费、诉讼代理费及为此支出的其它合理费用)；\n
+			2.7如用户违反以上规则，牵牛网有权要求用户改正或直接采取一切必要的措施(包括但不限于删除用户张贴的内容、暂停或终止用户使用网络服务的权利)以减轻用户不当行为而造成的影响，被终止使用网络服务的用户已缴纳的费用不予以退还。\n
+			2.8用户不可撤销的同意，拨打网站的电话，包括但不限于客服电话、销售电话等，均可能会被录音，用户没有任何异议。\n
+			2.9牵牛网有权拒绝为与本单位经营同类业务、有业务竞争关系或者其他利害关系的单位及个人提供服务。\n
+			隐私保护\n
+			3.0牵牛网不对外公开或向第三方提供单个用户的注册资料及用户在使用网络服务时存储在牵牛网的非公开内容，但下列情况除外：\n
+			(1)	事先获得用户的明确授权；\n
+			(2)	根据有关的法律法规要求；\n
+			(3)	按照相关政府主管部门的要求；\n
+			(4)	为维护社会公众的利益。\n
+			3.1在不透露单个用户隐私资料的前提下，牵牛网有权对整个用户数据库进行分析并对用户数据库进行商业上的利用。\n
+			版权声明\n
+			3.2牵牛网特有的标识、版面设计、编排方式、等版权均属牵牛网享有，未经牵牛网许可，不得任意复制或转载。\n
+			3.3牵牛网用户发布的所有内容仅代表作者自己的立场和观点，与牵牛网无关，由作者本人承担一切法律责任。\n
+			免责声明\n
+			3.4用户明确同意其使用牵牛网络服务所存在的风险将完全由其自己承担；因其使用牵牛网络服务而产生的一切后果也由其自己承担，牵牛网对用户不承担任何责任。\n
+			3.5牵牛网不担保网络服务一定能满足用户的要求，也不担保网络服务不会中断，对网络服务的及时性、安全性、准确性也都不作担保。同时，牵牛网不保证能够长期无错误运营，也不保证服务器不受病毒或其他故障的侵扰。如果用户在使用本网站时发生数据丢失的情况，与牵牛网无关。\n
+			3.6牵牛网不能保证某一招聘信息会有一定数量的用户来浏览，也不能保证会有一位特定的用户来浏览。牵牛网并不保证所有信息、文本、图形、链接及其它项目的绝对准确性和完整性，故仅供用户参考使用。\n
+			3.7用户必须独自承担由于使用牵牛网或通过牵牛网登录到其他站点而形成的全部风险，并独立承担与他人交流信息所造成的后果。牵牛网不担保用户发送给另一方用户的资料的真实性、精确性与可靠性。用户对所接受的资料的信任纯属个人风险。\n
+			3.8牵牛网仅为招聘网络信息发布平台，任何透过牵牛网发布的招聘信息及其他产品或者服务均系用户自行发布，牵牛网对其合法性概不负责，亦不承担任何法律责任；用户在通过牵牛网得到资讯和信息后，与信息发布人所进行的任何交易均系其双方自主交易，双方若发生纠纷，皆与牵牛网无关，牵牛网不承担任何法律责任；本公司对于用户由于使用猎聘网而造成的任何金钱、商誉、名誉的损失，或任何特殊的、间接的、或结果性的损失都不负任何责任。\n
+			责任限制条款\n
+			3.9牵牛网对用户因使用本网站产生损失而提出的索赔金额，以用户向牵牛网已交付的款项之和为限。\n
+			通知送达\n
+			4.0本协议项下牵牛网对于用户所有的通知均可通过网页公告、电子邮件、手机短信或常规的信件传送等方式进行；该等通知于发送之日视为已送达收件人。\n
+			法律管辖\n
+			4.1本协议的订立、执行和解释及争议的解决均应适用中国法律并受中国法院管辖。\n
+			4.2如双方就本协议内容或其执行发生任何争议，双方应尽量友好协商解决；协商不成时，任何一方均可向牵牛网所在地的人民法院提起诉讼。\n</string>
+    <!-- 牵牛招聘积分规则 -->
+    <string name="str_qianniuintegral_title">牵牛招聘积分规则</string>
+    <string name="str_qianniuintegral_rule" formatted="false">获赠积分:\n
+			1) 注册成功且完成手机绑定\n
+			+50牵牛币\n\n
+			2) 推荐/应聘成功(平台审核通过)\n
+			+20牵牛币/人\n\n
+			3) 完善简历\n
+			+5牵牛币/份(单日50份封顶)\n</string>
+    <!-- 个税 -->
+    <string name="title_activity_tax">TaxActivity</string>
+    <string name="tax_title_txt">个调税计算</string>
+    <string name="tax_title_right_txt">税率设置</string>
+    <string name="tax_item_select_city">选择城市</string>
+    <string name="tax_item_threshold">起征额</string>
+    <string name="tax_item_unit">元</string>
+    <string name="tax_upper_limit_txt">封顶数</string>
+    <string name="tax_item_before_tax">税前月收入</string>
+    <string name="tax_item_before_tax_hint">请输入税前月收入</string>
+    <string name="tax_item_social_security">社保公积金(查看详细)</string>
+    <string name="tax_free_statement" formatted="true">免费声明：(计算结果仅供参考，不具有法律依据)</string>
+    <string name="tax_calculate">计算</string>
+    <string name="tax_reset">重置</string>
+    <string name="tax_detail">查看详细</string>
+    <string name="tax_item_after_tax">税后月收入</string>
+    <string name="tax_item_my_tax">应缴个税</string>
+    <string name="tax_check_threshold_null">请输入起征额</string>
+    <string name="tax_check_before_tax_null">请输入税前月收入</string>
+    <string name="tax_detail_title_txt">社保与公积金缴费明细</string>
+    <string name="tax_detail_item_pension">养老</string>
+    <string name="tax_detail_item_medical">医疗</string>
+    <string name="tax_detail_item_losejob">失业</string>
+    <string name="tax_detail_item_injuries">工伤</string>
+    <string name="tax_detail_item_tips">个人无需承担</string>
+    <string name="tax_detail_item_birth">生育</string>
+    <string name="tax_detail_item_fund">公积金</string>
+    <string name="tax_detail_total">合计个人缴费：%1$s元</string>
+    <string name="tax_setting_item_percent">%</string>
+    <string name="tax_setting_title_txt">税率设置</string>
+    <string name="tax_setting_item_pension">养老</string>
+    <string name="tax_setting_item_medical">医疗</string>
+    <string name="tax_setting_item_losejob">失业</string>
+    <string name="tax_setting_item_injuries">工伤</string>
+    <string name="tax_setting_item_birth">生育</string>
+    <string name="tax_setting_item_fund">公积金</string>
+    <string name="tax_setting_pension_null">请输入养老金比例</string>
+    <string name="tax_setting_medical_null">请输入医疗比例</string>
+    <string name="tax_setting_losejob_null">请输入失业比例</string>
+    <string name="tax_setting_fund_null">请输入公积金比例</string>
+    <string name="tax_free_dialog_tips">确定要放弃本次修改吗？</string>
+    <string name="tax_city_select_title_txt">城市选择</string>
+    <string name="tax_free_statement_title_txt">免费声明</string>
+    <string name="tax_free_statement_content">个税计算涉及多种法律法规和实施办法，五险一金的缴纳比例在不同地区、不同单位可能有所不同，计算结果仅供参考，不能作为劳动仲裁，劳动合同，劳动争议的相关法律依据，任何疑问请咨询人事部门、 当地劳动及社会保障机构、税务机构等权威部门。</string>
+    <string name="fragment_my_auth_status_1">已绑定</string>
+    <string name="fragment_my_auth_status_2">未绑定</string>
+
+    <!-- 分享 -->
+    <string name="str_thpshare_sinaweibo">分享到新浪微博</string>
+    <string name="str_thpshare_tencentweibo">分享到腾讯微博</string>
+    <string name="str_sharerewardinfo_candidate">#每天接任务，人脉赚大钱#@上海牵牛招聘 您的好友发现一个不错的职位 %1$s公司 %2$s职位，推荐赏金有￥%3$s元哦，有兴趣来看看吧。\n%4$s\n来自牵牛招聘</string>
+    <string name="str_sharerewardinfo_recommend">#每天接任务，人脉赚大钱#@上海牵牛招聘 您的好友发现一个悬赏任务，赏金有￥%1$s元哦，赶紧来瞧瞧吧！\n%2$s\n来自牵牛招聘</string>
+    <string name="str_sharerewardinfo_candidate_zero">#每天接任务，人脉赚大钱#@上海牵牛招聘 您的好友现一个不错的职位 %1$s公司 %2$s职位，有兴趣来看看吧。\n%3$s\n来自牵牛招聘</string>
+    <string name="str_sharerewardinfo_recommend_zero">#每天接任务，人脉赚大钱#@上海牵牛招聘 您的好友发现一个悬赏任务，赶紧来瞧瞧吧！\n%1$s\n来自牵牛招聘</string>
+
+    <!-- 号外disk菜单 -->
+    <string name="disk_item_famous_man">圈内人</string>
+    <string name="disk_item_famous_campany">名企专区</string>
+    <string name="disk_item_campaign">活动</string>
+    <string name="disk_item_professional_info">行业资讯</string>
+    <string name="disk_item_tax_calculator">个税计算</string>
+    <string name="disk_item_app_recommand">牵牛推荐</string>
+    <string name="disk_item_more">更多</string>
+    <string name="disk_item_shaigognzi">晒工资</string>
+    <string name="disk_item_aidiaoyan">爱调研</string>
+    <string name="disk_item_shangcheng">商城</string>
+    <string name="disk_item_qiandao">签到</string>
+    <string name="disk_item_mingpian">名片</string>
+    <string name="disk_item_gossip">八卦</string>
+    <!-- 定位 -->
+    <string name="str_locationing">正在定位城市...</string>
+    <string name="str_location_fail">无法获取当前所在城市</string>
+    <string name="locationNetwork_demo">网络定位功能</string>
+    <string name="industry_insiders_title_txt">圈内人</string>
+    <string name="industry_insiders_apply">申请</string>
+    <string name="company_title_txt">名企</string>
+    <string name="industry_insiders_job_count_txt">职位数:%1$d个</string>
+    <!-- <string name="industry_insiders_job_count"> </string> -->
+    <!-- <string name="industry_insiders_item_attention_count_txt">%1$s&#160;人关注</string> -->
+    <!-- <string name="industry_insiders_attention_count"> </string> -->
+    <string name="company_item_post_count_txt">%1$s&#160;个职位</string>
+    <string name="industry_insiders_no_data"> 没有数据</string>
+    <string name="industry_detail_title">圈内招聘</string>
+    <string name="company_detail_title">名企招聘</string>
+    <string name="comment_title">评论</string>
+    <string name="comment_content_hint">请输入评论</string>
+    <string name="comment_submit">发布评论</string>
+    <string name="comment_submit_null">请先输入评论内容</string>
+    <string name="comment_list_title">评论墙</string>
+    <string name="comment_list_comment">评论</string>
+    <string name="comment_list_tips">关于&#160;%1$s&#160;的评论：</string>
+    <string name="comment_list_item_user">用户：%1$s</string>
+    <string name="post_list_title_txt">职位列表</string>
+    <string name="seek_worthy_title">招聘%1$s职位</string>
+    <string name="seek_worthy_address">地点：%1$s</string>
+    <string name="seek_worthy_post">职位：%1$s</string>
+    <string name="seek_worthy_post_prompt">招聘所在公司/部门</string>
+    <!-- <string name="seek_worthy_attention">%1$s&#160;人关注</string> -->
+    <string name="seek_worthy_subscription_fail">订阅失败</string>
+    <string name="seek_worthy_subscription_success">订阅成功</string>
+    <string name="seek_worthy_subscription_cancel_success">订阅取消</string>
+    <string name="seek_worthy_error">数据为空</string>
+    <string name="apply_insiders_or_company_email">service@1000new.com</string>
+    <string name="apply_insiders_title">我要成为圈内人</string>
+    <string name="apply_company_title">我要成为名企</string>
+    <string name="seek_worthy_bottom_count">评论墙(共%1$s条)</string>
+    <string name="integration_mall_title_txt">商城</string>
+    <string name="integration_mall_use_integration">花积分</string>
+    <string name="integration_mall_get_integration">赚积分</string>
+    <string name="integration_use_detail_title_txt">兑换详情</string>
+    <string name="integration_use_detail_use">立刻兑换</string>
+    <string name="integration_order_title_txt">确认订单</string>
+    <string name="integration_use_order_ok">确定</string>
+    <string name="integration_search_hint">请输入关键字或礼品名</string>
+    <string name="integration_goods_list_title_search">搜索结果</string>
+    <string name="integration_goods_list_title_more">更多</string>
+
+    <!-- 完善资料界面 -->
+    <string name="str_perfectinformation_title">完善资料</string>
+    <string name="str_perfectinformation_nametitle">姓名</string>
+    <string name="str_perfectinformation_namehint">请输入姓名</string>
+    <string name="str_perfectinformation_gendertitle">性别</string>
+    <string name="str_perfectinformation_male">男</string>
+    <string name="str_perfectinformation_female">女</string>
+    <string name="str_perfectinformation_phonehint">请输入手机号</string>
+    <string name="str_perfectinformation_authhint">请输入验证码</string>
+    <string name="str_perfectinformation_submit">提交</string>
+    <string name="str_perfectinformation_skip">跳过</string>
+    <string name="title_activity_exposure_wage">ExposureWageActivity</string>
+    <string name="str_date_to_now">至今</string>
+    <string name="str_date_to_now_YYMMDD">2100-01-01</string>
+    
+    <string name="exposure_wage_home_title">晒工资</string>
+    <string name="exposure_wage_home_sun_wage">晒工资</string>
+    <string name="exposure_wage_home_search_count">剩余%1$s次查询机会，</string>
+    <string name="exposure_wage_home_search_count_day">每天赠送3次</string>
+    <string name="exposure_wage_home_search_hint">提示：公司名或职位名查询</string>
+    <string name="exposure_wage_home_get_search_count">(如何获得查询次数？)</string>
+    <string name="exposure_wage_home_hot_company">热门公司</string>
+    <string name="exposure_wage_home_hot_post">热门职位</string>
+    <string name="exposure_wage_home_more">更多></string>
+    
+    <string name="exposure_wage_getcount_title1">搜索结果</string>
+    <string name="exposure_wage_getcount_title2">获取查询次数</string>
+    <string name="exposure_wage_getcount_null">搜索次数已用完</string>
+    
+    <string name="exposure_wage_title_txt">晒工资</string>
+    <string name="exposure_wage_tab_title_1">晒工资</string>
+    <string name="exposure_wage_tab_title_count_1">+20次查询</string>
+    <string name="exposure_wage_tab_title_2">传工资单</string>
+    <string name="exposure_wage_tab_title_count_2">+45次查询</string>
+    <string name="exposure_wage_city_text">城市</string>
+    <string name="exposure_wage_company_text">公司名称</string>
+    <string name="exposure_wage_post_text">职位</string>
+    <string name="exposure_wage_salary_text">月薪(税前)</string>
+	<string name="exposure_wage_submit">提交</string>
+	
+	<string name="exposure_payroll_upload">上传工资单</string>
+	
+	<string name="exposure_invitefriends_txt">我们正在努力建设中…敬请期待!</string>
+	<string name="exposure_share_sina">新浪微博</string>
+	<string name="exposure_share_timeline">朋友圈</string>
+	<string name="exposure_share_wechat">微信好友</string>
+	
+	<string name="exposure_comment_title">发表评论</string>
+	<string name="exposure_comment_content_hint">请提交您的评论意见，不超过500字符</string>
+	<string name="exposure_comment_submit">提交评论</string>
+	
+	<string name="exposure_search_result_title_1">公司</string>
+	<string name="exposure_search_result_title_2">职位</string>
+	<string name="exposure_search_result_select_city">更换城市</string>
+	
+	<string name="exposure_search_result_detail_title_1">职位</string>
+	<string name="exposure_search_result_detail_title_2">评论</string>
+	<string name="exposure_search_result_detail_comment">发表评论</string>
+	
+	<string name="exposure_daily_item_post_name">职位：%1$s</string>
+	<string name="exposure_daily_item_user">来自%1$s%2$s用户</string>
+	
+    <!-- 个人中心(我)界面 -->
+    <string name="str_my_title">我</string>
+    <string name="str_my_login">登录</string>
+    <string name="str_my_exit">注销</string>
+    <string name="str_my_accountnamehint">姓名/昵称</string>
+    <string name="str_my_username">用户名：  %s</string>
+    <string name="str_my_usernamehint">用户名：  </string>
+    <string name="str_my_balancetitle">余额:</string>
+    <string name="str_my_balanceyuan">元</string>
+</resources>

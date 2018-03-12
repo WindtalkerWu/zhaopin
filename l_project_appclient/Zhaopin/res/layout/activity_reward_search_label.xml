@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RewardSearchLabelActivity" 
+    android:background="@color/white">
+	<RelativeLayout
+        android:id="@+id/reward_search_label_title_bg"
+        style="@style/common_top_layout_style" >
+
+        <ImageButton
+            android:id="@+id/reward_search_label_goback"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/reward_search_label_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/reward_search_label_title_txt" />
+    </RelativeLayout>
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/reward_search_label_title_bg">
+        <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+            
+        <com.qianniu.zhaopin.app.widget.HotLabelFlowLayout android:id="@+id/reward_search_label_flow_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp">
+    	</com.qianniu.zhaopin.app.widget.HotLabelFlowLayout>
+    	<TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="t"
+        android:visibility="invisible"/>
+        </LinearLayout>
+    </ScrollView>
+    
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/bg_color">
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        
+		<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <RelativeLayout style="@style/common_top_layout_style" >
+
+                <ImageButton
+                    android:id="@+id/findpwd_btn_goback"
+                    style="@style/common_top_left_title_style" 
+                    android:src="@drawable/common_button_back"/>
+
+                <TextView
+                    android:id="@+id/findpwd_title"
+                    style="@style/common_top_center_bigtitle_style"
+                    android:text="@string/str_findpwd_title" />
+            </RelativeLayout>
+			<ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+					<LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:background="@drawable/common_around_corner_bg"
+                        android:orientation="vertical" >
+					    <!-- 通过手机账号找回密码 -->
+
+	                   <RelativeLayout
+	                        android:layout_width="fill_parent"
+	                        android:layout_height="wrap_content"
+	                        android:layout_marginBottom="10.0dip"
+	                        android:layout_marginLeft="10.0dip"
+	                        android:layout_marginRight="10.0dip" >
+	
+	                        <Button
+	                            android:id="@+id/fidnpwd_btn_moblie"
+	                            android:layout_width="fill_parent"
+	                            android:layout_height="wrap_content"
+	                            android:layout_alignParentLeft="true"
+	                            android:layout_marginTop="20dp"
+	                            android:background="@android:drawable/btn_default"
+	                            android:gravity="center"
+	                            android:text="@string/str_findpwd_btn_moblie"
+	                            />
+	                    </RelativeLayout>
+	                   <RelativeLayout
+	                        android:layout_width="fill_parent"
+	                        android:layout_height="wrap_content"
+	                        android:layout_marginBottom="10.0dip"
+	                        android:layout_marginLeft="10.0dip"
+	                        android:layout_marginRight="10.0dip" >
+	
+	                        <Button
+	                            android:id="@+id/fidnpwd_btn_mail"
+	                            android:layout_width="fill_parent"
+	                            android:layout_height="wrap_content"
+	                            android:layout_alignParentLeft="true"
+	                            android:layout_marginTop="20dp"
+	                            android:background="@android:drawable/btn_default"
+	                            android:gravity="center"
+	                            android:text="@string/str_findpwd_btn_mail"
+	                            />
+	                    </RelativeLayout>
+                    </LinearLayout>
+   				</LinearLayout>
+             </ScrollView>
+        </LinearLayout>
+	</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/common_top_layout_style" >
+
+        <ImageView
+            android:id="@+id/fragment_news_set"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_help"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/fragment_news_search"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_subscription" />
+
+        <TextView
+            android:id="@+id/fragment_news_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/app_info_title_news" />
+    </RelativeLayout>
+
+    <LinearLayout 
+        android:id="@+id/fragment_news_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:orientation="vertical">
+        <RelativeLayout
+        style="@style/searchbar_input_layout_style"
+        android:visibility="visible"
+        android:background="@color/white" >
+
+        <EditText
+            android:id="@+id/fragment_news_search_et"
+            style="@style/searchbar_input_edittext_style"/>
+
+        <ImageView
+            android:id="@+id/fragment_news_search_clean_iv"
+            style="@style/common_input_cleaner_style" />
+    	</RelativeLayout>
+        <include layout="@layout/common_form_line" />
+    </LinearLayout>
+    
+
+    <include layout="@layout/progress_item" />
+
+    <com.qianniu.zhaopin.app.widget.PullToRefreshListView
+        android:id="@+id/fragment_listview_news"
+        android:listSelector="@drawable/listview_item_empty_selector"
+        style="@style/widget_listview" />
+
+</LinearLayout>

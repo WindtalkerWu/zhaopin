@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <RelativeLayout
+        android:id="@+id/tax_free_statement_title_bg"
+        style="@style/common_top_layout_style" >
+
+        <ImageView
+            android:id="@+id/tax_free_statement_goback"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/tax_free_statement_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/tax_free_statement_title_txt" />
+    </RelativeLayout>
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tax_free_statement_content"
+        android:layout_margin="12dp"
+       	android:lineSpacingExtra="3dp"
+        android:layout_below="@id/tax_free_statement_title_bg"
+        android:textColor="@color/list_title"
+        android:textSize="16sp"/>
+    
+</RelativeLayout>

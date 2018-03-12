@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/resume_fast_title"
+        style="@style/common_top_layout_style"
+        android:layout_alignParentTop="true" >
+
+        <ImageButton
+            android:id="@+id/resume_goback"
+            style="@style/common_top_left_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_button_back" />
+
+        <ImageButton
+            android:id="@+id/resume_edit_save"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_save"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/resume_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/resume_fastresume" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/submit_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="20dp" >
+
+        <Button
+            android:id="@+id/resume_fast_del"
+            style="@style/LineStyle_center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/common_button_gray"
+            android:minHeight="@dimen/default_button_height"
+            android:text="@string/frame_title_delete"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/resume_fast_submit"
+            style="@style/LineStyle_center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/common_button_green"
+            android:minHeight="@dimen/default_input_height"
+            android:text="@string/frame_title_save" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/resume_fastedit_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/submit_layout"
+        android:layout_below="@id/resume_fast_title"
+        android:layout_marginTop="5dp"
+        android:minHeight="@dimen/default_input_height"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            style="@style/LineStyle_big_Layout"
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/input_left"
+            android:gravity="center_vertical"
+            android:paddingTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/publish_reward_must"
+                android:textColor="@color/red"
+                android:visibility="invisible" />
+
+            <TextView
+                style="@style/LineStyle_Text"
+                android:text="@string/resume_fastresume" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/fastresume_edittv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/input_right_text"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="left|top"
+            android:hint="请将您复制的简历文本粘贴到这里"
+            android:padding="10dp"
+            android:textColor="@color/list_subTitle"
+            android:textColorHint="@color/tips_gray"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+
+</RelativeLayout>

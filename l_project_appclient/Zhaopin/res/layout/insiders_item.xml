@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false" >
+
+    <TextView
+        android:id="@+id/insiders_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:text="小米"
+        android:textColor="@color/list_title"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/insiders_item_head_portrait_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/insiders_item_title"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/common_form_line" />
+
+        <ImageView
+            android:id="@+id/insiders_item_head_portrait"
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:background="@drawable/qianniu_bg_widget"
+            android:scaleType="fitXY" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/common_form_line" />
+    </LinearLayout>
+    <!-- <TextView android:id="@+id/insiders_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@drawable/common_transparent_bg"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginRight="0.5dp"
+        android:layout_alignBottom="@id/insiders_item_head_portrait_bg"/> -->
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/insiders_item_head_portrait_bg"
+         android:layout_gravity="center_horizontal" >
+
+         <TextView
+             android:id="@+id/insiders_item_name"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_centerVertical="true"
+             android:padding="5dp"
+             android:singleLine="true"
+             android:textColor="@color/list_title"
+             android:layout_toLeftOf="@+id/insiders_item_attention_count_img"
+             android:text="马云"
+             android:textSize="16sp" />
+
+         <TextView
+             android:id="@+id/insiders_item_attention_count"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:gravity="center_vertical"
+             android:paddingTop="5dp"
+             android:paddingBottom="5dp"
+             android:paddingLeft="2dp"
+             android:paddingRight="5dp"
+             android:singleLine="true"
+             android:layout_centerVertical="true"
+             android:layout_alignParentRight="true"
+             android:layout_marginRight="5dp"
+             android:textColor="@color/list_subTitle"
+             android:textSize="12sp" />
+
+         <ImageView
+             android:id="@id/insiders_item_attention_count_img"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_toLeftOf="@id/insiders_item_attention_count"
+             android:layout_marginTop="13.5dp"
+             android:background="@drawable/common_bg_attention" />
+     </RelativeLayout>
+</merge>

@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/tax_city_select_title_bg"
+        style="@style/common_top_layout_style" >
+
+        <ImageView
+            android:id="@+id/tax_city_select_goback"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/tax_city_select_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/tax_city_select_title_txt" />
+    </RelativeLayout>
+    <ListView android:id="@+id/tax_city_select_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tax_city_select_title_bg"
+        android:divider="@drawable/common_form_line"
+        android:cacheColorHint="@color/full_transparent"
+        android:listSelector="@drawable/common_list_item_default_selector">
+    </ListView>
+</RelativeLayout>

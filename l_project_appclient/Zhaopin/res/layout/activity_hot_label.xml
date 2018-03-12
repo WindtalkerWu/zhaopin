@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+     <RelativeLayout
+        android:id="@+id/hot_label_title_bg"
+        style="@style/common_top_layout_style" >
+
+        <TextView
+            android:id="@+id/hot_label_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/hot_label_title_txt" />
+    </RelativeLayout>
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/hot_label_title_bg"
+        android:layout_above="@+id/hot_label_bottom"
+        android:scrollbars="none" >
+    <RelativeLayout
+        android:id="@+id/hot_label_content"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="5dp">
+
+    <TextView android:id="@+id/hot_label_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hot_label_tips"
+        android:textColor="@color/list_title"
+        android:textSize="16sp"
+        android:layout_margin="10dp"/>
+    <TextView android:id="@+id/hot_label_tips_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hot_label_tips"
+        android:text="@string/hot_label_tips_more"
+        android:textColor="@color/list_subTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="14sp"/>
+    <com.qianniu.zhaopin.app.widget.HotLabelFlowLayout android:id="@+id/hot_label_flow_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hot_label_tips_more"
+        android:layout_marginRight="10dp" >
+    </com.qianniu.zhaopin.app.widget.HotLabelFlowLayout>
+    	<TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="text"
+        android:layout_below="@id/hot_label_flow_bg"
+        android:visibility="invisible"/>
+    </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout android:id="@id/hot_label_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="15dp"
+        android:paddingTop="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" >
+        <Button android:id="@+id/hot_label_save"
+            style="@style/common_button_green_short"
+            android:textColor="@color/white"
+            android:text="@string/hot_label_save"/>
+        <Button android:id="@+id/hot_label_skip"
+            style="@style/common_button_green_short"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@id/hot_label_save"
+            android:layout_marginLeft="20dp"
+            android:text="@string/hot_label_skip"/>
+    </RelativeLayout>
+
+</RelativeLayout>

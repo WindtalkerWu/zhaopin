@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/deliveryaddresslist_rl_top"
+        style="@style/common_top_layout_style"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@+id/deliveryaddresslist_btn_goback"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+        
+		<ImageView
+            android:id="@+id/deliveryaddresslist_btn_add"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_add" />
+
+        <TextView
+            android:id="@+id/deliveryaddresslist_tv_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/str_deliveryaddresslist_title" />
+    </RelativeLayout>
+
+    <LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+        android:layout_below="@id/deliveryaddresslist_rl_top"
+        android:layout_marginTop="8.0dip"
+        android:orientation="vertical" >
+
+        <include layout="@layout/progress_item" />
+
+        <com.qianniu.zhaopin.app.widget.PullToRefreshListView
+            android:id="@+id/deliveryaddresslist_lv_address"
+            style="@style/widget_listview" 
+	        android:listSelector="@drawable/listview_item_empty_selector"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qianniu.zhaopin.app.ui.InfoListCommonItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/info_listitem_commoncontainer"
+    style="@style/common_listitem_style"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10.0dip"
+    android:paddingRight="10.0dip" >
+
+    <ImageView
+        android:id="@+id/info_listitem_userface"
+        style="@style/user_face_image"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/qianniu_logobg"  />
+
+    <TextView
+        android:id="@+id/info_listitem_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dip"
+        android:textColor="@color/listitem_gray"
+        android:textSize="@dimen/text_size_10" />
+
+    <TextView
+        android:id="@+id/info_listitem_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@id/info_listitem_date"
+        android:layout_toRightOf="@id/info_listitem_userface"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:textColor="@color/listitem_black"
+        android:textSize="@dimen/text_size_15"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/info_listitem_digest"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info_listitem_title"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/info_listitem_userface"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:textColor="@color/listitem_black"
+        android:textSize="@dimen/text_size_12" />
+
+</com.qianniu.zhaopin.app.ui.InfoListCommonItem>

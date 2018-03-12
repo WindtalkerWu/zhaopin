@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/comment_top"
+        style="@style/common_top_layout_style" >
+
+        <ImageView
+            android:id="@+id/comment_goback"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/comment_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/comment_title" />
+
+        <ImageView
+            android:id="@+id/comment_share"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_share"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/comment_content_bg"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:background="@drawable/common_form_bg" >
+
+        <EditText
+            android:id="@+id/comment_content"
+            style="@style/common_text_multi_input_comment_edittext_style"
+            android:layout_gravity="top"
+            android:hint="@string/comment_content_hint"
+            android:maxLength="160"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/comment_length" />
+
+        <TextView
+            android:id="@id/comment_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/list_subTitle"
+            android:text="140"
+            android:textSize="12sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="6dp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/comment_dosubmit"
+        style="@style/common_button_green_match"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/comment_submit"
+        android:textSize="16sp" />
+
+</LinearLayout>

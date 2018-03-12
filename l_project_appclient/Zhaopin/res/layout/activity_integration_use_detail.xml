@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@color/bg_color" >
+
+    <RelativeLayout
+        android:id="@+id/integration_use_detail_title_bg"
+        style="@style/common_top_layout_style"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@+id/integration_use_detail_goback"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/integration_use_detail_tv_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/integration_use_detail_title_txt" />
+
+        <ImageView
+            android:id="@+id/integration_use_detail_title_collection"
+      		android:layout_width="wrap_content"
+       		android:layout_height="fill_parent"
+       		android:layout_centerVertical="true"
+       		android:scaleType="centerCrop"
+            android:layout_toLeftOf="@+id/integration_use_detail_title_share"
+			android:background="@color/full_transparent"
+            android:src="@drawable/common_button_nocollection" />
+        <ImageView
+            android:id="@id/integration_use_detail_title_share"
+            style="@style/common_top_right_title_style"
+            android:src="@drawable/common_button_share" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/integration_use_detail_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/integration_use_detail_operate"
+        android:layout_below="@id/integration_use_detail_title_bg"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:id="@id/integration_use_detail_operate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+
+        <include
+            android:layout_alignParentTop="true"
+            layout="@layout/common_form_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp" >
+			<Button
+                android:id="@+id/integration_use_detail_pay"
+                style="@style/common_button_green_match"
+                android:text="@string/integration_use_detail_use" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/integration_use_detail_loading"
+        style="@style/common_big_loading_style" />
+
+</RelativeLayout>

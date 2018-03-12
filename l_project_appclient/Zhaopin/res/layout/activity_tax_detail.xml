@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <RelativeLayout
+        android:id="@+id/tax_detail_title_bg"
+        style="@style/common_top_layout_style" >
+
+        <ImageView
+            android:id="@+id/tax_detail_goback"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/tax_detail_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/tax_detail_title_txt" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/tax_detail_pension_item"
+        style="@style/common_form_item_bg_style"
+        android:layout_below="@id/tax_detail_title_bg"
+        android:layout_marginTop="15dp" >
+
+        <TextView android:id="@+id/tax_detail_pension_tv"
+            style="@style/common_form_item_left_tv_small_style"
+            android:text="@string/tax_detail_item_pension" />
+
+        <TextView android:id="@+id/tax_detail_pension_unit"
+            style="@style/common_form_item_right_tv_style"
+            android:text="@string/tax_item_unit" />
+
+        <TextView android:id="@+id/tax_detail_pension_rate"
+            style="@style/common_form_item_tv_style"
+            android:layout_toRightOf="@id/tax_detail_pension_tv" />
+
+        <EditText android:id="@+id/tax_detail_pension"
+           	style="@style/common_form_item_edit_style"
+            android:layout_toRightOf="@id/tax_detail_pension_rate"
+            android:layout_toLeftOf="@id/tax_detail_pension_unit"
+            android:focusable="false"
+            android:text="0" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/tax_detail_medical_item"
+        style="@style/common_form_item_bg_style"
+        android:layout_below="@id/tax_detail_pension_item"
+        android:layout_marginTop="-1dp" >
+
+        <TextView android:id="@+id/tax_detail_medical_tv"
+            style="@style/common_form_item_left_tv_small_style"
+            android:text="@string/tax_detail_item_medical" />
+
+        <TextView android:id="@+id/tax_detail_medical_unit"
+            style="@style/common_form_item_right_tv_style"
+            android:text="@string/tax_item_unit" />
+
+        <TextView android:id="@+id/tax_detail_medical_rate"
+            style="@style/common_form_item_tv_style"
+            android:layout_toRightOf="@id/tax_detail_medical_tv" />
+
+        <EditText android:id="@+id/tax_detail_medical"
+           	style="@style/common_form_item_edit_style"
+            android:layout_toRightOf="@id/tax_detail_medical_rate"
+            android:layout_toLeftOf="@id/tax_detail_medical_unit"
+            android:focusable="false"
+            android:text="0" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/tax_detail_losejob_item"
+        style="@style/common_form_item_bg_style"
+        android:layout_below="@id/tax_detail_medical_item"
+        android:layout_marginTop="-1dp" >
+
+        <TextView android:id="@+id/tax_detail_losejob_tv"
+            style="@style/common_form_item_left_tv_small_style"
+            android:text="@string/tax_detail_item_losejob" />
+
+        <TextView android:id="@+id/tax_detail_losejob_unit"
+            style="@style/common_form_item_right_tv_style"
+            android:text="@string/tax_item_unit" />
+
+        <TextView android:id="@+id/tax_detail_losejob_rate"
+            style="@style/common_form_item_tv_style"
+            android:layout_toRightOf="@id/tax_detail_losejob_tv" />
+
+        <EditText android:id="@+id/tax_detail_losejob"
+           	style="@style/common_form_item_edit_style"
+            android:layout_toRightOf="@id/tax_detail_losejob_rate"
+            android:layout_toLeftOf="@id/tax_detail_losejob_unit"
+            android:focusable="false"
+            android:text="0" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/tax_detail_injuries_item"
+        style="@style/common_form_item_bg_style"
+        android:layout_below="@id/tax_detail_losejob_item"
+        android:layout_marginTop="-1dp"
+        android:visibility="gone" >
+
+        <TextView android:id="@+id/tax_detail_injuries_tv"
+            style="@style/common_form_item_left_tv_small_style"
+            android:text="@string/tax_detail_item_injuries" />
+
+        <TextView android:id="@+id/tax_detail_injuries"
+           	style="@style/common_form_item_right_tv_style"
+            android:hint="@string/tax_detail_item_tips" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/tax_detail_birth_item"
+        style="@style/common_form_item_bg_style"
+        android:layout_below="@id/tax_detail_injuries_item"
+        android:layout_marginTop="-1dp"
+        android:visibility="gone" >
+
+        <TextView android:id="@+id/tax_detail_birth_tv"
+            style="@style/common_form_item_left_tv_small_style"
+            android:text="@string/tax_detail_item_birth" />
+
+        <TextView android:id="@+id/tax_detail_birth"
+           	style="@style/common_form_item_right_tv_style"
+            android:hint="@string/tax_detail_item_tips" />
+    </RelativeLayout>
+     <RelativeLayout
+        android:id="@+id/tax_detail_fund_item"
+        style="@style/common_form_item_bg_style"
+        android:layout_below="@id/tax_detail_birth_item"
+        android:layout_marginTop="-1dp" >
+
+        <TextView android:id="@+id/tax_detail_fund_tv"
+            style="@style/common_form_item_left_tv_small_style"
+            android:text="@string/tax_detail_item_fund" />
+
+        <TextView android:id="@+id/tax_detail_fund_unit"
+            style="@style/common_form_item_right_tv_style"
+            android:text="@string/tax_item_unit" />
+
+        <TextView android:id="@+id/tax_detail_fund_rate"
+            style="@style/common_form_item_tv_style"
+            android:layout_toRightOf="@id/tax_detail_fund_tv" />
+
+        <EditText android:id="@+id/tax_detail_fund"
+           	style="@style/common_form_item_edit_style"
+            android:layout_toRightOf="@id/tax_detail_fund_rate"
+            android:layout_toLeftOf="@id/tax_detail_fund_unit"
+            android:focusable="false"
+            android:text="0" />
+    </RelativeLayout>
+	<TextView android:id="@+id/tax_detail_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/red"
+            android:textSize="16sp"
+            android:layout_below="@id/tax_detail_fund_item"
+            android:layout_margin="8dp"
+            android:layout_alignParentRight="true"
+            android:text="@string/tax_detail_total" />
+</RelativeLayout>

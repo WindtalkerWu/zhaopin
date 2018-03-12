@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/resume_home_bg"
+    android:orientation="vertical" >
+
+   	<RelativeLayout style="@style/common_top_layout_style" >
+
+        <ImageView
+            android:id="@+id/integralrecharge_btn_back"
+            style="@style/common_top_left_title_style"
+            android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/integralrecharge_tv_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/str_integralrecharge_title" 
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layerType="software" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp" >
+                
+                <LinearLayout style="@style/common_form_vertical_style" >
+                    <RelativeLayout
+                        android:id="@+id/integralrecharge_ll_rechargesum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
+                        <TextView 
+                            android:id="@+id/integralrecharge_tv_rechargesumtitle"
+							android:layout_width="wrap_content"
+                        	android:layout_height="wrap_content"
+                        	android:layout_alignParentLeft="true"
+                        	android:layout_marginLeft="18.0dip"
+                        	android:layout_marginTop="30.0dip"
+                        	android:text="@string/str_integralrecharge_rechargesumtitle"
+                        	android:textColor="@color/black"
+                        	android:textSize="14sp"
+                            />
+                        <EditText
+                            android:id="@+id/integralrecharge_et_rechargesum"
+							android:layout_width="200.0dip"
+                        	android:layout_height="wrap_content"
+                        	android:background="@drawable/common_search_edittext_bg"
+                        	android:layout_marginLeft="6.0dip"
+                        	android:layout_marginTop="26.0dip"
+                        	android:layout_toRightOf="@id/integralrecharge_tv_rechargesumtitle"
+                            android:hint="@string/str_integralrecharge_rechargesumhite"
+                        	android:textColor="@color/red"
+                        	android:singleLine="true"
+                        	android:imeOptions="actionNext"
+                            />
+                        <TextView 
+							android:layout_width="wrap_content"
+                        	android:layout_height="wrap_content"
+                        	android:layout_marginTop="30.0dip"
+                        	android:layout_marginLeft="3.0dip"
+                        	android:layout_toRightOf="@id/integralrecharge_et_rechargesum"
+                        	android:text="@string/str_integralrecharge_rmb"
+                        	android:textColor="@color/black"
+                        	android:textSize="14sp"
+                            />
+                    </RelativeLayout>
+                    <TextView 
+							android:layout_width="wrap_content"
+                        	android:layout_height="wrap_content"
+                        	android:layout_marginTop="10.0dip"
+                        	android:layout_marginLeft="100.0dip"
+                        	android:layout_marginBottom="30.0dip"
+                        	android:text="@string/str_integralrecharge_remark"
+                        	android:textSize="14sp"
+                            />
+	             </LinearLayout>
+	             
+                 <!-- 充值按钮 -->
+				<RelativeLayout
+	               android:id="@+id/integralrecharge_lp_gorecharge"
+	               android:layout_gravity="center_horizontal"
+	               style="@style/common_button_green_big"
+	               android:layout_marginTop="20.0dip"
+               		>
+				   <TextView
+				   	   style="@style/common_button_text"
+	              	   android:text="@string/str_integralrecharge_gorecharge"
+				       />
+          		 </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

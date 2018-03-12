@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+  	<RelativeLayout
+        android:id="@+id/jobrecommend_rl_top"
+        style="@style/common_top_layout_style" >
+
+         <ImageButton
+             android:id="@+id/jobrecommend_btn_goback"
+             style="@style/common_top_left_title_style"
+             android:src="@drawable/common_button_back" />
+
+        <TextView
+            android:id="@+id/jobrecommend_tv_title"
+            style="@style/common_top_center_bigtitle_style"
+            android:text="@string/str_jobrecommend_title" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+			<LinearLayout
+	            android:layout_marginLeft="10.0dip"
+	            android:layout_marginRight="10.0dip"
+	            android:layout_marginTop="10.0dip"
+	            style="@style/common_form_vertical_style"
+	            >
+			    <!-- 名字 -->
+			    <RelativeLayout style="@style/common_form_item_style" >
+
+                    <LinearLayout
+                        android:id="@+id/jobrecommend_ll_name"
+                        style="@style/common_form_item_textviewlayout_style" >
+
+                        <TextView
+                            style="@style/common_form_item_textview_style"
+                            android:text="@string/str_jobrecommend_name" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/jobrecommend_rl_name"
+                        style="@style/common_form_item_editlayout_style"
+                        android:layout_toRightOf="@id/jobrecommend_ll_name" >
+
+                        <EditText
+                            android:id="@+id/jobrecommend_et_name"
+                            style="@style/common_form_item_edittext_style"
+                            android:hint="@string/str_jobrecommend_hint_name"
+                            android:imeOptions="actionNext" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                      
+				<include layout="@layout/common_form_line" />
+			    <!-- 联系电话 -->
+			    <RelativeLayout style="@style/common_form_item_style" >
+
+                    <LinearLayout
+                        android:id="@+id/jobrecommend_ll_tel"
+                        style="@style/common_form_item_textviewlayout_style" >
+
+                        <TextView
+                            style="@style/common_form_item_textview_style"
+                            android:text="@string/str_jobrecommend_tel" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/jobrecommend_rl_tel"
+                        style="@style/common_form_item_editlayout_style"
+                        android:layout_toRightOf="@id/jobrecommend_ll_tel" >
+
+                        <EditText
+                            android:id="@+id/jobrecommend_et_tel"
+                            style="@style/common_form_item_edittext_style"
+                            android:inputType="number" 
+                            android:hint="@string/str_jobrecommend_hint_tel"
+                            android:imeOptions="actionNext" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                      
+				<include layout="@layout/common_form_line" />
+			    <!-- 推荐理由 -->
+			    <RelativeLayout style="@style/common_form_item_style" >
+
+                    <LinearLayout
+                        android:id="@+id/jobrecommend_ll_reason"
+                        style="@style/common_form_item_textviewlayout_style" >
+
+                        <TextView
+                            style="@style/common_form_item_textview_style"
+                            android:text="@string/str_jobrecommend_reason" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/jobrecommend_rl_reason"
+                        style="@style/common_form_item_editlayout_style"
+                        android:layout_toRightOf="@id/jobrecommend_ll_reason" >
+
+                        <ImageView
+                            android:id="@+id/jobrecommend_img_reason_next"
+                            style="@style/common_form_item_edit_next_style" />
+
+                        <TextView
+                            android:id="@+id/jobrecommend_tv_reason"
+                            style="@style/common_form_item_edit_textview_style"
+                            android:layout_toLeftOf="@id/jobrecommend_img_reason_next"
+                            android:hint="@string/str_jobrecommend_hint_reason" />
+                    </RelativeLayout>
+                </RelativeLayout>
+	       </LinearLayout>
+			<LinearLayout
+	            android:layout_marginLeft="10.0dip"
+	            android:layout_marginRight="10.0dip"
+	            android:layout_marginTop="10.0dip"
+	            style="@style/common_form_vertical_style"
+	            >
+				<EditText
+	              	android:id="@+id/jobrecommend_et_detailreason"
+	              	android:layout_width="match_parent"
+	              	android:layout_height="180dp"
+	              	android:layout_centerVertical="true"
+	              	android:textSize="14sp"
+	              	android:textColor="@color/list_subTitle"
+	              	android:textColorHint="@color/tips_gray"
+	              	android:ellipsize="end"
+				  	android:hint="@string/str_jobrecommend_hint_detailreason"
+				  	android:imeOptions="actionDone"
+	              	android:maxLength="500"
+	              	android:background="@null"
+	              	android:gravity="top"
+              />
+			</LinearLayout>
+           <RelativeLayout
+               android:id="@+id/jobrecommend_lp_submit"
+               android:layout_marginTop="24.0dip"
+               android:layout_gravity="center_horizontal"
+               style="@style/common_button_green_big" >
+			   <TextView
+			   	   style="@style/common_button_text"
+              	   android:text="@string/str_jobrecommend_submit" />
+           </RelativeLayout>
+	    </LinearLayout>
+    </ScrollView>
+	<View
+        android:id="@+id/jobrecommend_loading"
+        style="@style/common_big_loading_style"  />
+ </LinearLayout>

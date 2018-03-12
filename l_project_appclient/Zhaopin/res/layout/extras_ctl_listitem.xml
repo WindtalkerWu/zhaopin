@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        style="@style/common_listitem_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    	android:paddingLeft="8dp"
+    	android:paddingRight="8dp"
+        android:background="@drawable/common_list_item_default_selector" >
+
+        <!-- android:background="@drawable/common_form_bg" -->
+
+        <ImageView
+            android:id="@+id/listitem_userface_iv"
+            style="@style/user_face_image"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+
+        <RelativeLayout
+            android:id="@+id/listitem_content_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/listitem_userface_iv" >
+
+            <ImageView
+                android:id="@+id/listitem_next_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="1dp"
+                android:src="@drawable/common_img_next_big" />
+
+            <TextView
+                android:id="@+id/listitem_title_tv"
+                style="@style/common_form_item_edit_textview_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:layout_toLeftOf="@id/listitem_next_icon"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="2"
+                android:text="saefjoawjefo"
+                android:textColor="@color/list_title"
+                android:textSize="@dimen/text_size_15" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
